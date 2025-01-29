@@ -1,0 +1,219 @@
+{
+  "main": {
+    "id": "160312374b8c2ce5",
+    "type": "split",
+    "children": [
+      {
+        "id": "431bd5ce21307892",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c2ec1cad6d6445b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Administracion/Conceptos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Conceptos"
+            }
+          },
+          {
+            "id": "53daa634078b4742",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Graficacion/Sistema de ecuaciones lineales.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sistema de ecuaciones lineales"
+            }
+          },
+          {
+            "id": "f194d0330096a74e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Sistemas Expertos/Sistema Experto.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sistema Experto"
+            }
+          },
+          {
+            "id": "5f6250acf4f094f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Derecho/Conceptos Basicos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Conceptos Basicos"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1bdbf1a37d90e7a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ae1fcf4a33aa2043",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f30b4ed38ab40266",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "3101f6ada65f3d47",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "a51d511eeb00fc0b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3234caf3b941957a",
+    "type": "split",
+    "children": [
+      {
+        "id": "18035f8d8914dea0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1c2b443376355060",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "8478d68d240d6e0b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "52b93dd533acc211",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4510a700f4e78c95",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "f30b4ed38ab40266",
+  "lastOpenFiles": [
+    "Sistemas Expertos/Sistema Experto.md",
+    "Derecho/Conceptos Basicos.md",
+    "Derecho",
+    "Sistemas Expertos",
+    "Graficacion/Sistema de ecuaciones lineales.md",
+    "Graficacion/Pasted image 20250128104459.png",
+    "Administracion/Conceptos.md",
+    "Graficacion",
+    "Administracion",
+    "Metaheuristicas"
+  ]
+}
