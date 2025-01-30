@@ -53,3 +53,30 @@ Muchas de las técnicas para administrar proyectos generales se aplican a la adm
 - *Conformidad*: Los proyectos de ingeniería trabajan con sistemas que están gobernados por las leyes físicas. Los desarrolladores deben ajustarse a los requerimientos de clientes humanas, lo cual cambian constantemente o los usuarios no se ponen de acuerdo
 - *Flexibilidad*: El SW cambia mas fácilmente que otros productos en base a los cambios de requerimientos del usuario
 
+## Administración de proyectos
+### Que es?
+
+- *Planear*: que se va a hacer
+- *Organizar*: Hacer preparativos
+- *Asignar Personal*: Elegir personas adecuadas
+- *Dirigir*: dar ordenes
+- *Monitorear*: el progreso o cambio
+- *Controlar*: Tomar acciones para corregir problemas
+- *Innovar*: Proponer soluciones nuevas
+- *Representar*: ponerse en contacto con clientes y usuarios
+
+### Definición
+
+Es el arte de dirigir y coordinar los recursos humanos y materiales a lo largo de la vida de un proyecto que por medio de técnicas modernas de administración para lograr los objetivos en cuanto a alcance, costo tiempo, calidad y satisfacción
+
+Son las habilidades, herramientas y procesos administrativos necesarios para manejar un proyecto exitosamente
+
+Es necesario si se desea obtener un producto en tiempo y forma
+
+### Razones del creciente interés por la administración de proyectos
+
+- Cambios rápidos en las organizaciones:
+	- Antes de los años 1990 las organizaciones cambiaban en promedio cada 15 años actualmente los cambios en las organizaciones son un promedio cada 3 a 5 años
+- El ciclo de vida de los productos esta disminuyendo constantemente
+	- Cada vez el ciclo de vida de un producto o servicio es menor, por lo que las empresas tienen que estar desarrollando nuevos productos o servicios con mayor frecuencia y con mayor rapidez
+- Los administradores reconocen que una buena administración de proyectos lo que permite realizar todo lo anterior de una forma ordenada rápida a menor costo y con la calidad deseada

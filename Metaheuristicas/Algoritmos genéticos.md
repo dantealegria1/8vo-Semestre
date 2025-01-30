@@ -6,6 +6,8 @@
 - Genotipo
 - Fenotipo
 ------------------------------------------------------------------------
+## Algoritmos genéticos
+
 Fueron desatollados por John Holland a principios de los 1960 motivado
 por el aprendizaje de maquina
 
@@ -18,11 +20,25 @@ Adaptabilidad -> Valor de la solución
 - Son los mas utilizados
 - Son robustos
 - Utilizan dos espacios separados
-	- De busqueda (Genotipo)
-	- De solucion (Fenotipo)
+	- De búsqueda (Genotipo)
+	- De solución (Fenotipo)
 - Los genotipos deben ser convertidos en fenotipos antes de evaluar la adaptación de cada solución
-#### Tipos de selección
+### Tipos de selección
 - Ruleta
 - Elitista
 - Estado Estable
 - Escalafón
+### Operadores de cruce
+- Cruce de un solo punto
+- Cruce de dos puntos
+### Mutación
+Se escoge un pequeño numero de cromosomas al azar. En cada de estos se escoge un gen al azar y sobre este se cambia aleatoria mente un bit
+- De un punto
+- De varios puntos
+- Mutación global
+### Fitness
+A cada solución (Cromosoma) se le asigna un valor dependiente que tan bueno es el cromosoma solucionando un problema
+### Para aplicar el algoritmo genético se requieren 5 componentes
+- Una representación de soluciones potenciales
+- Una forma de crear una población inicial de soluciones
+- Una función de evaluación que juegue el papel de ambiente clasificando soluciones en termino de aptitud

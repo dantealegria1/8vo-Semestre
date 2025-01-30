@@ -37,7 +37,7 @@ C.P.E.U.M
 ## **Instancias del Proceso Judicial**
 
 ### Primera Instancia
-Es el nivel inicial donde se lleva a cabo un juicio. Dependiendo3 del tipo de caso, el juicio puede pertenecer a diferentes ramas del derecho:
+Es el nivel inicial donde se lleva a cabo un juicio. Dependiendo del tipo de caso, el juicio puede pertenecer a diferentes ramas del derecho:
 
 - **Mercantil**: Relacionado con actividades comerciales y empresariales.
 - **Civil**: Conflictos entre particulares, como contratos, propiedad o daños.
@@ -58,3 +58,15 @@ Si después de recurrir a la SCJN no se obtiene una resolución favorable y se c
 
 ### Juzgados Internacionales
 Estos tribunales se encargan de revisar casos en los que se alegan violaciones a derechos humanos o tratados internacionales. A diferencia de los tribunales nacionales, sus fallos suelen ser *recomendaciones*, aunque pueden influir en la política y la justicia de los países involucrados.
+
+---
+Constitución -> Ley
+La constitución es el bien común. Los impuestos -> Beneficio de la sociedad
+
+Diputado y senadores por elección, plurinuminales -> son por votación representantes de gobernados
+
+Nadie puede ser juzgado por el mismo delito dos veces
+
+## Estructura de norma jurídica
+
+Es la regla que regula el comportamiento de los individuos en la sociedad y cuyo cumplimiento se encuentra sancionado por el propio ordenamiento
