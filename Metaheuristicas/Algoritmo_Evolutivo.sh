@@ -33,6 +33,8 @@ $@: All arguments as separate strings
 $*: All arguments as a single string
 $$: Process ID of the current script
 $?: Exit status of the last command
+
+${#individual} gets the length of the string individual
 COMMENT
 
 # Configuration
