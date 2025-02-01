@@ -80,3 +80,24 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - El ciclo de vida de los productos esta disminuyendo constantemente
 	- Cada vez el ciclo de vida de un producto o servicio es menor, por lo que las empresas tienen que estar desarrollando nuevos productos o servicios con mayor frecuencia y con mayor rapidez
 - Los administradores reconocen que una buena administración de proyectos lo que permite realizar todo lo anterior de una forma ordenada rápida a menor costo y con la calidad deseada
+
+### Problemas comunes en proyectos
+
+- Entre el 60% y el 80% de los proyectos de T.I fracasados se debe a la pobre definición de requerimientos, pobre análisis y mala administración del proyecto
+- El 62% de los proyectos de T.I no cumplen con la planificación definida
+- El 49% de los Proyectos de T.I sobrepasan el presupuesto definido
+- EL 47% de los Proyectos de T.I superan los costos de mantenimiento esperados
+- El 41% de los proyectos de T.I no cumplieron con el valor esperado para el negocio y el retorno de inversión
+- La mayoría de estas situaciones se debió a una pobre administración del proyecto
+- 150 mil millones de dolares es el costo de proyectos fracasados
+
+### Factores cruciales para el éxito
+- Objetivos definidos
+- Administrador de proyectos competentes
+- Apoyo de la alta administración
+- Miembros del equipo competentes
+- Asignación de recursos suficientes
+- Canales de comunicación adecuadas
+- Mecanismos de control
+- Capacidades de retroalimentacion
+- Buena respuesta al cliente y del cliente
