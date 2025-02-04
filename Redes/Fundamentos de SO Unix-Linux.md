@@ -29,4 +29,11 @@ Linux hace ABC, ya la D la hacen los WM , Windows ABCD
 - Servidores
 ### Pequeñas
 - Micro Computadoras (PC)
-- 
+- Computo móvil
+	- Laptop, notebook, ultrabook
+	- Netbook
+- Tabletas
+- Celulares y dispositivos digitales
+- Computadoras embebidas SBS (Domotica y biotech)
+- Wearables
+

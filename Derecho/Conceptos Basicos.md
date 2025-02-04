@@ -29,6 +29,7 @@ Cada estado tiene una constitución (32 constituciones)
 
 ---------------------------------------------------------
 ## El derecho como medio de regulación
+
 - Por que el derecho se convierte en un medio de regulación?
 - Para que el derecho sea un medio de regulación se debe de basar en?
 
@@ -70,3 +71,36 @@ Nadie puede ser juzgado por el mismo delito dos veces
 ## Estructura de norma jurídica
 
 Es la regla que regula el comportamiento de los individuos en la sociedad y cuyo cumplimiento se encuentra sancionado por el propio ordenamiento
+
+Es la unidad mínima que integra el ordenamiento jurídico es decir, es la regla o precepto que forma parte del derecho objetivo
+
+La norma ordena la conducta humana percibiendo determinados comportamientos o señalando determinados efectos a los actos humanos
+
+Las normas jurídicas en cuanto son impuestas desde fuera del individuo sometido a ellas son heteronomas
+
+Toda vez que las normas o reglas jurídicas se refieren a la conducta de una persona en relación con otra u otras personas
+
+## Fuentes de derecho
+
+Leyes -> Derechos
+- Tiempos penas corporales
+- Tipos de sanciones
+- Beneficios
+
+Las formas del desenvolvimiento del derecho a las cuales hay que acudir para conocerlas y aplicarlas
+- La ley
+- La Jurisprudencia
+- La Costumbre y el uso
+- La Doctrina
+### La Ley
+Es la norma del Derecho dictada, promulgada y sancionada por la autoridad pública, aun sin el consentimiento de los individuos, tiene la finalidad el encauzamiento de la actividad social hacia el bien común
+### La jurisprudencia
+Es la interpretación que hacen los tribunales federales, cuando la aplican a cinco casos en el mismo sentido. Llena los vacíos que deja la ley, es algo que le falta a la ley (son vacíos).
+
+Cuando los jueces interpretan la ley, están haciendo jurisprudencia, se convierten en obligatorias y todos los tribunales inferiores deben acatarlas.
+### La costumbre y el uso
+La forma primitiva del derecho es la costumbre, podemos manifestar que es la primera forma de derecho
+
+Se puede definir como la observación uniforme y constante de kas reglas de conducta obligatoria elaborada por una comunidad social para resolver situaciones jurídicas
+### La doctrina
+Esta integrada por el conjunto de estudios y opiniones de autores y estudiosos del derecho que realizan o emiten sus obras

@@ -101,3 +101,20 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - Mecanismos de control
 - Capacidades de retroalimentacion
 - Buena respuesta al cliente y del cliente
+
+#### Administración vista de administradores
+- Enfrentar fecha limite
+- Enfrentar limitación de recursos
+- Comunicar efectivamente a los diversos grupos
+- Conseguir que todos se comprometan
+- Establecer hitos medibles
+- Enfrentar cambios
+- Lograr plan de acuerdo con los desarrolladores
+- Ganar compromiso de gerencia
+- Enfrentar conflictos
+- Negociar con vendedores y contratistas
+- Estimaciones y planes deficientes
+- Falla de estándares y medidas de calidad
+- Falla de guía sobre toma de decisiones en organización
+- Falta de técnicas para hacer visible el progreso
+- Papeles y responsabilidades mal definidos

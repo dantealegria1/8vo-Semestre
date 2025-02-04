@@ -37,6 +37,18 @@ $?: Exit status of the last command
 ${#individual} gets the length of the string individual
 COMMENT
 
+:<<'COMMENT'
+
+CRITERIOS:
+
+Cruzamiento de un solo punto
+Seleccion por torneo de 4 individuos
+Mutacion del 10%
+
+COMANDO TIME <archivo>
+
+COMMENT
+
 # Configuration
 MATRIX_SIZE=5  # 5x5 matrix
 POPULATION_SIZE=12
