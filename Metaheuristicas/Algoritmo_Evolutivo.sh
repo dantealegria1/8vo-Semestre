@@ -38,95 +38,105 @@ ${#individual} gets the length of the string individual
 COMMENT
 
 # Configuration
-TARGET_LENGTH=10
-POPULATION_SIZE=10
+MATRIX_SIZE=5  # 5x5 matrix
+POPULATION_SIZE=12
 MUTATION_RATE=10  # Out of 100
 MAX_GENERATIONS=100
 
-# Generate a random binary string of specified length
+# Generate a random 5x5 binary matrix
 generate_random_individual() {
-    local length=$1
-    local result=""
-    for ((i=0; i<length; i++)); do
-        if [ $((RANDOM % 2)) -eq 0 ]; then
-            result="${result}0"
-        else
-            result="${result}1"
-        fi
+    local matrix=""
+    for ((i=0; i<MATRIX_SIZE; i++)); do
+        local row=""
+        for ((j=0; j<MATRIX_SIZE; j++)); do
+            row+=$((RANDOM % 2))  # Random 0 or 1
+        done
+        matrix+="$row "
     done
-    echo "$result"
+    echo "$matrix"
 }
 
-# Calculate fitness (number of 1s in the string)
+# Calculate fitness (number of 1s in the matrix)
 calculate_fitness() {
-    local individual=$1
+    local matrix=($@)
     local count=0
-    for ((i=0; i<${#individual}; i++)); do
-        if [ "${individual:$i:1}" = "1" ]; then
-            ((count++))
-        fi
+    for row in "${matrix[@]}"; do
+        for ((i=0; i<${#row}; i++)); do
+            if [ "${row:$i:1}" = "1" ]; then
+                ((count++))
+            fi
+        done
     done
     echo $count
 }
 
 # Tournament selection
 select_parent() {
-    local population=($@)
+    local population=("$@")
     local best_fitness=-1
     local best_individual=""
-    
-    # Tournament size of 3
-    for ((i=0; i<3; i++)); do
+    local size_tornament=4
+    for ((i=0; i<$size_tornament; i++)); do
         local idx=$((RANDOM % ${#population[@]}))
         local individual=${population[$idx]}
-        local fitness=$(calculate_fitness "$individual")
-        
+        local fitness=$(calculate_fitness $individual)
+
         if [ $fitness -gt $best_fitness ]; then
             best_fitness=$fitness
             best_individual=$individual
         fi
     done
-    
+
     echo "$best_individual"
 }
 
-# Single point crossover
+# Crossover (swap rows between two matrices)
 crossover() {
-    local parent1=$1
-    local parent2=$2
-    local point=$((RANDOM % (TARGET_LENGTH - 1) + 1))
-    
-    local child1="${parent1:0:$point}${parent2:$point}"
-    local child2="${parent2:0:$point}${parent1:$point}"
-    
-    echo "$child1 $child2"
+    local parent1=($1)
+    local parent2=($2)
+    local point=$((RANDOM % (MATRIX_SIZE - 1) + 1))
+
+    local child1=("${parent1[@]:0:$point}" "${parent2[@]:$point}")
+    local child2=("${parent2[@]:0:$point}" "${parent1[@]:$point}")
+
+    echo "${child1[*]}|${child2[*]}"
 }
 
-# Mutation
+# Mutation (flip a random bit in the matrix)
 mutate() {
-    local individual=$1
-    local result=""
-    
-    for ((i=0; i<${#individual}; i++)); do
-        if [ $((RANDOM % 100)) -lt $MUTATION_RATE ]; then
-            # Flip bit
-            if [ "${individual:$i:1}" = "1" ]; then
-                result="${result}0"
-            else
-                result="${result}1"
-            fi
+    local matrix=($@)
+    local row_idx=$((RANDOM % MATRIX_SIZE))
+    local col_idx=$((RANDOM % MATRIX_SIZE))
+
+    local mutated_matrix=()
+    for ((i=0; i<MATRIX_SIZE; i++)); do
+        local row="${matrix[$i]}"
+        if [ $i -eq $row_idx ]; then
+            local new_row=""
+            for ((j=0; j<MATRIX_SIZE; j++)); do
+                if [ $j -eq $col_idx ]; then
+                    if [ "${row:$j:1}" = "1" ]; then
+                        new_row+="0"
+                    else
+                        new_row+="1"
+                    fi
+                else
+                    new_row+="${row:$j:1}"
+                fi
+            done
+            mutated_matrix+=("$new_row")
         else
-            result="${result}${individual:$i:1}"
+            mutated_matrix+=("$row")
         fi
     done
-    
-    echo "$result"
+
+    echo "${mutated_matrix[*]}"
 }
 
 # Initialize population
 population=()
 for ((i=0; i<POPULATION_SIZE; i++)); do
-    individual=$(generate_random_individual $TARGET_LENGTH)
+    individual=$(generate_random_individual)
     population+=("$individual")
 done
 
@@ -135,41 +145,44 @@ for ((generation=0; generation<MAX_GENERATIONS; generation++)); do
     # Find best individual in current generation
     best_fitness=-1
     best_individual=""
+
     for individual in "${population[@]}"; do
-        fitness=$(calculate_fitness "$individual")
+        fitness=$(calculate_fitness $individual)
         if [ $fitness -gt $best_fitness ]; then
             best_fitness=$fitness
             best_individual=$individual
         fi
     done
-    
-    echo "Generation $generation: Best = $best_individual (Fitness = $best_fitness)"
-    
-    # Check if we found perfect solution
-    if [ $best_fitness -eq $TARGET_LENGTH ]; then
+
+    echo "Generation $generation: Best Fitness = $best_fitness"
+    echo "Best Matrix:"
+    for row in $best_individual; do echo "$row"; done
+    echo ""
+
+    # Check if we found the perfect solution (all 1s)
+    if [ $best_fitness -eq $((MATRIX_SIZE * MATRIX_SIZE)) ]; then
         echo "Perfect solution found!"
         exit 0
     fi
-    
+
     # Create new population
     new_population=()
     while [ ${#new_population[@]} -lt $POPULATION_SIZE ]; do
-        # Select parents
         parent1=$(select_parent "${population[@]}")
         parent2=$(select_parent "${population[@]}")
-        
+
         # Crossover
         children=($(crossover "$parent1" "$parent2"))
-        
+        IFS='|' read -r child1 child2 <<< "${children[*]}"
+
         # Mutate children
-        child1=$(mutate "${children[0]}")
-        child2=$(mutate "${children[1]}")
-        
+        child1=$(mutate $child1)
+        child2=$(mutate $child2)
+
         new_population+=("$child1" "$child2")
     done
-    
+
     # Update population (keep size constant)
     population=("${new_population[@]:0:$POPULATION_SIZE}")
 done
 
-echo "Evolution completed. Best solution: $best_individual"
