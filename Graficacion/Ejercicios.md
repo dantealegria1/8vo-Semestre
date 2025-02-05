@@ -8,3 +8,15 @@ $$d=(y_1+\frac{ax_1+c}{b})\cos\theta$$
 ![[Drawing 2025-02-04 10.47.44.excalidraw]]
 
 Tenemos $tan\theta=tan\alpha=m$ Como $ax+by-c=0 \rightarrow y=-\frac{a}{b}x+\frac{c}{b}$ 
+
+### Ejercicio 1.2 apartado 3
+￼
+¿Cuál de las aseveraciones que siguen es cierta para el siguiente sistema de ecuaciones?
+3x - 2y = 8
+4x + y = 7 
+a) El sistema es inconsistente.
+*b) La solución es (-1, 2).*
+c) La solución se encuentra sobre la recta x=2.
+d) Las ecuaciones son equivalentes 
+
+![[Pasted image 20250204211617.png]]
