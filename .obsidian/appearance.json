@@ -3,5 +3,7 @@
   "textFontFamily": "FiraCode Nerd Font",
   "interfaceFontFamily": "FiraCode Nerd Font",
   "theme": "obsidian",
-  "cssTheme": "Material Gruvbox"
+  "cssTheme": "Material Gruvbox",
+  "baseFontSize": 20,
+  "nativeMenus": false
 }

@@ -1,9 +1,7 @@
 #!/bin/bash
-
 :<<'COMMENT'
 EXPLANATION
 Comparison Operators in Bash:
-
 -gt means "greater than" (Greater Than)
 -lt means "less than" (Less Than)
 -eq: equals
@@ -49,26 +47,25 @@ COMANDO TIME <archivo>
 
 COMMENT
 
-# Configuration
-MATRIX_SIZE=5  # 5x5 matrix
-POPULATION_SIZE=12
-MUTATION_RATE=10  # Out of 100
-MAX_GENERATIONS=100
+# Definición de constantes
+MATRIX_SIZE=5  # Tamaño de la matriz (5x5)
+POPULATION_SIZE=12  # Tamaño de la población
+MAX_GENERATIONS=76  # Número máximo de generaciones
 
-# Generate a random 5x5 binary matrix
+# Función para generar un individuo aleatorio (matriz binaria de 5x5)
 generate_random_individual() {
     local matrix=""
     for ((i=0; i<MATRIX_SIZE; i++)); do
         local row=""
         for ((j=0; j<MATRIX_SIZE; j++)); do
-            row+=$((RANDOM % 2))  # Random 0 or 1
+            row+=$((RANDOM % 2))  # Genera un 0 o 1 aleatorio
         done
         matrix+="$row "
     done
     echo "$matrix"
 }
 
-# Calculate fitness (number of 1s in the matrix)
+# Función para calcular la aptitud (fitness), contando los "1" en la matriz
 calculate_fitness() {
     local matrix=($@)
     local count=0
@@ -82,82 +79,77 @@ calculate_fitness() {
     echo $count
 }
 
-# Tournament selection
+# Selección por torneo de 4 individuos
 select_parent() {
     local population=("$@")
     local best_fitness=-1
     local best_individual=""
-    local size_tornament=4
-    for ((i=0; i<$size_tornament; i++)); do
+    local size_tournament=4
+    for ((i=0; i<$size_tournament; i++)); do
         local idx=$((RANDOM % ${#population[@]}))
         local individual=${population[$idx]}
         local fitness=$(calculate_fitness $individual)
-
+        
         if [ $fitness -gt $best_fitness ]; then
             best_fitness=$fitness
             best_individual=$individual
         fi
     done
-
     echo "$best_individual"
 }
 
-# Crossover (swap rows between two matrices)
+# Cruzamiento de un solo punto
 crossover() {
     local parent1=($1)
     local parent2=($2)
     local point=$((RANDOM % (MATRIX_SIZE - 1) + 1))
-
     local child1=("${parent1[@]:0:$point}" "${parent2[@]:$point}")
     local child2=("${parent2[@]:0:$point}" "${parent1[@]:$point}")
-
     echo "${child1[*]}|${child2[*]}"
 }
 
-# Mutation (flip a random bit in the matrix)
+# Mutación: cambia el 10% de los bits en la matriz
 mutate() {
     local matrix=($@)
-    local row_idx=$((RANDOM % MATRIX_SIZE))
-    local col_idx=$((RANDOM % MATRIX_SIZE))
-
-    local mutated_matrix=()
-    for ((i=0; i<MATRIX_SIZE; i++)); do
-        local row="${matrix[$i]}"
-        if [ $i -eq $row_idx ]; then
-            local new_row=""
-            for ((j=0; j<MATRIX_SIZE; j++)); do
-                if [ $j -eq $col_idx ]; then
-                    if [ "${row:$j:1}" = "1" ]; then
-                        new_row+="0"
+    local num_mutations=$(( (MATRIX_SIZE * MATRIX_SIZE) / 10 ))
+    for ((m=0; m<num_mutations; m++)); do
+        local row_idx=$((RANDOM % MATRIX_SIZE))
+        local col_idx=$((RANDOM % MATRIX_SIZE))
+        local mutated_matrix=()
+        for ((i=0; i<MATRIX_SIZE; i++)); do
+            local row="${matrix[$i]}"
+            if [ $i -eq $row_idx ]; then
+                local new_row=""
+                for ((j=0; j<MATRIX_SIZE; j++)); do
+                    if [ $j -eq $col_idx ]; then
+                        new_row+=$((1 - ${row:$j:1}))
                     else
-                        new_row+="1"
+                        new_row+="${row:$j:1}"
                     fi
-                else
-                    new_row+="${row:$j:1}"
-                fi
-            done
-            mutated_matrix+=("$new_row")
-        else
-            mutated_matrix+=("$row")
-        fi
+                done
+                mutated_matrix+=("$new_row")
+            else
+                mutated_matrix+=("$row")
+            fi
+        done
+        matrix=("${mutated_matrix[@]}")
     done
-
-    echo "${mutated_matrix[*]}"
+    echo "${matrix[*]}"
 }
 
-# Initialize population
+# Inicialización de la población
 population=()
 for ((i=0; i<POPULATION_SIZE; i++)); do
     individual=$(generate_random_individual)
     population+=("$individual")
 done
 
-# Main evolution loop
+# Bucle principal del algoritmo evolutivo
 for ((generation=0; generation<MAX_GENERATIONS; generation++)); do
-    # Find best individual in current generation
     best_fitness=-1
     best_individual=""
-
+    
+    # Encontrar el mejor individuo de la generación actual
     for individual in "${population[@]}"; do
         fitness=$(calculate_fitness $individual)
         if [ $fitness -gt $best_fitness ]; then
@@ -165,36 +157,52 @@ for ((generation=0; generation<MAX_GENERATIONS; generation++)); do
             best_individual=$individual
         fi
     done
-
+    
     echo "Generation $generation: Best Fitness = $best_fitness"
-    echo "Best Matrix:"
-    for row in $best_individual; do echo "$row"; done
-    echo ""
-
-    # Check if we found the perfect solution (all 1s)
+    echo ""    
+    # Verificar si se encontró la solución óptima (matriz llena de 1s)
     if [ $best_fitness -eq $((MATRIX_SIZE * MATRIX_SIZE)) ]; then
         echo "Perfect solution found!"
+        for row in $best_individual; do echo "$row"; done
+        echo ""
         exit 0
     fi
-
-    # Create new population
+    
+    # Creación de la nueva población
     new_population=()
     while [ ${#new_population[@]} -lt $POPULATION_SIZE ]; do
         parent1=$(select_parent "${population[@]}")
         parent2=$(select_parent "${population[@]}")
-
-        # Crossover
+        
+        # Cruzamiento
         children=($(crossover "$parent1" "$parent2"))
         IFS='|' read -r child1 child2 <<< "${children[*]}"
-
-        # Mutate children
+        
+        # Mutación
         child1=$(mutate $child1)
         child2=$(mutate $child2)
-
-        new_population+=("$child1" "$child2")
+        
+        # Evaluar si los hijos mejoran a los padres
+        fitness_p1=$(calculate_fitness $parent1)
+        fitness_p2=$(calculate_fitness $parent2)
+        fitness_c1=$(calculate_fitness $child1)
+        fitness_c2=$(calculate_fitness $child2)
+        
+        # Agregar solo si los hijos son mejores o iguales a los padres
+        if [ $fitness_c1 -ge $fitness_p1 ]; then
+            new_population+=("$child1")
+        else
+            new_population+=("$parent1")
+        fi
+        
+        if [ $fitness_c2 -ge $fitness_p2 ]; then
+            new_population+=("$child2")
+        else
+            new_population+=("$parent2")
+        fi
     done
-
-    # Update population (keep size constant)
+    
+    # Mantener el tamaño de la población
     population=("${new_population[@]:0:$POPULATION_SIZE}")
 done
 

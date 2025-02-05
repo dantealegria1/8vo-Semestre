@@ -104,3 +104,12 @@ La forma primitiva del derecho es la costumbre, podemos manifestar que es la pri
 Se puede definir como la observación uniforme y constante de kas reglas de conducta obligatoria elaborada por una comunidad social para resolver situaciones jurídicas
 ### La doctrina
 Esta integrada por el conjunto de estudios y opiniones de autores y estudiosos del derecho que realizan o emiten sus obras
+
+# La informatica y el marco juridico aplicable
+
+- Codigo de comercio
+- Ley federal de propiedad intelectual
+- Ley federal de proteccion de datos
+- Codigo penal estatal y federal
+- Codigo federal y estatal
+

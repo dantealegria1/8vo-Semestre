@@ -118,3 +118,26 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - Falla de guía sobre toma de decisiones en organización
 - Falta de técnicas para hacer visible el progreso
 - Papeles y responsabilidades mal definidos
+
+#### Problemas comunes en un proyecto segun personal
+- Trabajo definido de modo inadecuado
+- Administradores ignorantes de TI
+- Falla de conocimientos del area de aplicacion
+- Falla de estandares
+- Documentos inadecuados
+- Retrato de actividades precedentes
+- Falla de comunicacion con usuarios
+- Trabajo duplicado por mala comunicacion
+
+## Ciclo de vida de un proyecto
+
+1. Project Initation
+2. Project Planning
+3. Project Execution
+4. Project Closure
+
+### Ciclo de vida del desarrollo de software
+- Analisis y definicion de requerimientos
+- Diseño del sistema de SW
+- Desarrollo y prueba de unidades
+- Integracion del sistema

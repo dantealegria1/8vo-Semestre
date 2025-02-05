@@ -36,4 +36,32 @@ Linux hace ABC, ya la D la hacen los WM , Windows ABCD
 - Celulares y dispositivos digitales
 - Computadoras embebidas SBS (Domotica y biotech)
 - Wearables
+## Software
 
+Para que jale ocupo 3 cosas. El llamado triangulo de arquitectura
+- Procesador [ISC]
+- Maquina [Modelo]
+- Sistema operativo
+
+Las grandes y medianas computadoras son multiusuarios, las pequeñas son mono usuarios. No puedo agarrar la computadora de beto y trabajar los dos. En esas computadoras predomina UNIX.
+
+En las PC predomina:
+- Windows
+- OSX
+- Linux
+
+En las Tabletas y celulares:
+- IOS
+- Android
+
+# Unix y como se genero
+## USA en los 60's
+
+1. Movimientos de los Derechos civiles
+2. Guerra Fria
+3. Guerra de Vietnam
+4. Carrera espacial
+5. En la computación
+	1. 3era Gen -> Buscaban multi-tasking ya que antes no se podia y el multi-user
+	2. El software se tuvo que adaptar ya que teníamos el hardware y era muy caro cambiarlo
+	3. Se creo el administrador de recursos time-sharing

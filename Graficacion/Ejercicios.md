@@ -10,13 +10,20 @@ $$d=(y_1+\frac{ax_1+c}{b})\cos\theta$$
 Tenemos $tan\theta=tan\alpha=m$ Como $ax+by-c=0 \rightarrow y=-\frac{a}{b}x+\frac{c}{b}$ 
 
 ### Ejercicio 1.2 apartado 3
-￼
+
 ¿Cuál de las aseveraciones que siguen es cierta para el siguiente sistema de ecuaciones?
 3x - 2y = 8
 4x + y = 7 
 a) El sistema es inconsistente.
-*b) La solución es (-1, 2).*
-c) La solución se encuentra sobre la recta x=2.
+b) La solución es (-1, 2).
+*c) La solución se encuentra sobre la recta x=2.*
 d) Las ecuaciones son equivalentes 
 
 ![[Pasted image 20250204211617.png]]
+
+En un zoológico hay aves de dos patas y bestias de cuatro patas. SI el zoológico contiene 60 cabezas y 200 patas ¿Cuantas aves y bestias viven en el?
+$$x=\ aves$$
+$$y=\ bestias$$
+$$x+y=60$$
+$$2x+4y=200$$
+La solución seria $x=20 \ y \ y=40$  
