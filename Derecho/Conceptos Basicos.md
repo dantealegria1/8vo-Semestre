@@ -105,11 +105,25 @@ Se puede definir como la observación uniforme y constante de kas reglas de cond
 ### La doctrina
 Esta integrada por el conjunto de estudios y opiniones de autores y estudiosos del derecho que realizan o emiten sus obras
 
-# La informatica y el marco juridico aplicable
+# La informática y el marco jurídico aplicable
 
-- Codigo de comercio
+- Código de comercio
 - Ley federal de propiedad intelectual
-- Ley federal de proteccion de datos
+- Ley federal de protección de datos
 - Codigo penal estatal y federal
 - Codigo federal y estatal
 
+### Firma electrónica
+Firma electrónica es única -> Firma autografa (Normal)
+Certificado -> Validez de la firma
+Llave -> - Periodo - Si es la persona que esta firmado
+|-> Clave, Contraseña
+
+| Contribuyente | -> | Certificado | -> | SAT |
+	|--Certificado
+	|--Llave
+	|--Declaración 
+
+- Nativo informático
+- Migrante informático
+- Analfabeta

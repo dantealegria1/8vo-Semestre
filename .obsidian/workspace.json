@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Derecho/Conceptos Basicos.md",
+                "file": "Redes/Fundamentos de SO Unix-Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Conceptos Basicos"
+              "title": "Fundamentos de SO Unix-Linux"
             }
           }
         ]
@@ -175,18 +175,22 @@
   },
   "active": "8f5f7a21718d35ce",
   "lastOpenFiles": [
-    "Redes/Fundamentos de SO Unix-Linux.md",
     "Graficacion/Ejercicios.md",
-    "Actividad15/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/output-metadata.json",
-    "Actividad15/app/build/intermediates/linked_resources_binary_format/debug/processDebugResources/linked-resources-binary-format-debug.ap_",
-    "Actividad15/app/src/main/AndroidManifest.xml~",
-    "Actividad15/app/build/intermediates/apk_ide_redirect_file/debug/createDebugApkListingFileRedirect/redirect.txt",
-    "Actividad15/app/build/intermediates/apk_ide_redirect_file/debug/createDebugApkListingFileRedirect",
-    "Actividad15/app/build/intermediates/apk_ide_redirect_file/debug",
-    "Actividad15/app/build/intermediates/apk_ide_redirect_file",
-    "Actividad15/app/build/intermediates/apk/debug/output-metadata.json",
-    "Actividad15/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources",
-    "Actividad15/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/javaResources0",
+    "Derecho/Conceptos Basicos.md",
+    "Redes/Fundamentos de SO Unix-Linux.md",
+    "Untitled.md",
+    "Vectores y matrices.md",
+    "Administracion/Proyectos.md",
+    "Actividad_1/app/src/main/res/layout/activity_main.xml~",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher_round.webp.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher.webp.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat",
+    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v26_values-v26.arsc.flat",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher_round.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xhdpi-v4/ic_launcher_round.webp",
@@ -197,12 +201,9 @@
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-hdpi-v4/ic_launcher.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxhdpi-v4/ic_launcher_round.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxhdpi-v4/ic_launcher.webp",
-    "Derecho/Conceptos Basicos.md",
     "Excalidraw/Drawing 2025-02-04 10.47.44.excalidraw.md",
-    "Administracion/Proyectos.md",
     "Estrategia Evolutiva (ES).md",
     "Metaheuristicas/Algoritmos genéticos.md",
-    "Untitled.md",
     "Excalidraw/Drawing 2025-02-04 10.47.04.excalidraw.md",
     "Graficacion/Sistema de ecuaciones lineales.md",
     "Sistemas Expertos/Tarea 1 ¿Como definiría usted la inteligencia artificial.md",

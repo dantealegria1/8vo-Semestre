@@ -12,7 +12,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"3
+        android:layout_height="wrap_content"
         android:text="Activity Life Cycle"
         android:textColor="#3cff00"
         android:layout_centerVertical="true"

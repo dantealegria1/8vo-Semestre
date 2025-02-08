@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     protected void onStart() {
-        super.onStart();
+        super.onStart()
         Log.d("Activity_Lifecycle","onStart invoked");
         Toast.makeText(MainActivity.this,"Start",Toast.LENGTH_SHORT).show();
     }

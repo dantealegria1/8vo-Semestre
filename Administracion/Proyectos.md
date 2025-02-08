@@ -141,3 +141,35 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - Diseño del sistema de SW
 - Desarrollo y prueba de unidades
 - Integracion del sistema
+
+#### Fase de inicio del proyecto
+- Es la primer fase que se realiza
+- Se identifica el problema o una oportunidad de mejora y se definen varias opciones de solución
+- Se realiza un estudio de factibilidad para determinar cual es la mejor opción
+- Se propone y una vez autorizada se inicia el proyecto
+- Se define una *Carta guía del proyecto* lo cual muestra los objetivos alcance y estructura del proyecto y se designa a un administrador de proyectos
+- El administrador de proyectos recluta el persona del proyecto y establece el entorno de la oficina del proyecto
+
+#### Fase de planeacion del proyecto
+- Tomando como base el alcance del proyectos definido en la carta guía del  proyecto, se crea:
+	- *Plan del proyecto*: identificar actividades, tareas, dependencias y tiempos
+	- *Plan de recursos*: Listas labores, equipos y materiales requeridos
+	- *Plan financiero*: Identificar los costos de labores, equipos y materiales
+	- *Plan de calidad*: Proveer objetivos de calidad, métricas de aseguramiento y control
+	- *Plan de riesgos*: Identificar los riesgos potenciales y las acciones a tomar para mitigarlos
+	- *Plan de aceptación*: Listas los criterios a manejar para ganar la aceptación del cliente
+	- *Plan de comunicaciones*: Listar la información necesaria para informar a las partes interesadas
+	- *Plan de aprovisionamiento*: Identificar los productos que serán entregados por proveedores externos
+#### Fase de ejecución del proyecto
+- Involucra la ejecución de cada actividad y tarea listada en el plan de proyecto
+- Al estarse ejecutando las actividades y tareas, se realizan un conjunto de procesos administrativos para monitorear y controlar la generacion de los entregarles del proyecto
+- Esta incluye la identificación de cambios, riesgos, productos, revisión de la calidad de cada entregable y medir que tanto se cumplió con los criterios de aceptación de cada entregable
+- Una vez que todos los ejecutables se han producido y el cliente a aceptado la solución final el proyecto esta listo para cerrarse
+
+#### Fase de cierre del proyecto
+- Esta fase involucra:
+	- Liberar y entregar el o los productos finales al cliente
+	- Entregar la documentación del proyecto
+	- Terminar los contratos con proveedores
+	- Liberar los recursos humanos y materiales, asi como cerrar el presupuesto del proyecto
+	- Comunicar el cierre del proyecto a los interesados
