@@ -1,59 +1,33 @@
 package com.example.actividad_1;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-// import android.util.Log;
-// import android.widget.Toast;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
-
+    int minteger = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("Activity_Lifecycle","onCreate invoked");
-        Toast.makeText(MainActivity.this,"Created",Toast.LENGTH_SHORT).show();
     }
-    @Override
-    protected void onStart() {
-        super.onStart()
-        Log.d("Activity_Lifecycle","onStart invoked");
-        Toast.makeText(MainActivity.this,"Start",Toast.LENGTH_SHORT).show();
+
+    public void increaseInteger(View view) {
+        minteger = minteger + 1;
+        display(minteger);
+
+    }public void decreaseInteger(View view) {
+        minteger = minteger - 1;
+        display(minteger);
     }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d("Activity_Lifecycle","onResume invoked");
-        Toast.makeText(MainActivity.this,"Resume",Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d("Activity_Lifecycle","onPause invoked");
-        Toast.makeText(MainActivity.this,"Pause",Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d("Activity_Lifecycle","onStop invoked");
-        Toast.makeText(MainActivity.this,"Stop",Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d("Activity_Lifecycle","onRestart invoked");
-        Toast.makeText(MainActivity.this,"Restart",Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d("Activity_Lifecycle","onDestroy invoked");
-        Toast.makeText(MainActivity.this,"Destroy",Toast.LENGTH_SHORT).show();
+
+    private void display(int number) {
+        TextView displayInteger = (TextView) findViewById(
+                R.id.integer_number);
+        displayInteger.setText("" + number);
     }
 }
+
 

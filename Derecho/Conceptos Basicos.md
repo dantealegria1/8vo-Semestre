@@ -112,7 +112,6 @@ Esta integrada por el conjunto de estudios y opiniones de autores y estudiosos d
 - Ley federal de protección de datos
 - Codigo penal estatal y federal
 - Codigo federal y estatal
-
 ### Firma electrónica
 Firma electrónica es única -> Firma autografa (Normal)
 Certificado -> Validez de la firma
@@ -127,3 +126,33 @@ Llave -> - Periodo - Si es la persona que esta firmado
 - Nativo informático
 - Migrante informático
 - Analfabeta
+## Sociedad de la información
+
+Es el desarrollo social caracterizado por la capacidad de sus miembros para obtener y compartir cualquier información, instantáneamente desde cualquier lugar y en la forma que se prefiera
+### Evolución
+#### Sociedad Industrial
+Tienen acceso a los bienes producidos por otros
+#### Sociedad postindustrial
+Se tienen acceso a los servicios prestados por otros
+#### Sociedad de la información
+Se tiene acceso a la información generada por otros
+### Modelo de la sociedad de la información
+#### Usuarios
+- Ciudadanos
+- Empresas
+- Administración Publica
+#### Infraestructura
+- Internet
+- Servicios Equipos
+#### Contenido
+- Intangibles
+- Tangibles
+- Servicios
+- Información
+### Clasificación del derecho informático
+#### Documentaría
+Analiza la información contenida en documentos jurídicos en forma de banco de datos
+#### Control y gestión
+Se encarga de organizar información jurídica de documentos para llevar el seguimiento de tramites para tener actualizada la información
+#### Decisión
+Esta apoya la toma de decisiones a la educación a la investigación, a la redacción y a la prevención

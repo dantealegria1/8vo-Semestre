@@ -87,3 +87,17 @@ Sean $A,B,C$ tres matrices de $mxn$ y sean $\alpha$ y $\beta$ dos escalares, ent
 5. $\alpha (A+B) ) \alpha A + \alpha B$
 6. $1A = A$
 7. $(\alpha + \beta) A = \alpha A + \beta A$
+
+## Ejercicios
+Calcule $a * b$  $$a = (2,-3,4,-36)\ y \ b = \begin{bmatrix} 1 \\2\\9\\3\end{bmatrix}$$ $2*1+(-3)(2)+0+(-6)(3) = 2-6+(-18) = 22$
+Notación $\Sigma$ 
+$$\sum_{i=M}^N a_i$$
+Escriba la suma $S_8 = 1-2+3-4+5-6+7-8$
+$$\sum_{i=1}^8 (-1)^{i+1} i$$
+Sea $a=(a_1,a_2,...,a_n) \ b=(b_1,b_2,...,b_n)$
+$ab =a_1b_1+a_2b_2+...a_nb_n$ = $$\sum_{i=1}^n a_ib_i$$  
+Si tuvieramos una constante es$$C\sum_{i=1}^n a_ib_i$$
+Sean ${a_n},{a_n}$ dos sucesiones reales y c un numero real entonces $$\sum_{k=m}^n ca_k = c\sum_{k=m}^n a_k$$ 
+$$\sum_{k=m}^n (a_k+b_k) = \sum_{k=m}^n a_k + \sum_{k=m}^n n_k$$
+
+Matrices y sistemas de ecuaciones lineales

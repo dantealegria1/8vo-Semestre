@@ -128,3 +128,45 @@ Así, UNIX se dividió en dos grandes familias:
 Durante los años 80, UNIX y sus derivados comenzaron a impulsar el desarrollo de tecnologías para la construcción de redes de computadoras, sentando las bases de la interconectividad moderna.
 
 El primero en desarrollar estas capacidades fue UNIX BSD, le siguió System V. Eso genero que el Internet se fortaleció con UNIX
+### **Empresas y sus versiones de UNIX**
+
+Durante la evolución de UNIX, varias compañías tomaron su base y desarrollaron sus propias versiones.
+
+|**Compañía**|**Versión de UNIX**|
+|---|---|
+|**IBM**|AIX|
+|**HP**|HP-UX|
+|**DEC**|ULTRIX, OSF-1|
+|**SGI**|IRIX|
+|**Sun Microsystems**|SunOS, Solaris|
+|**Apple**|A/UX|
+|**Microsoft**|Xenix|
+|**SCO**|Xenix (comprado a Microsoft)|
+
+---
+
+### **Crisis y re estructuración de UNIX**
+
+1. **AT&T entra en crisis**
+    - AT&T, la empresa creadora de UNIX, enfrenta problemas financieros y decide vender UNIX System Laboratories (USL), la división encargada de su desarrollo.
+
+2. **Novell adquiere USL**
+    - Novell, junto con su sistema **NetWare**, compra USL y lanza **UnixWare** como una nueva versión de UNIX.
+    - Durante un tiempo, UnixWare se vuelve popular y genera buenos ingresos para Novell.
+
+3. **Venta de UnixWare y System V**
+    - Novell no logra competir contra Microsoft y decide vender UnixWare.
+    - **The SCO Group (SCO)** adquiere **UnixWare, System V y NetWare**.
+
+4. **El fin de NetWare**
+    - Tras la adquisición, SCO decide **descontinuar NetWare** para centrarse en UnixWare y System V.
+
+### Familia UNIX
+- System V
+- BSD
+- Clones
+	- Minix
+	- Quick Unic -> QNX
+	- Linux
+SCO se agarro contra linux
+Para obtener financiamiento recurre a una fusion de empresas Conectiva (linux) y buffete de damndas y asi nace SCO group. Los amenazan a demandar por usar linux. QUiere demandar a IBM, HP, Red Hat. que son los que estaban ganando lana con linuxz2

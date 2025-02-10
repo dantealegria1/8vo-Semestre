@@ -167,9 +167,51 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - Una vez que todos los ejecutables se han producido y el cliente a aceptado la solución final el proyecto esta listo para cerrarse
 
 #### Fase de cierre del proyecto
-- Esta fase involucra:
+- **Esta fase involucra:
 	- Liberar y entregar el o los productos finales al cliente
 	- Entregar la documentación del proyecto
 	- Terminar los contratos con proveedores
-	- Liberar los recursos humanos y materiales, asi como cerrar el presupuesto del proyecto
+	- Liberar los recursos humanos y materiales, así como cerrar el presupuesto del proyecto
 	- Comunicar el cierre del proyecto a los interesados
+- El ultimo paso para realizar una revisión pos implementacion para:
+	- Cuantificar el daño del proyecto en su totalidad
+	- Listar cualquier lección aprendida para proyectos futuros
+
+#### Fase de inicio
+- **Definir un caso de negocio
+	- Una vez que un problema de negocios u oportunidad ha sido identificada se prepara un caso de negocios que incluye
+		- Definición detallada del problema y oportunidad
+		- Un análisis de las soluciones disponibles , beneficio potencial, costo, riesgos y materiales necesarios; por solución; estudio de factibilidad de ser necesario
+		- La solución recomendada y un plan de implementacion
+	- El caso de negocios es aprobado por el patrocinador del proyecto y se asignan los fondos necesarios
+- **Estudio de factibilidad
+	- Se realiza para alguna de las soluciones si su factibilidad no es muy claro durante o después del desarrollo de caso de negocios
+	- El propósito es ver si una soluciones podrá lograr los beneficios definidos en el caso de negocios verificando si
+		- Los costos son manteniente
+		- La solución se puede lograr
+		- Riesgos aceptables
+		- Disponibilidad de materiales
+- **Establecer carta guía del proyecto*
+	- Esta carta define los siguientes elementos del proyecto:
+		- Visión
+		- Objetivos
+		- Avances
+		- Productos
+		- Estructura organización del proyecto (roles y responsabilidades)
+		- Plan de actividades recursos y fondos requeridos para realizar el proyecto
+		- Lista de riesgo, materiales y plan de contratos
+- **Nombrar el equipo del proyecto
+	- En ese punto el alcance del proyecto esta definido a detalle por lo que si el equipo del proyecto se puede determinar
+	- Nombrar un administrador de proyecto el cual se encarga de:
+		- Documentar una descripción de trabajo a detalle para cada rol
+		- Nombrar recursos humanos para cada rol en base a sus habilidades y experiencia
+	- Una vez que el equipo esta totalmente definido se define la oficina del proyecto
+- **Definir una oficina del proyecto
+	- Es la ubicación física donde sera la base del equipo del proyecto
+	- Puede ser virtual cuando los integrantes del equipo del proyecto están alrededor del mundo
+	- Componentes de una oficina del proyecto escrito:
+		- Localización (física o virtual)
+		- Comunicaciones (teléfono, red datos, mail, Internet)
+		- Almacenamiento de archivos, instalaciones de BD y backup
+		- Documentación (metodología, procesos, formas y registros)
+		- Herramientas (contabilidad, modelado de planeaciòn de proyectos y riesgos )

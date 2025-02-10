@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redes/Fundamentos de SO Unix-Linux.md",
+                "file": "Derecho/Conceptos Basicos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fundamentos de SO Unix-Linux"
+              "title": "Conceptos Basicos"
             }
           }
         ]
@@ -175,22 +175,25 @@
   },
   "active": "8f5f7a21718d35ce",
   "lastOpenFiles": [
-    "Graficacion/Ejercicios.md",
-    "Derecho/Conceptos Basicos.md",
+    "Actividad15/app/build/intermediates/apk/debug/output-metadata.json",
+    "Actividad15/app/build/intermediates/apk/debug/app-debug.apk",
+    "Actividad15/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex",
+    "Actividad15/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_5.jar",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_4.jar",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_3.jar",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_1.jar",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_0.jar",
+    "Actividad15/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/921bd231a53e635a0eba35fa6e4457f340c54272787302b420c2cb848ada97dd_2.jar",
+    "Actividad15/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/com/example/actividad15/MainActivity.class",
     "Redes/Fundamentos de SO Unix-Linux.md",
+    "Graficacion/Ejercicios.md",
+    "Movil/Untitled.md",
+    "Administracion/Proyectos.md",
+    "Metaheuristicas/Algoritmos genéticos.md",
+    "Derecho/Conceptos Basicos.md",
     "Untitled.md",
     "Vectores y matrices.md",
-    "Administracion/Proyectos.md",
-    "Actividad_1/app/src/main/res/layout/activity_main.xml~",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-hdpi_ic_launcher_round.webp.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/mipmap-mdpi_ic_launcher.webp.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat",
-    "Actividad_1/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v26_values-v26.arsc.flat",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher_round.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-mdpi-v4/ic_launcher.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xhdpi-v4/ic_launcher_round.webp",
@@ -203,11 +206,9 @@
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxhdpi-v4/ic_launcher.webp",
     "Excalidraw/Drawing 2025-02-04 10.47.44.excalidraw.md",
     "Estrategia Evolutiva (ES).md",
-    "Metaheuristicas/Algoritmos genéticos.md",
     "Excalidraw/Drawing 2025-02-04 10.47.04.excalidraw.md",
     "Graficacion/Sistema de ecuaciones lineales.md",
     "Sistemas Expertos/Tarea 1 ¿Como definiría usted la inteligencia artificial.md",
-    "Sistemas Expertos/Sistema Experto.md",
-    "Movil/Untitled.md"
+    "Sistemas Expertos/Sistema Experto.md"
   ]
 }
