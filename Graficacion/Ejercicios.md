@@ -101,3 +101,63 @@ Sean ${a_n},{a_n}$ dos sucesiones reales y c un numero real entonces $$\sum_{k=m
 $$\sum_{k=m}^n (a_k+b_k) = \sum_{k=m}^n a_k + \sum_{k=m}^n n_k$$
 
 Matrices y sistemas de ecuaciones lineales
+
+Calcule $BA$ y $AB$ $$A = \begin{bmatrix} 1 & 2 \\-1& 4\end{bmatrix} \ y \ B=\begin{bmatrix} 3 & -2 \\3& 6\end{bmatrix}$$
+Sea $A=[A_{ij}]$ una matriz de $m*n$ y sea $B = [B_{ij}]$ una matriz de $n*p$ producto de $A \ y \ B$ en una matriz $m*p$ $C=[C_{ij}]$ $$C_{ij} = (rengon \ i \ de \ A)+(columna \ j \ de \ B)$$   
+Calculamos cada elemento:
+$(AB)11=(1)(3)+(2)(3)=3+6=9$
+$(AB)12=(1)(−2)+(2)(6)=−2+12=10$
+$(AB)21=(−1)(3)+(4)(3)=−3+12=9$
+$(AB)22=(−1)(−2)+(4)(6)=2+24=26$
+
+Por lo tanto
+$$AB = \begin{bmatrix} 9 & 10 \\ 9 & 26 \end{bmatrix}$$
+Ahora calculamos BA:
+
+$$BA = \begin{bmatrix} 3 & -2 \\ 3 & 6 \end{bmatrix} \times \begin{bmatrix} 1 & 2 \\ -1 & 4 \end{bmatrix}$$
+
+Calculamos cada elemento:
+
+- $(BA)11=(3)(1)+(−2)(−1)=3+2=5$
+- $(BA)12=(3)(2)+(−2)(4)=6−8=−2$
+- $(BA)21=(3)(1)+(6)(−1)=3−6=−3$
+- $(BA)22=(3)(2)+(6)(4)=6+24=30$
+
+Por lo tanto,
+
+$$BA = \begin{bmatrix} 5 & -2 \\ -3 & 30 \end{bmatrix}$$
+El producto de dos matrices $A \ y \ B$ se define de la siguiente manera:
+
+Si $A$ es una matriz de tamaño $m×n$ y $B$ es una matriz de tamaño $n×p$ el resultado $C=AB$ será una matriz de tamaño $m×p$.
+
+Cada entrada de la matriz resultante $C$ se calcula como el **producto escalar** entre una fila de $A$ y una columna de $B$:
+
+$C_{ij} = A_{i1} B_{1j} + A_{i2} B_{2j} + \dots + A_{in} B_{nj}$
+
+Es decir, el elemento en la fila $i$ y columna $j$ de $C$ se obtiene sumando los productos de los elementos correspondientes de la **fila $i$ de $A$** y la **columna $j$ de $B$$**
+
+### **Matriz Inversa usando el Método de Gauss-Jordan**
+
+Para encontrar la **matriz inversa** de una matriz AA usando **el método de Gauss-Jordan**, seguimos estos pasos:
+
+1. **Construir la matriz aumentada** $[A∣I][A | I]$, donde I es la matriz identidad.
+2. **Aplicar transformaciones elementales** para convertir A en la identidad I.
+3. **El resultado** será $[I∣A−1][I | A^{-1}]$, donde el lado derecho será la matriz inversa $A−1A^{-1}$.
+### **Ejemplo: Calcular la inversa de**
+$$A = \begin{bmatrix} 2 & 3 \\ 1 & 4 \end{bmatrix}$$
+#### **Paso 1: Formar la matriz aumentada**
+$$\left[ \begin{array}{cc|cc} 2 & 3 & 1 & 0 \\ 1 & 4 & 0 & 1 \end{array} \right]$$
+#### **Paso 2: Convertir la primera columna en una columna de pivotes**
+Hacemos que el primer pivote (posición 1,1) sea **1** dividiendo la primera fila entre 2:
+$$\left[ \begin{array}{cc|cc} 1 & \frac{3}{2} & \frac{1}{2} & 0 \\ 1 & 4 & 0 & 1 \end{array} \right]$$
+Restamos la primera fila de la segunda para hacer **cero** el elemento (2,1):
+$$\left[ \begin{array}{cc|cc} 1 & \frac{3}{2} & \frac{1}{2} & 0 \\ 0 & \frac{5}{2} & -\frac{1}{2} & 1 \end{array} \right]$$
+#### **Paso 3: Convertir la segunda columna en una columna de pivotes**
+Dividimos la segunda fila entre 52\frac{5}{2} para hacer que el pivote (2,2) sea **1**:
+$$\left[ \begin{array}{cc|cc} 1 & \frac{3}{2} & \frac{1}{2} & 0 \\ 0 & 1 & -\frac{1}{5} & \frac{2}{5} \end{array} \right]$$
+Sustituimos en la primera fila para hacer **cero** el elemento (1,2):
+$$\left[ \begin{array}{cc|cc} 1 & 0 & \frac{4}{5} & -\frac{3}{5} \\ 0 & 1 & -\frac{1}{5} & \frac{2}{5} \end{array} \right]$$
+#### **Paso 4: La parte derecha es la inversa**
+$$A−1=A^{-1} = \begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix}$$
+# Magnitud y vectores
+$$ |V| = \sqrt{a²+b²}$$

@@ -15,12 +15,12 @@ class AlgoritmoGenetico:
     def __init__(self):
         # Parámetros principales del algoritmo
         self.BIT_COUNT = 50          # Longitud de cada individuo (cromosoma)
-        self.POPULATION_SIZE = 50     # Número de individuos en la población
+        self.POPULATION_SIZE = 100     # Número de individuos en la población
         self.MAX_GENERATIONS = 100    # Máximo número de generaciones a ejecutar
-        self.TOURNAMENT_SIZE = 5      # Número de individuos que participan en cada torneo
-        self.MUTATION_RATE = 0.1      # Probabilidad de mutación (10% de los bits)
+        self.TOURNAMENT_SIZE = 10      # Número de individuos que participan en cada torneo
+        self.MUTATION_RATE = 0.2      # Probabilidad de mutación (10% de los bits)
         self.DEGRADATION = 0.9  # Umbral de degradación permitida (90% del fitness del padre)
-        self.STAGNATION_LIMIT = 25    # Número de generaciones sin mejora antes de parar
+        self.STAGNATION_LIMIT = 20    # Número de generaciones sin mejora antes de parar
         
     def generate_random_individual(self):
         """

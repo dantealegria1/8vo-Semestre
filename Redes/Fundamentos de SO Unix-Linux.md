@@ -143,9 +143,7 @@ Durante la evolución de UNIX, varias compañías tomaron su base y desarrollaro
 |**Microsoft**|Xenix|
 |**SCO**|Xenix (comprado a Microsoft)|
 
----
-
-### **Crisis y re estructuración de UNIX**
+## Crisis y re estructuración de UNIX
 
 1. **AT&T entra en crisis**
     - AT&T, la empresa creadora de UNIX, enfrenta problemas financieros y decide vender UNIX System Laboratories (USL), la división encargada de su desarrollo.
@@ -160,13 +158,52 @@ Durante la evolución de UNIX, varias compañías tomaron su base y desarrollaro
 
 4. **El fin de NetWare**
     - Tras la adquisición, SCO decide **descontinuar NetWare** para centrarse en UnixWare y System V.
-
 ### Familia UNIX
-- System V
-- BSD
-- Clones
-	- Minix
-	- Quick Unic -> QNX
-	- Linux
-SCO se agarro contra linux
-Para obtener financiamiento recurre a una fusion de empresas Conectiva (linux) y buffete de damndas y asi nace SCO group. Los amenazan a demandar por usar linux. QUiere demandar a IBM, HP, Red Hat. que son los que estaban ganando lana con linuxz2
+
+La familia de sistemas operativos **UNIX** se divide en varias ramas:
+- **System V**
+- **BSD (Berkeley Software Distribution)**
+- **Clones de UNIX:**
+    - **Minix**
+    - **QNX** (antes llamado Quick Unix)
+    - **Linux**
+### **El Conflicto de SCO con Linux**
+
+SCO (Santa Cruz Operation) tuvo conflictos legales con la comunidad Linux:
+1. **SCO y la Fusión Empresarial**
+    - Para obtener financiamiento, SCO se fusiona con Conectiva (una empresa de Linux) y un bufete de demandas.
+    - Así nace **SCO Group**, que empieza a reclamar derechos sobre Linux.
+2. **Las Demandas**    
+    - SCO Group amenaza con demandar a empresas que usaban Linux.
+    - Entre sus objetivos estaban **IBM, HP y Red Hat**, quienes estaban generando ingresos con Linux.
+    - SCO Group finalmente demanda a **IBM**.
+3. **Resolución del Caso**
+    - **IBM gana el juicio**: El veredicto favorece a IBM.
+    - **SCO Group se declara en bancarrota**.
+    - La empresa es comprada por **Xinu**, que luego es adquirida por **OpenText**.
+### Distribuciones y Evolución de UNIX en Empresas
+
+- **IBM** → Mantiene **AIX**.
+- **HP** → Mantiene **HP-UX**.
+- **Oracle** → Solaris cambia de rumbo:
+    - Oracle lanza **OpenSolaris**.
+    - La comunidad no quería que se llamara así, por lo que surgió **OpenIndiana**.
+### Evolución de BSD
+
+- **NetBSD**
+- **FreeBSD** → Se derivan:
+    - **DesktopBSD**
+    - **DragonFly BSD**
+- **OpenBSD**
+
+### El Legado de Steve Jobs y NeXT
+
+4. **Steve Wozniak crea NeXT**, una empresa que desarrolla **NeXTSTEP** en **C++**.
+5. **Jobs introduce ideas innovadoras en NeXTSTEP**.
+6. **Apple compra NeXT**, y Jobs regresa a Apple.
+7. **Inician el proyecto Rhapsody**, basado en **OpenBSD**.
+8. **Crean Darwin (basado en Mach y BSD), que da origen a macOS X**.
+
+### Clones
+- Linux
+- Minx

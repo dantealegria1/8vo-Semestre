@@ -156,3 +156,14 @@ Analiza la información contenida en documentos jurídicos en forma de banco de 
 Se encarga de organizar información jurídica de documentos para llevar el seguimiento de tramites para tener actualizada la información
 #### Decisión
 Esta apoya la toma de decisiones a la educación a la investigación, a la redacción y a la prevención
+# E-Gobierno
+
+Es la aplicación de las tecnologías de la información y la comunicación al funcionamiento del sector publico con el objetivo de incrementar la eficiencia y la transparencia y la participación ciudadana
+
+Esto implica alcanzar mayores niveles de eficacia y eficiencia en el quehacer gubernamental mejorando los procesos y procedimientos del gobierno
+
+## Objetivo
+Se trata de introducir tecnología en los procedimientos convencionales del municipio se trata ademas de repensar de reinventar la gestión de la administración publica poniendo al ciudadano en el centro de esa reinvención. El catalizador de esta renovación de la administración publica con las tics
+
+Persona física -> individuo -> Responsabilidad total
+Moral -> Grupo de individuos -> Capital social
