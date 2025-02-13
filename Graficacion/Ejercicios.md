@@ -159,7 +159,7 @@ Sustituimos en la primera fila para hacer **cero** el elemento (1,2):
 $$\left[ \begin{array}{cc|cc} 1 & 0 & \frac{4}{5} & -\frac{3}{5} \\ 0 & 1 & -\frac{1}{5} & \frac{2}{5} \end{array} \right]$$
 #### **Paso 4: La parte derecha es la inversa**
 $$A−1=A^{-1} = \begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix}$$
-# Magnitud y vectores
+## Magnitud y vectores
 $$ |V| = \sqrt{a²+b²}$$
 ### Calcule las magnitudes y direcciones de los vectores
 
@@ -216,3 +216,167 @@ Para conseguir que un vector sea unitario se divide entre su magnitud
 ### Producto escalar y Angulo entre vectores
 $$u*v=a_1a_2+b_1b_2$$
 $$cos\theta = \frac{u*v}{|u||v|} \ siendo \ |v| \ la \ magnitud \ del \ vector \rightarrow \theta = cos^{-1}(\frac{u*v}{|u||v|})$$
+
+Si $u=(a,b)$ demuestra que $|u| =1$ 
+$$V = \frac{V}{|V|} = \frac{(a,b)}{|V|} \rightarrow |V| = \sqrt{a²+b2} \rightarrow \frac{V}{|V|} = \frac{(a,b)}{\sqrt{a²+b²}} = ( \frac{(a)}{\sqrt{a²+b²}} + \frac{(b)}{\sqrt{a²+b²}}) $$
+$$|V|=\sqrt{(\frac{(a)}{\sqrt{a²+b²}})² + (\frac{(b)}{\sqrt{a²+b²}})²} = \sqrt{\frac{a²}{a²+b²} + \frac{b²}{a²+b²}} = \sqrt{\frac{a²+b²}{a²+b²}} = \sqrt 1 = 1$$
+Dibuja el vector a) v-u b) u-v
+```vega-lite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "values": [
+      {"x": 0, "y": 0, "x2": 3, "y2": 4, "label": "u(3,4)", "color": "blue"},
+      {"x": 0, "y": 0, "x2": 1, "y2": 2, "label": "v(1,2)", "color": "green"},
+      {"x": 0, "y": 0, "x2": 2, "y2": 2, "label": "u - v(2,2)", "color": "red"}
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "rule", "strokeWidth": 3},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "x2": {"field": "x2"},
+        "y2": {"field": "y2"},
+        "color": {"field": "color", "type": "nominal"}
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "baseline": "middle", "dx": 5},
+      "encoding": {
+        "x": {"field": "x2", "type": "quantitative"},
+        "y": {"field": "y2", "type": "quantitative"},
+        "text": {"field": "label"},
+        "color": {"field": "color", "type": "nominal"}
+      }
+    }
+  ],
+  "width": 400,
+  "height": 400,
+  "config": {
+    "axis": {"grid": true, "domain": true, "ticks": true}
+  }
+}
+
+```
+
+
+> **Teorema** sean u y v dos vectores diferentes de 0 si $\rho$ es el angulo entre ellos entonces $$ cos \rho = \frac{u*v}{|u||v|} $$ 
+```vega-lite
+ {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "color": "red"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      },
+      "data": {
+        "values": [
+          {"x": 0, "y": 0},
+          {"x": 3, "y": 1}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "color": "red"},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      },
+      "data": {
+        "values": [
+          {"x": 0, "y": 0},
+          {"x": 1, "y": 2}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "strokeWidth": 2, "color": "red", "strokeDash": [5,5]},
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      },
+      "data": {
+        "values": [
+          {"x": 3, "y": 1},
+          {"x": 1, "y": 2}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": -15, "dy": 15, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 1},
+        "y": {"value": 2},
+        "text": {"value": "(a₂, b₂)"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": 15, "dy": -15, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 3},
+        "y": {"value": 1},
+        "text": {"value": "(a₁, b₁)"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": 0, "dy": -15, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 2},
+        "y": {"value": 1.5},
+        "text": {"value": "v - u"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": 20, "dy": 0, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 2},
+        "y": {"value": 0.5},
+        "text": {"value": "u"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": -20, "dy": 0, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 0.5},
+        "y": {"value": 1},
+        "text": {"value": "v"}
+      }
+    },
+    {
+      "mark": {"type": "text", "dx": -10, "dy": -10, "fontSize": 14},
+      "encoding": {
+        "x": {"value": 0},
+        "y": {"value": 0},
+        "text": {"value": "0"}
+      }
+    }
+  ]
+}
+
+```
+ $$|v-u|² = (v-u)*(v-u)=v*v-2u*v+u*u = |v|² - 2u*v+|u|²$$
+Usando ley de cosenos
+
+Encuentre el angulo entre los vectores
+$$
+\vec{u} = 2\hat{i} + 3\hat{j} = (2,3)
+$$
+$$
+\vec{v} = -7\hat{i} - \hat{j} = (-7,-1)
+$$
+$$
+\vec{u} \cdot \vec{v} = 2(-7) + 3(1) = -14 + 3 = -11
+$$
+$$
+|\vec{u}| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}
+$$
+$$
+|\vec{v}| = \sqrt{(-7)^2 + 1^2} = \sqrt{49 + 1} = \sqrt{50} = 5\sqrt{2}
+$$
+$$
+\therefore \cos \varphi = \frac{-11}{(\sqrt{13})(5\sqrt{2})} = \frac{-11}{5\sqrt{26}}
+$$

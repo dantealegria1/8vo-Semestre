@@ -228,6 +228,7 @@ Es necesario si se desea obtener un producto en tiempo y forma
 #### Analisis de cada solucion
  ![[Pasted image 20250212084244.png]]
 #### Factibilidad de la solucion
+
 - **Tecnica
 	- Cuenta con la tecnologia necesaria, con una red local, con un equipo de computo necesario y con los recursos para adquirir la tecnologia faltante
 - **Financiera
@@ -238,3 +239,60 @@ Es necesario si se desea obtener un producto en tiempo y forma
 	- Se estima que el proyecto se realice en 1 año por lo que es viable
 - **Operativa
 	- El sistema se desarrollara con una interfaz amigable para los uusarios no se detecta resistencia al cambio, en incluso se percibe un apoyo total al proyectoq
+### Carta guia del proyecto
+
+- **Vision
+	- Que al termino del proyecto la empresa cuente con un sistema de informacion que le permita registrar controlar todos lso eventos de los diferentes areas como contar con la informacion necesaria para la toma de decisiones en todo los niveles de la empresa
+- **Objetivos
+	- General: Crear un sistema de informacion basado en SW que permita tener un mayor control en todas las areas de la organizacion
+	- Especificos:
+		- Diseñar y documentar los procesos de todas las areas
+		- Realizar el sistema
+		- Realizar la documentacion
+		- Implantar el sistema de inforacion
+- **Plan de actividades
+	- Entrevistas con los responsables de cada una de las areas, para ver como trabahan
+	- Entrevisas con diferentes trabajadores de las diferentes areas para ver como trabahan
+	- Observar el funcionamiento de la organizacion
+	- Realizar un diagnostico de la situacion actual de la organizacion en cuanto a sus procesos operativos y administrativos
+	- Realizar el analisis del sistema
+	- Realizar el diseño del sistema
+	- Realizar el diseño de la BD
+	- ...
+- Recursos y fondos
+
+| Recursos  | Fondos          |
+| --------- | --------------- |
+| Papeleria | $15,000.00 M.N  |
+| Personal  | $650,000.00 M.N |
+| Software  | $10,000.00 M.N  |
+| Total:    | $685,000.00 M.N |
+## Fase de planeacion
+
+Aquí se define un plan detallado del proyecto para asegurar que las actividades de la fase de ejecución se realicen
+- En la secuencia correcta
+- Se le asigna los recursos necesarios para su realizacion
+- Se ejecuten correctamente
+- Se controlen correctamente
+
+### Desarrollar el plan del proyecto
+
+- Documentar el plan del proyecto
+- Identificar la estructura de descomposición del trabajo el cal incluya la jerarquía de fases, las actividades y tareas a realizar en el proyecto
+- Una vez aprobado el EDT se realiza la valoración del esfuerzo requerido para realizar las actividades y tareas
+- Se define la secuencia de actividades
+- Se asigna recursos
+- Se define un programa detallado del proyecto
+- Este programa del proyecto se convierte en la herramienta principal para el administrador de proyectos para asegurar el proceso del proyecto
+
+### EDT
+
+> Es en gestión de proyectos una descomposición jerárquica orientada al entregable, del trabajo a ser ejecutado por el equipo del proyecto para cumplir con los objetivos de este y crear los entregarles requiridos, con cada nivel descendente de la EDT representando una definicion con un detalle incrementado del trabajo del proyecto
+
+Es una herramienta fundamental
+
+Su propósito es organizar y definir el alcance total aprobado del proyecto según lo declarado en la documentación vigente
+
+Su forma jerárquica permita una fácil identificación de los elementos finales, llamadas **_Paquetes de trabajo_**. Se trata de un elemento exhaustivo en cuanto al alcance del proyecto, la EDT sirve como base para la planificación del proyecto. Todo trabajo o ser hecho en el proyecto debe poder rastrear su origen en una o mas entradas de la EDT
+
+![[Pasted image 20250213082810.png]]

@@ -213,8 +213,8 @@ SCO (Santa Cruz Operation) tuvo conflictos legales con la comunidad Linux:
 UNIX es un sistema operativo que puede trabajar en red y en la terminal. Es multiproceso, multitarea, multiusuario, portable y modular, siendo ampliamente utilizado en distintos tipos de computadoras.
 ### Filosofía de UNIX
 
--  Todo en UNIX debe ser representado y administrado como archivo (Por eso es tan seguro por que protege los archivos)
-- La belleza de la simplicidad _'Toda tarea debe tener una herramienta lo mas simple pero lo mas potente posible'_ tambien debe de interpretar
+- Todo en UNIX debe ser representado y administrado como archivo (Por eso es tan seguro por que protege los archivos)
+- La belleza de la simplicidad _'Toda tarea debe tener una herramienta lo mas simple pero lo mas potente posible'_ también debe de interpretar
 - La falta de noticias son buenas noticias
 - Ademas es flexible y adaptable
 ### Características de UNIX
@@ -249,3 +249,23 @@ En UNIX, una **TTY** (teletype) es una terminal que consiste en un teclado y una
 ### Workstations
 
 Las workstations fueron diseñadas para ofrecer una mejor experiencia visual, incorporando tarjetas gráficas, bocinas, micrófonos y ratones. Sin embargo, su alto costo llevó a su declive. Para competir con las PC, se redujo su calidad para abaratar precios, lo que contribuyó aún más a su desaparición.
+
+## Caracteristicas de UNIX
+
+- Herramientas de software
+- Portabilidad
+- Potencia
+- Flexibilidad
+- Multitarea, Multiplataforma
+- Elegancia
+- Orientado a redes
+- Integracion de nuevas o mejores tecnologías
+
+### Mejoras
+
+- Robustas
+- Consistencia
+- Agentes de usuario
+- Nuevas capacidades
+- Interoperabilidad
+- Comparticion de recursos entre S.Os en el mismo equipo

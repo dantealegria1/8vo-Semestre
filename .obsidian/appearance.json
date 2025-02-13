@@ -2,7 +2,7 @@
   "baseFontSizeAction": true,
   "textFontFamily": "FiraCode Nerd Font",
   "interfaceFontFamily": "FiraCode Nerd Font",
-  "theme": "system",
+  "theme": "obsidian",
   "cssTheme": "Sanctum",
   "baseFontSize": 20,
   "nativeMenus": false

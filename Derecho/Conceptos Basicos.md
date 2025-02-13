@@ -176,14 +176,14 @@ Moral -> Grupo de individuos -> Capital social
 - Modificación de los actores involucrados
 - Capacitación de usuarios
 #### Ventajas
-- Disminuye la corrupcion
-- Se aceptan solicitudes 24hrs al dia
-- Mejora la atencion al publico
-- Elimina procesos burocraticos
+- Disminuye la corrupción
+- Se aceptan solicitudes 24hrs al día
+- Mejora la atención al publico
+- Elimina procesos burocráticos
 - Mejora la calidad de vida de las personas
 
 ### Implementacion
-¿Que se requiere para hacer la implenetacion?
+¿Que se requiere para hacer la implementacion?
 
 ```mermaid
 flowchart LR
@@ -194,4 +194,10 @@ flowchart LR
 ```
 ### Desarrollo de un adecuado modelo de E-gobierno
 
-La implementacion de un modelo adeucuado de E-gob no se desarrolla de forma aislada ya que es necesario que este tipo de modelos le den al usuario un ahorro de tramites entre las diferentes isntancias de gobierno
+La implementacion de un modelo adecuado de E-gob no se desarrolla de forma aislada ya que es necesario que este tipo de modelos le den al usuario un ahorro de tramites entre las diferentes instancias de gobierno
+# Datos
+## Naturaleza de la ley
+
+Articulo 3 fracciones 2, 7 y 33 de la ley federal de transparencia y acceso a la información publica gubernamental
+
+De orden publico y de observancia general en toda la republica y tiene por objeto la protección de los datos personales en posesión de los particulares con la finalidad de regular su tratamiento legitimo controlado e informado a efecto de garantizar la privacidad y el derecho a la autodeterminación informativa de personas
