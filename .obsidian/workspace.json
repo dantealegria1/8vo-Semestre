@@ -183,7 +183,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,7 +200,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "7b7ff91b099b7a3d",
+  "active": "676b1be22006a464",
   "lastOpenFiles": [
     "Derecho/Conceptos Basicos.md",
     "Graficacion/Ejercicios.md",

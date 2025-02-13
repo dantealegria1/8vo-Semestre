@@ -212,3 +212,7 @@ La suma de vectores forma un paralelogramo
 ### Desigualdad del triangulo
 $$|U+V| \leq |U|+|V|$$
 Para conseguir que un vector sea unitario se divide entre su magnitud
+
+### Producto escalar y Angulo entre vectores
+$$u*v=a_1a_2+b_1b_2$$
+$$cos\theta = \frac{u*v}{|u||v|} \ siendo \ |v| \ la \ magnitud \ del \ vector \rightarrow \theta = cos^{-1}(\frac{u*v}{|u||v|})$$
