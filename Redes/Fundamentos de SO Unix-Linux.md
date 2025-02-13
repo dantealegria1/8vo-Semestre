@@ -2,7 +2,7 @@
 
 ### ¿Que hace?
 
-- Administra recursos físicos (*hardware*) y los recursos lógicos      (*Software*)
+- Administra recursos físicos (*hardware*) y los recursos lógicos (*Software*)
 - Debe de trabajar reconociendo el hardware, que computadora y que tiene la computadora
 - *Firmware:* Esta hecho solo para un dispositivo en especifico
 - Mostrar una maquina extendida, Se ve inteligente y se usa a través de una interfaz hombre-maquina
@@ -202,8 +202,50 @@ SCO (Santa Cruz Operation) tuvo conflictos legales con la comunidad Linux:
 5. **Jobs introduce ideas innovadoras en NeXTSTEP**.
 6. **Apple compra NeXT**, y Jobs regresa a Apple.
 7. **Inician el proyecto Rhapsody**, basado en **OpenBSD**.
-8. **Crean Darwin (basado en Mach y BSD), que da origen a macOS X**.
+8. **Crean Darwin (basado en Mach y BSD), que da origen a macOS X**
 
 ### Clones
 - Linux
 - Minx
+
+## *¿Qué es UNIX?
+
+UNIX es un sistema operativo que puede trabajar en red y en la terminal. Es multiproceso, multitarea, multiusuario, portable y modular, siendo ampliamente utilizado en distintos tipos de computadoras.
+### Filosofía de UNIX
+
+-  Todo en UNIX debe ser representado y administrado como archivo (Por eso es tan seguro por que protege los archivos)
+- La belleza de la simplicidad _'Toda tarea debe tener una herramienta lo mas simple pero lo mas potente posible'_ tambien debe de interpretar
+- La falta de noticias son buenas noticias
+- Ademas es flexible y adaptable
+### Características de UNIX
+
+- **Multiusuario**: Permite que múltiples usuarios trabajen simultáneamente en el sistema.
+- **Multiproceso**: Puede ejecutar varios procesos a la vez.
+- **Portabilidad**: Se puede ejecutar en distintas arquitecturas de hardware.
+### Hardware compatible con UNIX
+#### Procesadores
+
+- Motorola
+- PowerPC
+- UltraSPARC
+- x86_64
+- ARM
+#### Arquitecturas
+
+- **CISC** (Complex Instruction Set Computing)
+- **RISC** (Reduced Instruction Set Computing)
+#### Memoria
+
+- ECC (Error-Correcting Code)
+#### Almacenamiento
+
+- SCSI
+- RAID
+- SAS
+- Remote Distribution
+### Terminal y Multiusuario
+
+En UNIX, una **TTY** (teletype) es una terminal que consiste en un teclado y una conexión a un puerto serial. A través de esta, un usuario se conecta al sistema, permitiendo el acceso multiusuario.
+### Workstations
+
+Las workstations fueron diseñadas para ofrecer una mejor experiencia visual, incorporando tarjetas gráficas, bocinas, micrófonos y ratones. Sin embargo, su alto costo llevó a su declive. Para competir con las PC, se redujo su calidad para abaratar precios, lo que contribuyó aún más a su desaparición.

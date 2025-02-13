@@ -1,5 +1,8 @@
 [
   "obsidian-git",
   "obsidian-excalidraw-plugin",
-  "obsidian-icon-folder"
+  "obsidian-icon-folder",
+  "mermaid-tools",
+  "obsidian-vega",
+  "dataview"
 ]

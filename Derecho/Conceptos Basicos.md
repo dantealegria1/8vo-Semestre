@@ -117,12 +117,12 @@ Firma electrónica es única -> Firma autografa (Normal)
 Certificado -> Validez de la firma
 Llave -> - Periodo - Si es la persona que esta firmado
 |-> Clave, Contraseña
-
-| Contribuyente | -> | Certificado | -> | SAT |
-	|--Certificado
-	|--Llave
-	|--Declaración 
-
+```mermaid
+flowchart LR
+	id1["Contrubyente (Certificado, llave y declaracion)"]
+    id1 --> id2["Certificado"]
+    id2 --> id3["Sat"] 
+```
 - Nativo informático
 - Migrante informático
 - Analfabeta
@@ -167,3 +167,31 @@ Se trata de introducir tecnología en los procedimientos convencionales del muni
 
 Persona física -> individuo -> Responsabilidad total
 Moral -> Grupo de individuos -> Capital social
+
+## Problemas de implementacion
+
+- Altos costos en un inicio
+- Modificar la forma de trabajar
+- Adecuar las formas de trabajar a un sistema
+- Modificación de los actores involucrados
+- Capacitación de usuarios
+#### Ventajas
+- Disminuye la corrupcion
+- Se aceptan solicitudes 24hrs al dia
+- Mejora la atencion al publico
+- Elimina procesos burocraticos
+- Mejora la calidad de vida de las personas
+
+### Implementacion
+¿Que se requiere para hacer la implenetacion?
+
+```mermaid
+flowchart LR
+	id1["Analisis de la forma de trabajo actual"]
+    id1 --> id2["Desarrollo de nuevo modelo de trabajo"]
+    id2 --> id3["Modificacion a las leyes y decretos"] 
+	id3 --> id4["Implementacion en paralelo"]
+```
+### Desarrollo de un adecuado modelo de E-gobierno
+
+La implementacion de un modelo adeucuado de E-gob no se desarrolla de forma aislada ya que es necesario que este tipo de modelos le den al usuario un ahorro de tramites entre las diferentes isntancias de gobierno

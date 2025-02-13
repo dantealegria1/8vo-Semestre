@@ -161,3 +161,54 @@ $$\left[ \begin{array}{cc|cc} 1 & 0 & \frac{4}{5} & -\frac{3}{5} \\ 0 & 1 & -\fr
 $$A−1=A^{-1} = \begin{bmatrix} \frac{4}{5} & -\frac{3}{5} \\ -\frac{1}{5} & \frac{2}{5} \end{bmatrix}$$
 # Magnitud y vectores
 $$ |V| = \sqrt{a²+b²}$$
+### Calcule las magnitudes y direcciones de los vectores
+
+>La dirección se da respecto al eje x
+
+$V=(2,2), V=(2,2\sqrt{3}), V=(-2\sqrt{3},2)$
+
+1) $|V| = \sqrt{2²+2²} = \sqrt{8} = \sqrt{4*2} = \sqrt 4 \sqrt 2 = 2\sqrt 2$ Para sacar la dirección $\theta = tan^{-1}( \frac {y}{x}) = tan^{-1}( \frac {2}{2}) = 45$
+2) $|V| = \sqrt{2²+(2\sqrt 3)²}=4$ Para sacar la dirección $\theta = tan^{-1}( \frac {y}{x}) = tan^{-1}( \frac {2\sqrt 3}{2}) = \sqrt 3$
+
+### Suma de vectores
+$U+V = (a_2+a_1,b_2+b_1)$
+La suma de vectores forma un paralelogramo
+
+```vega-lite 
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {"field": "vector", "type": "nominal"}
+      },
+      "data": {
+        "values": [
+          {"vector": "V1", "x": 0, "y": 0},
+          {"vector": "V1", "x": 2, "y": 2},
+
+          {"vector": "V2", "x": 0, "y": 0},
+          {"vector": "V2", "x": -1, "y": 3},
+
+          {"vector": "V1 (translated)", "x": -1, "y": 3},
+          {"vector": "V1 (translated)", "x": 1, "y": 5},
+
+          {"vector": "V2 (translated)", "x": 2, "y": 2},
+          {"vector": "V2 (translated)", "x": 1, "y": 5},
+
+          {"vector": "Sum V1 + V2", "x": 0, "y": 0},
+          {"vector": "Sum V1 + V2", "x": 1, "y": 5}
+        ]
+      }
+    }
+  ]
+}
+```
+### Desigualdad del triangulo
+$$|U+V| \leq |U|+|V|$$
+Para conseguir que un vector sea unitario se divide entre su magnitud

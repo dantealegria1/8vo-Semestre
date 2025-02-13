@@ -165,7 +165,6 @@ Es necesario si se desea obtener un producto en tiempo y forma
 - Al estarse ejecutando las actividades y tareas, se realizan un conjunto de procesos administrativos para monitorear y controlar la generacion de los entregarles del proyecto
 - Esta incluye la identificación de cambios, riesgos, productos, revisión de la calidad de cada entregable y medir que tanto se cumplió con los criterios de aceptación de cada entregable
 - Una vez que todos los ejecutables se han producido y el cliente a aceptado la solución final el proyecto esta listo para cerrarse
-
 #### Fase de cierre del proyecto
 - **Esta fase involucra:
 	- Liberar y entregar el o los productos finales al cliente
@@ -215,3 +214,27 @@ Es necesario si se desea obtener un producto en tiempo y forma
 		- Almacenamiento de archivos, instalaciones de BD y backup
 		- Documentación (metodología, procesos, formas y registros)
 		- Herramientas (contabilidad, modelado de planeaciòn de proyectos y riesgos )
+- **Realizar revision de la Fase
+	- Al final de la fase de inicio se realiza una revisión de la fase
+	- Esta es básicamente un checklist para asegurar que el proyecto lo ha conseguido los objetivos establecidos en lo planeado
+## Ejercicio
+
+![[Pasted image 20250212081048.png]]
+
+### Posibles soluciones
+- Desarrollar un sistema de informacion basado en software desarrollando el software a las necesidades de la organizacion que cubre todas las areas y diseñar los procesos asociados
+- Desarrollar e implantar un sistema de informaion basado en software utilizando software comercial que cubra todas las areas y diseñar los procesos asociados
+- Desarrollar e implantar un sistema de informacion que cubre todas las areas y diseñar los procesos asociado
+#### Analisis de cada solucion
+ ![[Pasted image 20250212084244.png]]
+#### Factibilidad de la solucion
+- **Tecnica
+	- Cuenta con la tecnologia necesaria, con una red local, con un equipo de computo necesario y con los recursos para adquirir la tecnologia faltante
+- **Financiera
+	- Se cuenta con los recursos fianncieros necesarios
+- **Legal
+	- El sistema a desarrollar no inflinge ninguna ley municipal, estatal y federal asi como ninguna politica de la empresa
+- **Tiempo
+	- Se estima que el proyecto se realice en 1 año por lo que es viable
+- **Operativa
+	- El sistema se desarrollara con una interfaz amigable para los uusarios no se detecta resistencia al cambio, en incluso se percibe un apoyo total al proyectoq
