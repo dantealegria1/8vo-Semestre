@@ -262,7 +262,7 @@ Dibuja el vector a) v-u b) u-v
 ```
 
 
-> **Teorema** sean u y v dos vectores diferentes de 0 si $\rho$ es el angulo entre ellos entonces $$ cos \rho = \frac{u*v}{|u||v|} $$ 
+> **Teorema** sean u y v dos vectores diferentes de 0 si $\rho$ es el angulo entre ellos entonces $$ cos \varphi = \frac{u*v}{|u||v|} $$ 
 ```vega-lite
  {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -380,3 +380,12 @@ $$
 $$
 \therefore \cos \varphi = \frac{-11}{(\sqrt{13})(5\sqrt{2})} = \frac{-11}{5\sqrt{26}}
 $$
+ ### Producto escalar
+ $$u*v=|u||v|cos \varphi$$
+
+### Vectores ortogonales y paralelos 
+ Ortogonales:
+ Son aquellos cuyo producto escalar es igual a 0. osea que el angulo entre ellos es de 90 grados
+ Paralelos:
+ Uno es un escalar o muliplo de otro y el angulo entre ellos es de 0 o 180
+ 
