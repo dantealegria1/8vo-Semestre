@@ -296,3 +296,105 @@ Su propósito es organizar y definir el alcance total aprobado del proyecto seg�
 Su forma jerárquica permita una fácil identificación de los elementos finales, llamadas **_Paquetes de trabajo_**. Se trata de un elemento exhaustivo en cuanto al alcance del proyecto, la EDT sirve como base para la planificación del proyecto. Todo trabajo o ser hecho en el proyecto debe poder rastrear su origen en una o mas entradas de la EDT
 
 ![[Pasted image 20250213082810.png]]
+
+### Desarrollar plan de recursos
+
+Una vez que se formo el plan de proyecto se deben de asignar los recursos necesarios para realizar las actividades
+
+Aunque ya se ha asignado recursos de forma general se requiere una asignacion detallada para identificar
+- Tipo de recursos
+- Cantidad total de cada tipo de recurso
+- Roles, responsabilidades y conjunto de habilidades
+- Articulos, proposito y especificaciones de todos los equipos necesarios
+- Articulos, cantididad de recursos materiales
+
+Se define un programa por cada tipo de recurso por lo que el administrador del proyecto puede asegurar la obtencion del recurso
+
+### Desarrollar un plan financiero
+
+Se prepara para identificar la cantidad de dinero necesaria para cada fase de proyecto
+
+Se cuantifica el costo total de recursos humanos, materiales y equipo
+
+Se define un programa de gastos el cual servira al Administrador de proyectos como comparativo entre los presupuestos y lo realmente gastado durante el proyecto
+
+Prepara un plan financiero detallado es extremadamente importante ya que el exito de proyecto de que se realice en tiempo y costo y calidad estimado
+
+#### Para crearlo
+
+##### Listar costos:
+- Identificar todos los tipos de costos en que se incluira en todo el ciclo de vida del proyecto, lo mas apegado a la realidad que se pueda. Tales como recursos, provedores, establecer la oficina del proyecto y la administracion
+##### Identificar el costo por unidad de los costos del proyecto
+- Costos por unidad costo renta del equipo, costo del material
+- Una vez identificado los costos por unidad se calcula el monto total de cada costo necesario para el proyecto
+#### Construir un programa de costos
+- Esto se hace mediante una tabla de costos vs Semanas del proyectos
+- No olvidar listar los acuerdos asumidos al realizar el programa de costos como que los recursos estaran disponibles cuando se requieren
+#### Definir el proceso financiero
+- Para monitorear y controlar los costos durante el proyecto. Definir el proceo de administracion de costos documentando
+	- Proposito
+	- Pasos
+	- Roles y responsabilidades
+	- Templates
+### Desarrollar un plan de calidad
+
+Se realiza para aasegurar que las expectativas de calidad estan claramente definidas
+Define:
+- Que significa calidad en terminos del proyecto
+- La lista de los niveles de calidad de los entregables, claros sin ambiguedad cada nivel de caldiad provee un conjunto de criterios y estandares
+- Define un plan de actividades que asegure al cliente los niveles de calidad
+- Identificar las tecnicas usadas para controlar el nivel de calidad
+
+### Desarrollar un plan de riesgos
+
+- Riesgo: Evento o circunstancia cuya probabilidad de ocurrencia es incierta pero que en cado de aparecer tiene un efecto sobre los objetivos del proyecto
+- Se desarrolla un plan de riesgos y las acciones a tomar para prevenir que estos ocurran y reducir el impacto si el riesgo se da
+- Es importante realizar el plan de riesgo para mitigar todos los riesgos del proyecto antes de empezar la fase de ejecucion
+#### Plan de riesgos
+
+- Identificar y analizar todos los riesgos
+- Utilizar una planilla para identificar y gestionar riesgos
+
+### Desarollar un plan de aceptacion
+
+La llave para un proyecto exitoso es ganar la aceptacion del cliente al lograr o exceder sus requerimientos
+
+El plan de aceptacion se realza para clarificar el cliterio usado para evaluar cada entregable para la aceptacion por parte del cliente
+
+Contiene:
+- Los criterios para obtener la aceptacion del cliente, determinar los criterios claves para obtener la aceptacion del cliente
+- Programa de revision de aceptacion donde cada cliente firmara de aceptado el entregable
+- Resumen de los procesos usado para ganar la aceptacion de cada entregable
+### Plan de comunicacion
+
+Antes del plan de ejecucion es necesario identificar como se mantendra informado a cada uno de los interesados sobre el avance del proyecto
+
+Este plan identifica:
+- Tipo de informacion distribuir
+- Los metodos de distribucion de la informacion por cada interesado
+- La frecuencia de la distribucion
+- Cada una de las personas responsables de distribuir informacion a cada unod e los interesados
+
+### Plan de aprovisionamiento
+
+Es la ultima actividad de la fase de planeacion, identifica los elementos del proyecto lo que seran adquiridos a provedores externos
+
+Contiene:
+- Descripcion detallada del producto o servicio a adquirir
+- La justificacion de adquirirlo externamente y no interamente
+- El programa de adquisicion
+	- En este momento se le debe solicitar al provedor de acuerdo al momento ue se requiere y el tiempo de entrega por parte del provedor
+- El proceso para la seleccion de un proveedor preferido
+- El proceso para pedir y recibir los productos y servicios
+	- Solicitud de informacion del producto o servicio
+	- Cotizacion de la propuesta
+	- Contrato
+
+### Revision de la fase de planeacion
+
+Realizar un checkpoint de todas las actividades para asegurar que se completo la fase y asegurar la calidad del proyecto
+
+Aun cuando ela dministrador de software realiza la misma funcion que cualquier adminsitrador es mas dificil su funcion debido a que:
+- El producto es intangible
+- No existe procesos de software estandar
+- Por lo general los proyectos de software son unicos

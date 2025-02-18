@@ -210,7 +210,12 @@ La suma de vectores forma un paralelogramo
 }
 ```
 ### Desigualdad del triangulo
+Establece que, para cualquier par de vectores u y v, se cumple la siguiente relación:
 $$|U+V| \leq |U|+|V|$$
+En términos geométricos, esta desigualdad refleja el hecho de que la longitud de un lado de un triángulo (en este caso, ∥u+v∥\| u + v \|∥u+v∥) **nunca es mayor que la suma de las longitudes de los otros dos lados** (∥u∥+∥v∥\| u \| + \| v \|∥u∥+∥v∥).
+
+Si tienes dos vectores u y v, la suma u+v forma un tercer lado de un triángulo en el espacio. La desigualdad del triángulo nos dice que la distancia entre el inicio y el final del recorrido de los dos vectores no puede ser mayor que recorrer ambos por separado.
+
 Para conseguir que un vector sea unitario se divide entre su magnitud
 
 ### Producto escalar y Angulo entre vectores
@@ -388,4 +393,104 @@ $$
  Son aquellos cuyo producto escalar es igual a 0. osea que el angulo entre ellos es de 90 grados
  Paralelos:
  Uno es un escalar o muliplo de otro y el angulo entre ellos es de 0 o 180
- 
+
+## Ejercicio
+Demuestre que si $\vec{v}=a\hat{i}+b\hat{j}\neq\vec{0}$, entonces": $\vec{u}=\left(\frac{a}{\sqrt{a^2+b^2}}\right)\hat{i}+\left(\frac{b}{\sqrt{a^2+b^2}}\right)\hat{j}$ es un vector unitario que tiene la misma dirección que $\vec{v}$
+Para la demostración del módulo:
+$$|\vec{v}|=\sqrt{a^2+b^2}$$
+$$|\vec{u}|=\sqrt{\left(\frac{a}{\sqrt{a^2+b^2}}\right)^2+\left(\frac{b}{\sqrt{a^2+b^2}}\right)^2}=\sqrt{\frac{a^2}{a^2+b^2}+\frac{b^2}{a^2+b^2}}=\sqrt{\frac{a^2+b^2}{a^2+b^2}}=\sqrt{1}=1$$
+
+Para demostrar que tienen la misma direccion recordemos que el vector unitario se saca $$\hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|} = \left( \frac{v_1}{\|\mathbf{v}\|}, \frac{v_2}{\|\mathbf{v}\|}, \dots, \frac{v_n}{\|\mathbf{v}\|} \right)
+$$
+Entonces: $$\hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|} = \frac{(a,b)}{\sqrt{a²+b²}} = \left( \frac{a}{\sqrt{a²+b²}}, \frac{b}{\sqrt{a²+b²}} \right)
+$$
+Aqui ya podemos ver que los vectores unitarios $v$ = al vector unitrio $u$ por lo tanto tienen la misma direccion
+
+#### **Regla de la Mano Derecha en Producto Cruz (⃗A × ⃗B)**
+
+Se usa para encontrar la dirección del **producto cruz** de dos vectores.
+### **Pasos**:
+
+1. Extiende la mano derecha con los **dedos apuntando en la dirección del primer vector** (**A**).
+2. Gira los dedos hacia la dirección del segundo vector (**B**), como si hicieras un barrido desde **A** hasta **B**.
+3. El **pulgar extendido** indica la dirección del vector resultante (**A × B**).
+
+
+```vega-lite
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "values": [
+      {"x": 0, "y": 0, "z": 0, "u": 1, "v": 0, "w": 0, "name": "î (1,0,0)"},
+      {"x": 0, "y": 0, "z": 0, "u": 0, "v": 1, "w": 0, "name": "ĵ (0,1,0)"},
+      {"x": 0, "y": 0, "z": 0, "u": 0, "v": 0, "w": 1, "name": "k̂ (0,0,1)"}
+    ]
+  },
+  "mark": {"type": "rule", "tooltip": true},
+  "encoding": {
+    "x": {"field": "x", "type": "quantitative", "scale": {"domain": [-1, 1]}},
+    "y": {"field": "y", "type": "quantitative", "scale": {"domain": [-1, 1]}},
+    "color": {"field": "name", "type": "nominal"},
+    "tooltip": [
+      {"field": "name", "type": "nominal"},
+      {"field": "u", "type": "quantitative"},
+      {"field": "v", "type": "quantitative"},
+      {"field": "w", "type": "quantitative"}
+    ]
+  }
+}
+
+```
+
+Saca el producto cruz de dos vetores sea $u=a_1+b_1+c_1$ y $v=a_2+b_2+c_2$
+$$\vec{u}\times\vec{v}=\left|\begin{matrix} \hat{\imath} & \hat{\jmath} & \hat{k} \\ a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \end{matrix}\right|=\hat{i}\begin{vmatrix} b_1 & c_1 \\ b_2 & c_2 \end{vmatrix}-\hat{j}\begin{vmatrix} a_1 & c_1 \\ a_2 & c_2 \end{vmatrix}+\hat{k}\begin{vmatrix} a_1 & b_1 \\ a_2 & b_2 \end{vmatrix}$$ $$=-\hat{i}(b_1c_2-b_2c_1)-\hat{j}(a_1c_2-a_2c_1)+\hat{k}(a_1b_2-a_2b_1)$$ $$=\hat{i}(b_1c_2-b_2c_1)+\hat{j}(a_2c_1-a_1c_2)+\hat{k}(a_1b_2-a_2b_1)$$ $$=(b_1c_2-b_2c_1)\hat{i}+(a_2c_1-a_1c_2)\hat{j}+(a_1b_2-a_2b_1)\hat{k}$$
+Muestra que
+$$ |\vec{u} \times\vec{v} |²=(u_1²+u_2²+u_3²)(v_1²+v_2²+v_3²)-(u_1v_1+u_2v_2+u_3v_3)²$$
+$$\vec{u}\times\vec{v}=\left|\begin{matrix} \hat{\imath} & \hat{\jmath} & \hat{k} \\ u_1 & u_2 & u_3 \\ v_1 & v_2 & v_3 \end{matrix}\right|=\hat{i}\begin{vmatrix} u_2 & u_3 \\ v_2 & v_3 \end{vmatrix}-\hat{j}\begin{vmatrix} u_1 & u_3 \\ v_1 & v_3 \end{vmatrix}+\hat{k}\begin{vmatrix} u_1 & u_2 \\ v_1 & v_2 \end{vmatrix}$$
+$$=\vec{i}(u_2v_3 -v_2u_3)-j(u_1v_3-v_1u_3)+k(u_1v_2-v_1u_2)$$$$ |\vec{u} \times\vec{v} |²=(u_1²+u_2²+u_3²)(v_1²+v_2²+v_3²)-(u_1v_1+u_2v_2+u_3v_3)² = |\vec{u}|^2 |\vec{v}|² -(\vec{u}*\vec{v})$$
+### Ecuaciones Valiosas
+$$ |\vec{u} \times\vec{v} | =  |\vec{u}||\vec{v} |sen\theta $$$$\vec{u}*\vec{v} = |\vec{u} ||\vec{v} |cos\theta$$ 
+# Vectores Dependientes vs Paralelos
+
+### Vectores Dependientes
+
+Dos o más vectores son **linealmente dependientes** si **uno de ellos se puede escribir como combinación lineal** de los otros.
+
+📌 **Ejemplo:**  
+Si v2=c⋅v1v2​=c⋅v1​ (con c≠0c=0), entonces v1v1​ y v2v2​ son dependientes.
+
+- En un espacio de **dimensión 2 (ℝ²)**, dos vectores son dependientes si son **paralelos o colineales**.
+    
+- En **dimensión 3 (ℝ³)** o mayor, pueden ser dependientes sin ser paralelos si hay más vectores de los necesarios para generar el espacio.
+    
+### Vectores Paralelos
+
+Dos vectores son **paralelos** si **uno es un múltiplo escalar del otro**.
+
+- **Siempre son linealmente dependientes.**
+    
+- **Tienen la misma dirección o exactamente opuesta.**
+    
+
+📌 **Ejemplo en ℝ²:**  
+Si v1=(2,3)v1​=(2,3) y v2=(4,6)v2​=(4,6), entonces:
+
+v2=2⋅v1v2​=2⋅v1​  
+
+✅ **Son paralelos** y también **dependientes**.
+
+📌 **Ejemplo en ℝ³:**  
+Si v1=(1,2,3)v1​=(1,2,3) y v2=(2,4,6)v2​=(2,4,6), también son **paralelos** y **dependientes**.
+
+---
+
+### Resumen
+
+|Concepto|Definición|Ejemplo|
+|---|---|---|
+|**Dependientes**|Uno se puede escribir como combinación lineal de los otros.|En ℝ³, (1,0,0),(2,0,0),(3,0,0)(1,0,0),(2,0,0),(3,0,0) son dependientes pero no paralelos.|
+|**Paralelos**|Uno es un múltiplo escalar del otro.|(1,2)(1,2) y (2,4)(2,4) son paralelos y dependientes.|
+
+📌 **Todos los vectores paralelos son dependientes, pero no todos los dependientes son paralelos.** 🚀

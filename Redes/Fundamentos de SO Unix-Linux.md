@@ -269,3 +269,69 @@ Las workstations fueron diseñadas para ofrecer una mejor experiencia visual, in
 - Nuevas capacidades
 - Interoperabilidad
 - Comparticion de recursos entre S.Os en el mismo equipo
+
+### Estructura de un sistema Unix  
+
+#### 1. Hardware  
+   - Procesador, memoria, dispositivos de almacenamiento, periféricos.  
+
+#### 2. Arranque del sistema  
+   - **Bootloader**: carga el kernel en memoria. Ejemplos: **GRUB, LILO, systemd-boot**.  
+
+#### 3. Kernel  
+   - **Monolítico y modular**: administra los recursos del sistema.  
+   - Manejo de procesos, memoria, archivos, dispositivos, redes.  
+   - Controladores de hardware y módulos dinámicos.  
+
+#### 4. Shells en Unix  
+   - **Bourne Shell (`sh`)**  
+   - **C Shell (`csh`)**  
+   - **Korn Shell (`ksh`)**  
+   - **Bourne Again Shell (`bash`)**  
+   - **Z Shell (`zsh`)**  
+   - **PowerShell (`pwsh`)** (en sistemas modernos como Linux con .NET)  
+
+#### 5. Terminal y Consola  
+   - **TTY (teletipo virtual)**: interfaz básica de texto.  
+   - **Terminales gráficas**: XTerm, Konsole, GNOME Terminal, Alacritty.  
+
+#### 6. Servidor gráfico  
+   - **X11** (X.Org) o **Wayland** (moderno).  
+   - Controladores de tarjeta gráfica (Mesa, NVIDIA, AMD).  
+
+#### 7. Administrador de ventanas (WM)  
+   - Controla la disposición y apariencia de las ventanas.  
+   - Tipos:  
+     - **Stacking (tradicional)**: Openbox, Fluxbox, XFWM.  
+     - **Tiling (mosaico)**: i3, Sway, AwesomeWM.  
+
+#### 8. Entorno de escritorio (DE)  
+   - Proporciona una interfaz gráfica completa.  
+   - Ejemplos: **GNOME (lo inició un mexicano 🇲🇽), KDE Plasma, XFCE, MATE, Cinnamon**.  
+
+#### 9. Lenguajes de programación en Unix  
+   - **C, C++** (para sistemas y bajo nivel).  
+   - **Python, Perl, Bash** (scripting y automatización).  
+   - **Go, Rust** (desarrollo moderno y seguro).  
+   - **Java, JavaScript, PHP** (desarrollo web).  
+
+#### 10. Aplicaciones del usuario  
+   - **Editores de texto**: Vim, Emacs, Nano, Neovim.  
+   - **Navegadores**: Firefox, Chromium, Lynx (modo texto).  
+   - **Gestores de paquetes**: APT (Debian/Ubuntu), Pacman (Arch), DNF (Fedora).  
+   - **Utilidades CLI**: `grep`, `awk`, `sed`, `htop`, `tmux`.  
+### Sesiones de trabajo en UNIX
+Emulador de terminales
+- Putty
+- bitvise
+
+Internet forma de protocolo
+- telnet (inseguri)
+- ssh
+
+Multiusuario en unix -> Red -> otros os
+
+La terminal trabaja con sesiones, para trabajar en una sesion de terminal tenemos 3 momentos 
+- Registro (cuenta publica, constraseña, privada/secreto)
+- orden
+- Cerrarse

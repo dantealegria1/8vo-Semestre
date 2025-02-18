@@ -42,3 +42,8 @@ A cada solución (Cromosoma) se le asigna un valor dependiente que tan bueno es 
 - Una representación de soluciones potenciales
 - Una forma de crear una población inicial de soluciones
 - Una función de evaluación que juegue el papel de ambiente clasificando soluciones en termino de aptitud
+# EDAs (Estimation of Distribution Algorithms)
+
+En los EDAs, primero generamos una población aleatoria. Para el problema **OneMax**, la siguiente generación se construye manteniendo, en cada alelo (_columna_), al menos el mismo porcentaje de **1s** que en la población anterior.
+
+En este enfoque, no se aplican operadores tradicionales como mutación o cruce. En su lugar, la evolución se basa únicamente en la distribución de los valores dentro de la población
