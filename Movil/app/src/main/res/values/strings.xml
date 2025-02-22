@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Name Capitalizer</string>
+    <string name="hint_enter_name">Ingrese nombre y apellido</string>
+    <string name="button_capitalize">Capitalizar</string>
+    <string name="enter_name_error">Por favor ingrese un nombre</string>
+</resources>
