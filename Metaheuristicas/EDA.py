@@ -1,4 +1,3 @@
-
 import random
 import numpy as np
 
@@ -9,8 +8,8 @@ class Eda:
         self.COLUMNS = 10              # Columnas por individuo
         self.POPULATION_SIZE = 100    # Número de individuos en la población
         self.MAX_GENERATIONS = 100    # Máximo número de generaciones
-        self.MUTATION_RATE = 0.2      # Probabilidad de mutación
         self.STAGNATION_LIMIT = 20    # Límite de generaciones sin mejora
+        self.TOP_SELECTION = 10
 
     def generate_random_individual(self):
         """Genera un individuo aleatorio representado como una matriz binaria."""
@@ -26,7 +25,8 @@ class Eda:
     
     def probability_per_column(self, population):
         """Calcula la probabilidad de 1s por columna en la población."""
-        stacked = np.stack(population)  # Convierte la lista de matrices en un array 3D
+        top_individuals = sorted(population, key=self.calculate_fitness, reverse=True)[:self.TOP_SELECTION]
+        stacked = np.stack(top_individuals)
         return np.mean(stacked, axis=0)  # Promedio de 1s en cada celda
 
     def generate_child(self, prob_matrix):

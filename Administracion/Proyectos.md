@@ -398,3 +398,177 @@ Aun cuando ela dministrador de software realiza la misma funcion que cualquier a
 - El producto es intangible
 - No existe procesos de software estandar
 - Por lo general los proyectos de software son unicos
+
+## Administracion de proyectos de software
+### Actividades de la adminsitracion de proyectos de software
+
+- Redacción de la propuesta
+- Planeacion y calendarizacion del proyecto
+- Costeo del proyecto
+- Supervision y calendarizacion del proyecto
+- Selección y evaluación del personal
+- Redacción y presentación de información
+### Espectro de la gestion de proyectos de SW
+
+La gestión eficaz de proyectos de software se enfoca sobra las 4P
+- Personal (_Quienes)
+- Producto (_Que)
+- Proceso (_Como)
+- Proyecto (_Para que)
+
+### Personal
+
+Aquel administrador de proyectos de software que no se de cuenta que el desarrollo de software es una empresa 100% humana esta perdido
+
+El SW lo desarrollan personas para personas y en ocaciones afecta a otras personas
+
+Por lo tanto lo mas importante en el desarrollo de SW son las personas
+
+EL componente mas importante para el éxito de un proyecto es el factor humano. Los gerentes la mayoría de las veces ignoran el desarrollo de su personal
+
+Aspectos para considerar referente al factor humano:
+- Participantes
+- Lideres del equipo
+- Estructura organizacional del equipo de SW
+- Conficlos de coordinación y comunicación
+
+#### Participantes
+
+**Gestores ejecutivo:
+- Son los directores de la empresa en la que vamos hacer el proyecto
+
+**Gestores técnico del proyecto:
+- Son los encargados de planificar, motivar, organizar y controlar a los profesionales que realizan el trabajo de SW
+
+**Profesionales
+- Proporcionan las habilidades técnicas para la ingeniería de un producto o aplicación
+**Clientes:
+- Especifican los requerimientos de sistema
+
+**Usuarios finales:
+- Interactuan con el sistema de SW una vez que se libera
+
+Para ser eficaz el equipo del proyecto debe estar organizado de tal forma que maximice las capacidades y habilidades de cada personal, esto es el labor del lider del equipo
+
+#### Lideres del equipo
+
+La gestion del proyecto es una actividad 100% humana
+
+Los profesionales de SW generalmente no tienen las competencias para ser lideres pero las adquieren por necesidad
+
+Jerry weinberg propone que los lideres de un proyecto exitoso aplican une estilo de gestion de resolucion de problemas
+- Enteneder el problema, gestionar flujo de ideas y al mismo tiempo hacer que el equipo se comprometa con la calidad
+
+Propone que para lograr un buen liderazgo se use el modelo MOI:
+- **Motivacion**: Habilidad para alentar al personal a producir segun su mejor capacidad
+- **Organizacion**: Habilidad para adecuar procesos existentes o inventar nuevos, que permitan que el concepto incial sea traducido a un producto final
+- **Ideas o innovacion**: Habilidad para alentar a la gente a ser creativo y trabajar dentro de los limites establecidos por un producto o aplicacion de software en particular
+
+Los lideres de proyectos exitosos aplican un estilo de gestion de reslucion de problemas
+
+Un gestor de proyectos de SW debe concentrarse en:
+- Entender el problema que sera resuelto
+- Gestioanr el flujo de ideas
+- Hacer que todos los del equipo conozcan con palabras y acciones que la calidad es relevante y no sera comprometida
+
+Un lider es aquel que sabe a donde quiere ir y se levanta y va
+
+Otras 4 caracresiticas que definene a un gesto de proyectos eficiente:
+
+**Resolucion de problemas**
+- Diagnosticar conflictos tecnicos
+- Estructura sistematicamente, una solucion y motivar a otros profesionales a desarrollar la solucion
+- Aplicar lecciones aprendidas en proyectos anteriores
+- Ser flexible para cambiar de direccion si los intentos iniciales, para solucionar el problema no funcionan
+
+**Dotes de gestion
+- Dirigir y encabezar el proyecto, tener la confianza de asumir el control y la seguridad para permitir o buenos profesionistas seguir sus instintos
+
+**Incentivos
+- Para optimizar la productividad del equipo recompensar la iniciativa y logros: y demostrar que la toma de riesgos controlada no sera penalizada
+
+**Influencia y fomento de la cultura de equipo
+- Debe ser capaz de leer a la gente de entender als señales verbales y no verbales y reaccionar a las necesidades de la persona que las envia: debe mantener el control en situaciones de alta emovional
+
+#### Estructura organizacion del equipo de software
+
+Es una organizacion existen practicas y politicas que no son responsabilidad del adminsitrador de proyectos de software
+
+La organizacion del equipo de desarrollo de software si es responsabilidad del administrador de proyectos de software
+
+**Factores relevantes en la eleccion de organizaciones de un equipo de software
+
+1. Dificultad del problema
+2. Tamaño del problema resultante en lineas de codigo o puntos de fusion
+3. TIempo en que el equipo estara junto, _vida del equipo_
+4. Grado de modularizacion
+5. Calidad y confiabilidad requeridas para el sistema
+6. Rapidez de la fecha de entrega
+7. Grado de sociabilidad, comunicacion que requiere el sistema
+#### Paradigmas organizacionales para los equipos de ingenieria de software
+
+- **Paradigma cerrado**: Tipo jerarquico, funciona bien en proyectos similares a los que ya se han realizado
+- **Paradigma aleatorio**: Se organizan como ellos mejores se acomoden, y funciona bien con proyectos innovadores o de adelantos tecnologías
+- **Paradigma abierto**: Combinación de los dos anteriores, funciona bien para problemas complejos pero no eficientemente
+- **Paradigmas sincrónicos**: Se apoya en la compartimentalizacion o segmentación natural de un problema y organiza a los miembros del equipo para trabajar en partes del problema con poca comunicación activa entre ellos
+
+Sin importar la organización del equipo el objetivo de cualquier administrador de proyecto es apoyar a la creación de un equipo que muestre cohesión
+
+
+#### Equipos agiles
+
+Los metodos Aguiles subrayan la competencia individual en onjuncion con la colaboracion del grupo
+
+Estos equipos son auto organizados para aprovechar la competencia de cada miembro y fomentar la colaboracion eficaz a lo largo del proyecto
+
+Se mantiene un minimo de planificacion
+
+Se tienen reuniones periodicas de equipos para coordinar el trabaho que se debe realizar
+
+Sin importar la organizacion del equipo, el objetivo de cualquier administrador de proyecto es apoyar a la crecion de u equipo que muestre cohesion
+
+#### Demarco y lister examinan este topico
+
+Tendremos a usar la palabra equipo con bastante libertad y llamamos equipo a cualquier grupo de personas asignadas a trabahar juntas
+
+Pero muchos de estos grupos no son equipos, ya que no tieneen una definicion comun de exito o algun esìritu de equipo identificable
+
+Lo que se ha perdido es un fenomeno que llamamos cuajar
+
+Un equipo cuajado es un grupo de personas fuertemente unidas que el todo es mayor a la suma por partes
+
+Una vez que un equipo comienza a cuajar la probabilida de exito aumenta. Se convierte en un monstruo para lograr un exito
+
+No necesita ser gestionado tradicionalmente, motivacion. Tiene impetu
+
+Los miembros del equipo cuajado son significativamente mas productivos y motivados que el promedio, comparte una meta y cultura en comun y en muchoas cassos un sentimiento elitista que los hace unicos
+
+#### Toxicidad de equipo
+
+No todos los equipos funcionan bien bajo acoplamiento de sus miembros
+
+Factores que fomentan un ambiente toxico
+- Atmosfera de trabajo frenetica
+- Alta frustracion que provoca fricciones
+- Proceso de software fragmentado o pobremente coordinado
+- Poca definicion de los papeles dentro del equipo
+- Continuas y repetidas exposiciones al fracaso
+
+#### Conflictos de comunicacion
+
+- La escala de muchos esfuerzos de desarrollo es muy grande
+- La incertidumbre es comun
+- La interoperabilidad con otros sitemas
+
+Para minimizar los conficlots se deben establecer mecanismos de comunicacion formal e informal entre los miembros del equipo y entre multiples equipos
+#### Comunicacion formal
+
+- Escritos
+- Reuniones estructuradas
+- Memorandums
+- Medios impersonales y no interactivas
+
+#### Comunicacion informal
+
+- Mas personal
+- Platica de cafe o pasillo

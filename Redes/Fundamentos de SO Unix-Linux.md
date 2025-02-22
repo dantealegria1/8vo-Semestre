@@ -319,19 +319,110 @@ Las workstations fueron diseñadas para ofrecer una mejor experiencia visual, in
    - **Editores de texto**: Vim, Emacs, Nano, Neovim.  
    - **Navegadores**: Firefox, Chromium, Lynx (modo texto).  
    - **Gestores de paquetes**: APT (Debian/Ubuntu), Pacman (Arch), DNF (Fedora).  
-   - **Utilidades CLI**: `grep`, `awk`, `sed`, `htop`, `tmux`.  
+   - **Utilidades CLI**: `grep`, `awk`, `sed`, `htop`, `tmux`.
+   
+
 ### Sesiones de trabajo en UNIX
-Emulador de terminales
-- Putty
-- bitvise
 
-Internet forma de protocolo
-- telnet (inseguri)
-- ssh
+#### Emuladores de terminal
 
-Multiusuario en unix -> Red -> otros os
+- PuTTY
+- Bitvise
 
-La terminal trabaja con sesiones, para trabajar en una sesion de terminal tenemos 3 momentos 
-- Registro (cuenta publica, constraseña, privada/secreto)
-- orden
-- Cerrarse
+#### Protocolos de conexión por Internet
+
+- **Telnet** (inseguro)
+- **SSH** (seguro)
+
+```mermaid
+flowchart LR
+    id1["Multiusuario en UNIX"]
+    id1 --> id2["Red"]
+    id2 --> id3["Otros OS"]
+```
+
+### Funcionamiento de una sesión en terminal
+
+La terminal trabaja con sesiones, y una sesión tiene tres momentos principales:
+
+1. **Registro** (cuenta pública, contraseña, clave privada/secreta)
+2. **Ejecución de órdenes**
+3. **Cierre de sesión**
+
+---
+
+## El surgimiento de GNU/Linux
+
+### Principales figuras
+
+- **Richard Stallman** (Fundador de la Free Software Foundation y del Proyecto GNU)
+- **Linus Torvalds** (Creador del kernel de Linux)
+
+### ¿Qué hacen las distribuciones de Linux?
+
+- Utilizan el **kernel** desarrollado por Linus Torvalds.
+- Incorporan las **utilidades GNU**.
+- Como resultado, nace **GNU/Linux**.
+
+```mermaid
+timeline
+    title Historia de Linux
+    1980 : Unix System V domina, pero es software privado.
+         : En el MIT, Richard Stallman promueve el libre intercambio de código.
+         : Funda la Free Software Foundation.
+         : Inicia el Proyecto GNU (GNU is Not Unix).
+         : Objetivo: desarrollar un nuevo SO, comenzando por sus utilidades.
+         : A inicios de los 90, GNU ya tenía herramientas, pero le faltaba un kernel.
+         : Se trabajaba en el kernel Hurd, pero aún no estaba listo.
+    1990 : En Finlandia, Linus Torvalds busca alternativas a DOS, SCO-UNIX y Minix.
+         : Decide crear su propio sistema operativo.
+         : Desarrolla un kernel inspirado en Minix, orientado a ejecutar utilidades GNU.
+         : Solo se programó el kernel.
+         : Varias organizaciones completaron el sistema operativo uniendo piezas clave.
+         : Inicialmente, Torvalds quería llamarlo FreakOS, pero se consolidó como Linux.
+```
+
+### Orientacion en las primeras distribuciones
+
+Por el trabajo que hace una sola persona **SLACKWARE
+- Trabajar de la forma mas cercana a un UNIX Tradicional
+- Patrick Velkerdig
+Cuando una comunidad realiza el trabajo **DEBIAN
+- Presentar un sistema operativo 100% de codigo abierto y gratuito
+- Debora
+- Ian
+- canonical se junta con windows para poder hacer la terminal de linux en windowsº
+Tambien mint y uaabuntu
+Mantenida por la comunidad pero financiada por RED HAT **FEDORA
+
+Otra empresa llamada canonical queria usar codigo privado **UBUNTU
+
+Cuando una empresa quiere ganar dinero **RED HAT
+
+Una copia de red hat es CentOs pero RED HAT lo compra
+
+otro clon es rocky os, eurolinux, red flag
+
+
+## UNIX - GNU Linux - Archivos
+
+#### Archivo
+
+Flujo o secuencia identificada (_nombrada_) de bits (_bytes_). 
+#### File systems
+
+Estructura (logica) que da orden, organizacion y gestiona archivos
+
+Almacenamiento secundario, debemos ver donde guardamos un bit donde guardamos un byte. Agarrar un almacenamiento secundario puro y aplicarle un concepto llamado formato (_formateo_) que es darle una estructura para poder meterle archivos
+
+Cada sistema operativo define su propio formato. Cada uno maneja un concepto de archivo como quiere
+
+| **S.O**        | FORMATO                                |
+| :------------- | :------------------------------------- |
+| **DOS**        | FAT                                    |
+| **OS 2**       | HPFS                                   |
+| **Windows NT** | NTFS, FAT 32                           |
+| **Mac OSX**    | AFS,                                   |
+| **UNIX**       | UFS                                    |
+| **Linux**      | Ext(1,2,3,4), BTRF, XFS, RaisorFS, ZFS |
+|                |                                        |

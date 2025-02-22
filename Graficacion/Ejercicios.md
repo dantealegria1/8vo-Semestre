@@ -454,7 +454,7 @@ $$=\vec{i}(u_2v_3 -v_2u_3)-j(u_1v_3-v_1u_3)+k(u_1v_2-v_1u_2)$$$$ |\vec{u} \times
 $$ |\vec{u} \times\vec{v} | =  |\vec{u}||\vec{v} |sen\theta $$$$\vec{u}*\vec{v} = |\vec{u} ||\vec{v} |cos\theta$$ 
 # Vectores Dependientes vs Paralelos
 
-### Vectores Dependientes
+### Vectores DependientesInteractuan
 
 Dos o más vectores son **linealmente dependientes** si **uno de ellos se puede escribir como combinación lineal** de los otros.
 
@@ -474,7 +474,7 @@ Dos vectores son **paralelos** si **uno es un múltiplo escalar del otro**.
 - **Tienen la misma dirección o exactamente opuesta.**
     
 
-📌 **Ejemplo en ℝ²:**  
+**Ejemplo en ℝ²:**  
 Si v1=(2,3)v1​=(2,3) y v2=(4,6)v2​=(4,6), entonces:
 
 v2=2⋅v1v2​=2⋅v1​  
@@ -485,7 +485,6 @@ v2=2⋅v1v2​=2⋅v1​
 Si v1=(1,2,3)v1​=(1,2,3) y v2=(2,4,6)v2​=(2,4,6), también son **paralelos** y **dependientes**.
 
 ---
-
 ### Resumen
 
 |Concepto|Definición|Ejemplo|
@@ -493,4 +492,18 @@ Si v1=(1,2,3)v1​=(1,2,3) y v2=(2,4,6)v2​=(2,4,6), también son **paralelos**
 |**Dependientes**|Uno se puede escribir como combinación lineal de los otros.|En ℝ³, (1,0,0),(2,0,0),(3,0,0)(1,0,0),(2,0,0),(3,0,0) son dependientes pero no paralelos.|
 |**Paralelos**|Uno es un múltiplo escalar del otro.|(1,2)(1,2) y (2,4)(2,4) son paralelos y dependientes.|
 
-📌 **Todos los vectores paralelos son dependientes, pero no todos los dependientes son paralelos.** 🚀
+**Todos los vectores paralelos son dependientes, pero no todos los dependientes son paralelos.** 
+
+## Ejercicios
+
+Determine si los vectores
+$$\begin{bmatrix} 1 \\-2\\3\end{bmatrix},\begin{bmatrix} 2 \\-2\\0\end{bmatrix} \ y \ \begin{bmatrix} 0 \\1\\7\end{bmatrix}$$
+- El numero de vectores no es mayor que el numero de filas
+- Si es igual a 0 son dependientes 
+$$
+\begin{vmatrix} 1 & 2 & 0\\ -2 & -2 & 1 \\ 3 & 0 & 7 \end{vmatrix} = 0
+$$
+$$ \det(A) = (1 \cdot (-2) \cdot 7) + (2 \cdot 1 \cdot 3) + (0 \cdot (-2) \cdot 0) - (3 \cdot (-2) \cdot 0) - (0 \cdot 1 \cdot 1) - (7 \cdot (-2) \cdot 2) $$
+$$ \det(A) = (-14) + (6) + (0) - (0) - (0) - (-28)\ \det(A) = -14 + 6 + 28 = 20 $$
+$$\det(A) \neq 0 $$
+Entonces son independientes

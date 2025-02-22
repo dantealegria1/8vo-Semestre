@@ -1,4 +1,4 @@
-## Niveles de gobierno
+Z## Niveles de gobierno
 
 Cada una tiene sus propias cosas con diferencias que aplican si es en su estado (Estatal) y para el país (Federal)
 - **Federal
@@ -201,3 +201,34 @@ La implementacion de un modelo adecuado de E-gob no se desarrolla de forma aisla
 Articulo 3 fracciones 2, 7 y 33 de la ley federal de transparencia y acceso a la información publica gubernamental
 
 De orden publico y de observancia general en toda la republica y tiene por objeto la protección de los datos personales en posesión de los particulares con la finalidad de regular su tratamiento legitimo controlado e informado a efecto de garantizar la privacidad y el derecho a la autodeterminación informativa de personas
+
+### Obliigados
+
+- Particulareas osea personas fisicas o morales de caracter privado que lleven a cabo el tratamiento de datos personales
+- Datos personales: Cualquier informacion concermiente a una persona fisica identificada o identificable
+
+-- APUNTE PEDIR A BETO
+
+### Encargado
+
+El responsable tendra la obligacion de informar a los titulares de los datos, la informacion que se recaba de ellos con que fines a traces del aviso de privacidad
+
+Todo responsable que lleve a cabo tratamiento de datos personales debera establecer y mantener medidas de seguridad administrativas, tecnicas y fisicas que permiten proteger los datos personales contra daño, perdida, alteracion, destruccion o el uso, acceso o tratamiento no autorizado
+
+Los responsable adaptan medidas de seguridad menores a aquellas que mantengan para el manejo de su informacion a si mismo se tomara en cuenta el riesgo existente las posibles consecuencias para los titulares la sensibilidad de los datos y el desarrollo tecnologico
+
+La emresa es fisica y moral
+El encargado
+- Aviso de privacidad -> Actualizao
+- Actualizacion de BD
+- Notificar cambios en los terminos y condiciones
+- La custodia de los datos personales
+
+### Contenido del aviso de privacidad
+
+- La identidad y domicilio del responsable que los recaba
+- Las finalidades del tratamiento de datos
+- Las opciones y medios que el responsable ofrezca a los titulare para limitar el uso o divulgacion de los datos
+- Los medios para ejercer los derechos de acceso, erctificacion, cancelacion u opocision de conformidad con lo dispuesto a la ley
+- En tu caso las transferencias de datos que se afectuen
+- El procesamiento y medio por el cual los responsables comunicara a los titulares de cambios al aviso de privacidad de conformodidad con lo previsto en esta ley
