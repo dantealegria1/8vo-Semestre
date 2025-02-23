@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redes/Fundamentos de SO Unix-Linux.md",
+                "file": "Metaheuristicas/Algoritmos genéticos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fundamentos de SO Unix-Linux"
+              "title": "Algoritmos genéticos"
             }
           },
           {
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "3234caf3b941957a",
@@ -199,15 +200,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "f30b4ed38ab40266",
+  "active": "dc7f77e0484b7d6d",
   "lastOpenFiles": [
-    "Administracion/Proyectos.md",
+    "Pasted image 20250223140311.png",
     "Derecho/Conceptos Basicos.md",
+    "Administracion/Proyectos.md",
+    "Metaheuristicas/Algoritmos genéticos.md",
+    "Movil/Proyecto.zip",
     "Redes/Fundamentos de SO Unix-Linux.md",
     "Graficacion/Graficacion.md",
     "Graficacion/Ejercicios.md",
     "Metaheuristicas/EDA.py~",
-    "Metaheuristicas/Algoritmos genéticos.md",
     "Metaheuristicas/EDA.py",
     "Sistemas Expertos/Tarea2_Sistemas_Expertos.pdf",
     "Redes/Por que usar linux.pdf",
@@ -220,7 +223,6 @@
     "Actividad_1/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex",
     "Actividad_1/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_cca26bd7f2ff0bd8ab037700bfd8665e4efd17c2a42e15d8928cc24ddf97da25_bucket_5/graph.bin",
     "Actividad_1/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_cca26bd7f2ff0bd8ab037700bfd8665e4efd17c2a42e15d8928cc24ddf97da25_bucket_5",
-    "Actividad_1/app/build/intermediates/desugar_graph/debug/dexBuilderDebug/out/currentProject/jar_cca26bd7f2ff0bd8ab037700bfd8665e4efd17c2a42e15d8928cc24ddf97da25_bucket_4/graph.bin",
     "Movil/Untitled.md",
     "Untitled.md",
     "Vectores y matrices.md",
