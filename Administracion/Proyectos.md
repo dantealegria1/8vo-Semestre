@@ -514,7 +514,6 @@ La organizacion del equipo de desarrollo de software si es responsabilidad del a
 
 Sin importar la organización del equipo el objetivo de cualquier administrador de proyecto es apoyar a la creación de un equipo que muestre cohesión
 
-
 #### Equipos agiles
 
 Los metodos Aguiles subrayan la competencia individual en onjuncion con la colaboracion del grupo
@@ -544,7 +543,6 @@ No necesita ser gestionado tradicionalmente, motivacion. Tiene impetu
 Los miembros del equipo cuajado son significativamente mas productivos y motivados que el promedio, comparte una meta y cultura en comun y en muchoas cassos un sentimiento elitista que los hace unicos
 
 #### Toxicidad de equipo
-
 No todos los equipos funcionan bien bajo acoplamiento de sus miembros
 
 Factores que fomentan un ambiente toxico
@@ -555,20 +553,86 @@ Factores que fomentan un ambiente toxico
 - Continuas y repetidas exposiciones al fracaso
 
 #### Conflictos de comunicacion
-
 - La escala de muchos esfuerzos de desarrollo es muy grande
 - La incertidumbre es comun
 - La interoperabilidad con otros sitemas
 
 Para minimizar los conficlots se deben establecer mecanismos de comunicacion formal e informal entre los miembros del equipo y entre multiples equipos
 #### Comunicacion formal
-
 - Escritos
 - Reuniones estructuradas
 - Memorandums
 - Medios impersonales y no interactivas
 
 #### Comunicacion informal
-
 - Mas personal
 - Platica de cafe o pasillo
+### Producto
+
+Es aquel producto o servicio que se entrega al final del proyecto como resultado del mismo.
+
+Este producto final se puede dividir en partes las cuales se entregan en diferentes etapas del proyecto.
+#### Antes de crear un proyecto se deben de establecer
+- Objetivos y ámbito del producto.
+- Soluciones alternativas.
+- Identificar restricciones técnicas y de gestión.
+- Sin esta información es imposible definir:
+	- Estimaciones razonables del costo.
+	- Valoración efectiva del riesgo.
+	- División realista de las tareas del proyecto.
+	- Calendario del proyecto manejable
+
+Para definir los objetivos y ámbito del producto se reúnen el desarrollador de SW y el cliente. En muchos casos esto comienza como parte de la Ing. de Sistemas o del Proceso
+de Negocio, y continua con la Ing. de Requisitos del Sistema.
+
+Los objetivos identifican las metas globales del producto, desde el punto de vista del cliente, sin considerar el como se lograrán.
+
+El ámbito identifica los datos primarios, las funciones y el comportamiento que caracterizan al producto.
+
+#### Ambito de software
+Se define al responder las siguientes preguntas
+- **Contexto**:
+	- ¿Cómo encaja el SW que se desarrollará en un sistema mas grande, producto o contexto de negocio?
+	- ¿Qué restricciones se imponen como resultado del contexto?
+- **Objetos de Información**:
+	- ¿Qué objetos de datos visibles al usuario se producen como resultado del SW?
+	- ¿Qué objetos de datos se requieren de entrada?
+- **Función y Desempeño:**
+	- ¿Qué función realizará el SW para transformar los datos de entrada?
+	- ¿Habrá características de desempeño especial a considerar?
+- **Características:**
+	- No ser ambiguo, ni incomprensible a niveles de gestión y técnicos.
+	- Los enunciados deben acotarse, es decir, deben llevar datos cuantitativos; ej: Número de usuarios simultáneos, Tamaño de la lista de correos, Tiempo de respuesta máxima permitido
+	- Contener las restricciones y limitaciones.
+	- Se describen los factores que reducen riesgos.
+#### Descomposicion del problema
+También llamada Partición o Elaboración del Problema.Esta actividad se asienta principalmente en el análisis de requisitos.
+
+En la fijación del ámbito del sistema la descomposición se realiza en dos formas:
+- La funcionalidad que debe entregarse
+- El proceso que se empleara para entregarla.
+### Proceso
+
+Un proceso dice quien esa haciendo que y cuando: y como lograr la meta. Un proceso de SW proporciona el marco de trabaho para establecer el plan detallado para el desarrollo de SW
+
+Un proceso tiene actividades:
+- Genericas para cualquier proyecto se detallan segun las necesidades de cada proeycto
+- Actividades de proteccion
+#### Actividades Genericas
+- Comunicacion (_requerimientos_)
+- Planeacion
+- Modelado (_Analisis y diseño)
+- Construccion (_Codificacion y prueba)
+- Despliegue
+
+#### Actividades de proteccion o sombrilla
+- Gestion del riesgo
+- Seguimiento y control
+- Revisiones
+- Medicion
+- Gestion de la configuracion
+- Gestion de reutilizacion
+- Preparacion y produccion de productos de trabajo
+
+
+PEDIR APUNTE A BETO!!!

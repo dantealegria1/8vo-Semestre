@@ -23,8 +23,8 @@ class Eda:
         """Calcula el fitness de un individuo como la suma total de 1s."""
         return np.sum(individual)
     
-    def probability_per_column(self, population):
-        """Calcula la probabilidad de 1s por columna en la población."""
+    def probability_per_cell(self, population):
+        """Calcula la probabilidad de 1s por celda en la población."""
         top_individuals = sorted(population, key=self.calculate_fitness, reverse=True)[:self.TOP_SELECTION]
         stacked = np.stack(top_individuals)
         return np.mean(stacked, axis=0)  # Promedio de 1s en cada celda
@@ -45,8 +45,8 @@ class Eda:
         stagnation_counter = 0
         
         for generation in range(self.MAX_GENERATIONS):
-            # Estimar probabilidades por columna
-            prob_matrix = self.probability_per_column(population)
+            # Estimar probabilidades por celda
+            prob_matrix = self.probability_per_cell(population)
             
             # Generar nuevos individuos y aplicar selección
             new_population = []

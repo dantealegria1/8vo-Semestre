@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Metaheuristicas/Algoritmos genéticos.md",
+                "file": "Administracion/Proyectos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algoritmos genéticos"
+              "title": "Proyectos"
             }
           },
           {
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "3234caf3b941957a",
@@ -164,8 +163,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -174,8 +173,8 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -196,16 +195,16 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "dc7f77e0484b7d6d",
   "lastOpenFiles": [
-    "Pasted image 20250223140311.png",
     "Derecho/Conceptos Basicos.md",
     "Administracion/Proyectos.md",
     "Metaheuristicas/Algoritmos genéticos.md",
+    "Pasted image 20250223140311.png",
     "Movil/Proyecto.zip",
     "Redes/Fundamentos de SO Unix-Linux.md",
     "Graficacion/Graficacion.md",
@@ -232,7 +231,6 @@
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xhdpi-v4/ic_launcher.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxxhdpi-v4/ic_launcher_round.webp",
     "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-xxxhdpi-v4/ic_launcher.webp",
-    "Actividad15/app/build/intermediates/packaged_res/debug/packageDebugResources/mipmap-hdpi-v4/ic_launcher_round.webp",
     "Excalidraw/Drawing 2025-02-04 10.47.44.excalidraw.md",
     "Estrategia Evolutiva (ES).md",
     "Excalidraw/Drawing 2025-02-04 10.47.04.excalidraw.md",
