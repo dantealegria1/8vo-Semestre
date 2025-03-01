@@ -60,15 +60,16 @@ class TspEda:
         return [self.generate_random_individual() for _ in range(self.POPULATION_SIZE)]
     
     def calculate_fitness(self, individual):
-        """Calcula el fitness de una ruta como el inverso de la distancia total recorrida."""
+        """Calcula el fitness de una ruta como la distancia total recorrida.
+        Menor distancia = mejor fitness."""
         total_distance = 0
         for i in range(len(individual)):
             from_city = individual[i]
             to_city = individual[(i + 1) % len(individual)]  # Vuelve a la primera ciudad
             total_distance += self.distance_matrix[from_city, to_city]
         
-        # Como queremos maximizar, pero el TSP es de minimización, tomamos el inverso
-        return 1.0 / (total_distance + 1e-10)
+        # Devolvemos directamente la distancia total (menor es mejor)
+        return total_distance
     
     def probability_matrix(self, population):
         """
@@ -87,9 +88,8 @@ class TspEda:
         Se normalizan las frecuencias de cada fila dividiendo por la suma de la fila.
         Se usa np.where para evitar divisiones por cero
         """
-
-        # Seleccionar los mejores individuos
-        top_individuals = sorted(population, key=self.calculate_fitness, reverse=True)[:self.TOP_SELECTION]
+        # Seleccionar los mejores individuos (menor distancia = mejor)
+        top_individuals = sorted(population, key=self.calculate_fitness)[:self.TOP_SELECTION]
         
         # Inicializar matriz de frecuencias
         freq_matrix = np.zeros((self.NUM_CITIES, self.NUM_CITIES))
@@ -147,37 +147,13 @@ class TspEda:
         return np.array(route)
     
     def acceptance(self, child, parent):
-        """Acepta el hijo si tiene mejor fitness, de lo contrario mantiene el padre."""
-        return child if self.calculate_fitness(child) > self.calculate_fitness(parent) else parent
-    
-    def plot_best_route(self, route):
-        """Visualiza la mejor ruta encontrada."""
-        plt.figure(figsize=(10, 8))
-        
-        # Dibujar ciudades
-        plt.scatter(self.cities[:, 0], self.cities[:, 1], c='red', s=100)
-        
-        # Numerar ciudades
-        for i, (x, y) in enumerate(self.cities):
-            plt.annotate(str(i), (x, y), xytext=(5, 5), textcoords='offset points')
-        
-        # Dibujar ruta
-        for i in range(len(route)):
-            from_idx = route[i]
-            to_idx = route[(i + 1) % len(route)]
-            plt.plot([self.cities[from_idx, 0], self.cities[to_idx, 0]],
-                     [self.cities[from_idx, 1], self.cities[to_idx, 1]], 'b-')
-        
-        plt.title('Mejor Ruta Encontrada')
-        plt.xlabel('Coordenada X')
-        plt.ylabel('Coordenada Y')
-        plt.grid(True)
-        plt.show()
+        """Acepta el hijo si tiene mejor fitness (menor distancia), de lo contrario mantiene el padre."""
+        return child if self.calculate_fitness(child) < self.calculate_fitness(parent) else parent
     
     def run(self):
         """Ejecuta el algoritmo EDA para el TSP."""
         population = self.generate_initial_population()
-        best_fitness = 0
+        best_fitness = float('inf')  # Inicializar con un valor muy alto
         best_route = None
         stagnation_counter = 0
         
@@ -197,23 +173,20 @@ class TspEda:
             # Actualizar población
             population = new_population
             
-            # Evaluar mejor individuo
-            best_individual = max(population, key=self.calculate_fitness)
+            # Evaluar mejor individuo (el de menor distancia)
+            best_individual = min(population, key=self.calculate_fitness)
             current_best_fitness = self.calculate_fitness(best_individual)
             
             # Guardar historial de fitness
             fitness_history.append(current_best_fitness)
             
-            total_distance = 1.0 / current_best_fitness
-            
             print(f"Generación {generation + 1}:")
-            print(f"Mejor Fitness: {current_best_fitness:.6f}")
-            print(f"Distancia Total: {total_distance:.2f}")
+            print(f"Mejor Fitness (Distancia Total): {current_best_fitness:.2f}")
             print(f"Generaciones sin mejora: {stagnation_counter}")
             print("-" * 50)
             
-            # Guardar mejor ruta
-            if current_best_fitness > best_fitness:
+            # Guardar mejor ruta (menor distancia)
+            if current_best_fitness < best_fitness:
                 best_fitness = current_best_fitness
                 best_route = best_individual.copy()
                 stagnation_counter = 0
@@ -225,23 +198,10 @@ class TspEda:
         
         # Imprimir resultados finales
         print("\nResultados finales:")
-        print(f"Mejor distancia encontrada: {1.0 / best_fitness:.2f}")
+        print(f"Mejor distancia encontrada: {best_fitness:.2f}")
         print(f"Mejor ruta: {best_route}")
-        
-        # Visualizar evolución del fitness
-        plt.figure(figsize=(10, 6))
-        plt.plot(range(1, len(fitness_history) + 1), fitness_history)
-        plt.title('Evolución del Fitness')
-        plt.xlabel('Generación')
-        plt.ylabel('Fitness (1/distancia)')
-        plt.grid(True)
-        plt.show()
-        
-        # Visualizar mejor ruta
-        if best_route is not None:
-            self.plot_best_route(best_route)
-        
-        return best_route, 1.0 / best_fitness
+                
+        return best_route, best_fitness
 
 # Ejecutar el algoritmo
 if __name__ == "__main__":
