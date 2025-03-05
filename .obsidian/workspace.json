@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Administracion/Proyectos.md",
+                "file": "Redes/Fundamentos de SO Unix-Linux.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Proyectos"
+              "title": "Fundamentos de SO Unix-Linux"
             }
           },
           {
@@ -199,15 +199,15 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "dc7f77e0484b7d6d",
+  "active": "f30b4ed38ab40266",
   "lastOpenFiles": [
-    "Derecho/Conceptos Basicos.md",
+    "Graficacion/Graficacion.md",
     "Administracion/Proyectos.md",
+    "Derecho/Conceptos Basicos.md",
     "Metaheuristicas/Algoritmos genéticos.md",
     "Pasted image 20250223140311.png",
     "Movil/Proyecto.zip",
     "Redes/Fundamentos de SO Unix-Linux.md",
-    "Graficacion/Graficacion.md",
     "Graficacion/Ejercicios.md",
     "Metaheuristicas/EDA.py~",
     "Metaheuristicas/EDA.py",

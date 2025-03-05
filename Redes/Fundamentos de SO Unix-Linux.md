@@ -408,7 +408,7 @@ otro clon es rocky os, eurolinux, red flag
 
 #### Archivo
 
-Flujo o secuencia identificada (_nombrada_) de bits (_bytes_). 
+Flujo o secuencia identificada (_nombrada_) de bits (_bytes_) 
 #### File systems
 
 Estructura (logica) que da orden, organizacion y gestiona archivos
@@ -426,3 +426,59 @@ Cada sistema operativo define su propio formato. Cada uno maneja un concepto de 
 | **UNIX**       | UFS                                    |
 | **Linux**      | Ext(1,2,3,4), BTRF, XFS, RaisorFS, ZFS |
 |                |                                        |
+|                |                                        |
+
+*Instalación de un S.O. UNIX/GNU-Linux*
+Planeación
+1. Paso Inicial -> Distribución, ¿Qué es lo que quiero? ¿Cual me acerca a ello?
+2. Objetivos 
+	1. Servidores de Red, (S.O.'s empresariales, Misión Crítica, Non Stop)
+		1. En la Nube o clusters -> *VPS*.
+			1. Producción.
+			2. Pruebas.
+			3. Respaldos.
+		2. Virtualización.
+		3. Nativa
+	2. Workstation, (grandes recursos, multimedios)
+		4. Diseño.
+		5. Programación.
+	3. PC's a laptops de trabajo (recursos limitados). -> aplicaciones específicas (fijas)
+	4. Computadoras muy viejitas (obsoleto)
+
+### Almacenamiento
+
+Depende del sistema operativo
+
+S.O
+- Relativo al S.O (Root /) (formato ext4 lvm estatico)
+	- Kernel
+	- Utilizatios
+	- Librerias
+	- lenguajes
+- Arranque (/Bat)
+- Temporales (/tmp)
+- Espacio variable o de servicios (/var) (ext4 o xfs)
+	- Bitacoras
+- Espacio para los usuarios (/home)
+- Swap (Formato estatico swap)
+
+Tamaño
+
+16 - 60 gb
+512 MG
+16 GB
+
+24 GB+Bases de datos+servicios
+
+NUmUsuarios**x**TMxU**x**1.2
+
+<1GB - 2xMem
+1GB-8GB -1xMem
+ >8gb - 8GB
+ 
+Formato
+ext4 o ext3 (lvm Estatico para el so)
+xfs (Para tamaños variables (tambien puede ser ext4))
+zfs
+btrf
+lvm puede ser estatico o dinamico, si es estatico ya que ponga un espacio ya no se puede mover
