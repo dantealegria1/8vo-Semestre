@@ -2,28 +2,23 @@
 
 ### **Imágenes Vectoriales**
 Las imágenes vectoriales están basadas en **primitivas geométricas** que se definen mediante ecuaciones matemáticas.
-
 #### **Primitivas**
 - Puntos  
 - Segmentos  
 - Círculos  
 - Polígonos  
 - Estructuras geométricas  
-
 ### **Imágenes de Píxeles**
 Las imágenes reales están compuestas por **píxeles**, que son pequeñas unidades de color organizadas en una cuadrícula.
-
 #### **Mallado**
 Un **mallado** es un conjunto de píxeles o una matriz de píxeles de tamaño $M \times N$.  
 - Un **mallado en 3 dimensiones** es un **paralelepípedo**.  
 - Un **boxcell** tiene **tres coordenadas** para su identificación y, además, requiere información sobre la **intensidad del píxel o el color**.
-
 ### **CAD (Computer-Aided Design)**
 El diseño asistido por computadora (CAD) permite trabajar con imágenes vectoriales y realizar transformaciones como:
 - **Escalamiento**  
 - **Rotación**  
 - **Traslación**
-
 ### Ejercicio
 
 #### Vecindad de un pixel
@@ -71,7 +66,7 @@ Ejercicio: Vecindad de tamaño 8 en $( \mathbb{R}^2 )$
 Dado un punto $( P = (2,3) )$ en el plano, encuentra los 8 puntos más cercanos según diferentes métricas.
 ### 1. Usando la métrica euclidiana  
 
-La distancia entre dos puntos $( (x_1, y_1) ) y ( (x_2, y_2) )$ es:  
+Es la distancia recta entre dos puntos $( (x_1, y_1) ) y ( (x_2, y_2) )$ es:  
 
 $$d(P, Q) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
 Los 8 vecinos más cercanos son los puntos a una distancia de $( \sqrt{1} ) o ( \sqrt{2} )$:
@@ -98,7 +93,7 @@ La distancia es:
 
 $$d(P, Q) = \max (|x_2 - x_1|, |y_2 - y_1|)$$
 
-Aquí, los puntos con \( d(P, Q) \leq 1 \) forman un cuadrado de lado 2:
+Aquí, los puntos con $( d(P, Q) \leq 1 )$ forman un cuadrado de lado 2:
 
 $$(1,2), (1,3), (1,4), (2,2), (2,4), (3,2), (3,3), (3,4)$$
 ---
@@ -136,7 +131,6 @@ Ejemplo en una matriz:
 Aquí, el píxel XX está conectado solo con los 4 píxeles que lo rodean horizontal y verticalmente.
 
 ---
-
 ### **2. Conectividad 8 (Vecindad de Moore)**
 
 Un píxel está conectado con sus 4 vecinos ortogonales **y también con los 4 en diagonal**.
@@ -188,3 +182,14 @@ Si usamos **conectividad 8**, todos los `1`s están conectados en una sola regi�
 La elección entre **conectividad 4** y **conectividad 8** afecta cómo se detectan objetos en una matriz de píxeles. Conectividad 4 es más estricta (solo vecinos ortogonales), mientras que conectividad 8 permite conexiones en diagonal. 🚀
 
 Un **símplice** (o **simplejo**, aunque este último término es menos común) es una de las estructuras geométricas más básicas en la geometría y la topología. Es la generalización de un triángulo a dimensiones superiores
+
+## Espacio metrico
+$d: M \times M \rightarrow R$ son $x,y,z,M$. Se satisfacen las siguientes axiomas
+1. $d(x,x) = 0$
+2. Si $x\neq y \rightarrow d(x,y) > 0$
+3. $d(x,y) = d(y,x)$ (Simetria)
+4. $d(x,z) \leq d(x,y) + d(y,z)$ (desigualdad de triangulo)
+
+### Camino
+Bajo cierta vecindad que conecta Po con Pm un componente conectado bajo cierta vecidndad es aquel en el que hay al menos un camino que conecta cualquier par de pixeles en ese componente.
+

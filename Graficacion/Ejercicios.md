@@ -507,3 +507,6 @@ $$ \det(A) = (1 \cdot (-2) \cdot 7) + (2 \cdot 1 \cdot 3) + (0 \cdot (-2) \cdot 
 $$ \det(A) = (-14) + (6) + (0) - (0) - (0) - (-28)\ \det(A) = -14 + 6 + 28 = 20 $$
 $$\det(A) \neq 0 $$
 Entonces son independientes
+Tambien se puede sacar con Gauss jordan usando 
+$$c1\begin{bmatrix} 1 \\-2\\3\end{bmatrix}+c2\begin{bmatrix} 2 \\-2\\0\end{bmatrix}  +c3  \begin{bmatrix} 0 \\1\\7\end{bmatrix}$$
+De hecho no se ni por que se hace lode c1, c2, c3 jaja si se resuelve asi $$\begin{vmatrix} 1 & 2 & 0\\ -2 & -2 & 1 \\ 3 & 0 & 7 \end{vmatrix} $$ Si se logra resolver dando 0 en todas es que son independientes
