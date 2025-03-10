@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Graficacion/Graficacion.md",
+                "file": "Graficacion/Ejercicios.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Graficacion"
+              "title": "Ejercicios"
+            }
+          },
+          {
+            "id": "b94fdbdaffe529d7",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.9"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.9"
             }
           }
         ]
@@ -44,7 +56,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -149,8 +161,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "icon": "lucide-file",
+              "title": "Complemento no activo"
             }
           },
           {
@@ -159,8 +171,8 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
+              "icon": "lucide-file",
+              "title": "Complemento no activo"
             }
           }
         ],
@@ -173,22 +185,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "workspaces:Manage workspace layouts": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "workspaces:Gestionar disposiciones de espacio de trabajo": false,
       "obsidian-git:Open Git source control": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "f30b4ed38ab40266",
+  "active": "8ee729def24e66b5",
   "lastOpenFiles": [
-    "Graficacion/Ejercicios.md",
     "Graficacion/Graficacion.md",
+    "Graficacion/Ejercicios.md",
     "Metaheuristicas/requirements.txt",
     "Metaheuristicas/Agente_Viajero.py",
     "Administracion/Proyectos.md",

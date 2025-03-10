@@ -193,3 +193,7 @@ $d: M \times M \rightarrow R$ son $x,y,z,M$. Se satisfacen las siguientes axioma
 ### Camino
 Bajo cierta vecindad que conecta Po con Pm un componente conectado bajo cierta vecidndad es aquel en el que hay al menos un camino que conecta cualquier par de pixeles en ese componente.
 
+Invariante: Cantidades que no cambian a pesar de que se le apliquen transformaciones a fin
+- Traslacion
+- Cambio de escala
+- rotacion
