@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MiVistaPersonalizada">
+        <attr name="titulo" format="string" />
+        <attr name="colorFondo" format="color" />
+        <attr name="tamanoTexto" format="dimension" />
+    </declare-styleable>
+</resources>
