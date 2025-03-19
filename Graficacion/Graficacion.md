@@ -193,7 +193,39 @@ $d: M \times M \rightarrow R$ son $x,y,z,M$. Se satisfacen las siguientes axioma
 ### Camino
 Bajo cierta vecindad que conecta Po con Pm un componente conectado bajo cierta vecidndad es aquel en el que hay al menos un camino que conecta cualquier par de pixeles en ese componente.
 
-Invariante: Cantidades que no cambian a pesar de que se le apliquen transformaciones a fin
+Invariante: Cantidades que no cambian a pesar de que se le apliquen transformaciones afines
+### Transformaciones afines
 - Traslacion
 - Cambio de escala
 - rotacion
+![[Imagen de WhatsApp 2025-03-11 a las 10.16.01_cabe1b9f.jpg]]
+
+### **Transformaciones afines**
+
+Las transformaciones afines son operaciones que modifican una figura en un espacio (como un plano o el espacio tridimensional) mediante combinaciones de **movimientos lineales** y **traslaciones**. Las más comunes son:
+### 1. **Traslación**
+
+Consiste en **desplazar** una figura en una dirección específica sin cambiar su forma ni orientación.
+
+Si un punto $P(x, y)$ se traslada por un vector $(t_x, t_y)$, las nuevas coordenadas $P'$ serán:
+$$P' = (x + t_x, y + t_y)$$
+✅ **Ejemplo:** Si $P(2, 3)$ se traslada por el vector $(1, -2)$, el nuevo punto es:
+$$P' = (2 + 1, 3 - 2) = (3, 1)$$
+### 2. **Cambio de escala**
+
+Consiste en **agrandar o reducir** una figura mediante un factor de escala en cada eje.
+
+Si un punto $P(x, y)$ se escala por factores $s_x$ y $s_y$ en los ejes $x$ y $y$ respectivamente, las nuevas coordenadas serán:
+$$P' = (s_x \cdot x, s_y \cdot y)$$
+
+✅ **Ejemplo:** Si P(2,3)P(2, 3) se escala por un factor de 2 en $x$ y 0.5 en $y$, el nuevo punto es:
+$$P' = (2 \cdot 2, 0.5 \cdot 3) = (4, 1.5)$$
+### 3. **Rotación**
+
+Consiste en **girar** una figura alrededor de un punto (usualmente el origen) por un ángulo $\theta$.
+
+Si un punto $P(x, y)$ se rota por un ángulo $\theta$ en sentido antihorario, las nuevas coordenadas serán:
+$$P' = (x' , y') = (x \cdot \cos \theta - y \cdot \sin \theta, x \cdot \sin \theta + y \cdot \cos \theta)$$
+
+✅ **Ejemplo:** Si $P(1,0)$ se rota 90° ($180=π \ 90 = \frac{\pi}{2}$):
+$$P' = (1 \cdot \cos \frac{\pi}{2} - 0 \cdot \sin \frac{\pi}{2}, 1 \cdot \sin \frac{\pi}{2} + 0 \cdot \cos \frac{\pi}{2}) \ P' = (0, 1)$$

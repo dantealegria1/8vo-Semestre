@@ -1,42 +1,44 @@
 import random
 import numpy as np
-import matplotlib.pyplot as plt
 
 class TspEda:
     def __init__(self):
-        # Parámetros principales del algoritmo
-        self.NUM_CITIES = 20            # Número de ciudades en el problema
-        self.POPULATION_SIZE = 100      # Número de individuos en la población
-        self.MAX_GENERATIONS = 100      # Máximo número de generaciones
-        self.STAGNATION_LIMIT = 21      # Límite de generaciones sin mejora
-        self.TOP_SELECTION = 30         # Número de mejores individuos para estimar probabilidades
+        # Ciudad de inicio y fin
+        self.START_END_CITY = 1
         
-        # Ciudades estáticas (coordenadas x, y)
+        # Ciudades
         self.cities = np.array([
-            [82.4, 15.7],  # Ciudad 0
-            [25.3, 71.2],  # Ciudad 1
-            [46.8, 91.3],  # Ciudad 2
-            [64.2, 32.1],  # Ciudad 3
-            [37.9, 56.8],  # Ciudad 4
-            [92.5, 60.1],  # Ciudad 5
-            [15.3, 32.7],  # Ciudad 6
-            [78.1, 45.6],  # Ciudad 7
-            [55.4, 78.2],  # Ciudad 8
-            [34.8, 12.3],  # Ciudad 9
-            [67.9, 89.5],  # Ciudad 10
-            [23.4, 45.7],  # Ciudad 11
-            [78.9, 30.2],  # Ciudad 12
-            [45.3, 24.8],  # Ciudad 13
-            [90.1, 82.3],  # Ciudad 14
-            [12.7, 85.4],  # Ciudad 15
-            [36.2, 96.7],  # Ciudad 16
-            [58.9, 54.3],  # Ciudad 17
-            [41.5, 70.6],  # Ciudad 18
-            [87.3, 39.5]   # Ciudad 19
+            [78.1, 45.6],  # Ciudad 0
+            [55.4, 78.2],  # Ciudad 1
+            [34.8, 12.3],  # Ciudad 2
+            [67.9, 89.5],  # Ciudad 3
+            [23.4, 45.7],  # Ciudad 4
+            [78.9, 30.2],  # Ciudad 5
+            [45.3, 24.8],  # Ciudad 6
+            [90.1, 82.3],  # Ciudad 7
+            [12.7, 85.4],  # Ciudad 8
+            [36.2, 96.7],  # Ciudad 9
+            [58.9, 54.3],  # Ciudad 10
+            [41.5, 70.6],  # Ciudad 11
+            [87.3, 39.5]   # Ciudad 12
         ])
+        
+        # Actualizar el numero de ciudades para que coincida con el tamano real del array
+        self.NUM_CITIES = len(self.cities)
+        
+        # Otros parametros
+        self.POPULATION_SIZE = 100  
+        self.MAX_GENERATIONS = 100 
+        self.STAGNATION_LIMIT = 21      
+        self.TOP_SELECTION = 30        
         
         # Calcular matriz de distancias entre ciudades
         self.distance_matrix = self.calculate_distance_matrix()
+        
+        # Validar que la ciudad de inicio/fin este dentro del rango
+        if self.START_END_CITY >= self.NUM_CITIES:
+            print(f"Error: La ciudad de inicio/fin ({self.START_END_CITY}) esta fuera de rango. Ajustando a ciudad 0.")
+            self.START_END_CITY = 0
     
     def calculate_distance_matrix(self):
         """Calcula la matriz de distancias entre todas las ciudades."""
@@ -50,43 +52,43 @@ class TspEda:
         return dist_matrix
     
     def generate_random_individual(self):
-        """Genera una ruta aleatoria como permutación de ciudades."""
-        route = list(range(self.NUM_CITIES))
-        random.shuffle(route)
+        """Genera una ruta aleatoria como permutacion de ciudades, 
+        asegurando que inicie y termine en la ciudad especificada."""
+        # Crear lista de ciudades excluyendo la ciudad de inicio/fin
+        cities = list(range(self.NUM_CITIES))
+        cities.remove(self.START_END_CITY)
+        
+        # Aleatorizar el orden de las ciudades restantes
+        random.shuffle(cities)
+        
+        # Crear ruta que comienza en START_END_CITY
+        route = [self.START_END_CITY] + cities
+        
         return np.array(route)
     
     def generate_initial_population(self):
-        """Genera una población inicial de rutas aleatorias."""
+        """Genera una poblacion inicial de rutas aleatorias."""
         return [self.generate_random_individual() for _ in range(self.POPULATION_SIZE)]
     
     def calculate_fitness(self, individual):
         """Calcula el fitness de una ruta como la distancia total recorrida.
-        Menor distancia = mejor fitness."""
+        Menor distancia = mejor fitness.
+        Ahora consideramos explicitamente el retorno a la ciudad de inicio."""
         total_distance = 0
-        for i in range(len(individual)):
+        for i in range(len(individual) - 1):
             from_city = individual[i]
-            to_city = individual[(i + 1) % len(individual)]  # Vuelve a la primera ciudad
+            to_city = individual[i + 1]
             total_distance += self.distance_matrix[from_city, to_city]
         
-        # Devolvemos directamente la distancia total (menor es mejor)
+        # Anadir distancia de retorno a la ciudad de inicio
+        total_distance += self.distance_matrix[individual[-1], self.START_END_CITY]
+        
         return total_distance
     
     def probability_matrix(self, population):
         """
         Calcula una matriz de probabilidades para cada par de ciudades
-        basado en las mejores rutas de la población actual.
-
-        Se toman las TOP_SELECTION mejores rutas.
-        Se cuenta cuántas veces aparecen las conexiones entre ciudades.
-        Se normalizan las frecuencias para obtener una matriz de probabilidades
-
-        Se recorren las rutas seleccionadas y, para cada ciudad, se toma la ciudad siguiente en la ruta.
-        Se incrementa el contador en la freq_matrix, reflejando la cantidad de veces que esa conexión aparece en las mejores soluciones.
-
-        Se convierte la freq_matrix en una matriz de probabilidades.
-        Cada fila representa una ciudad y muestra la probabilidad de moverse a otra ciudad.
-        Se normalizan las frecuencias de cada fila dividiendo por la suma de la fila.
-        Se usa np.where para evitar divisiones por cero
+        basado en las mejores rutas de la poblacion actual.
         """
         # Seleccionar los mejores individuos (menor distancia = mejor)
         top_individuals = sorted(population, key=self.calculate_fitness)[:self.TOP_SELECTION]
@@ -96,10 +98,13 @@ class TspEda:
         
         # Contar frecuencias de conexiones entre ciudades
         for route in top_individuals:
-            for i in range(len(route)):
+            for i in range(len(route) - 1):
                 from_city = route[i]
-                to_city = route[(i + 1) % len(route)]
+                to_city = route[i + 1]
                 freq_matrix[from_city, to_city] += 1
+            
+            # Anadir conexion de la ultima ciudad a la ciudad de inicio
+            freq_matrix[route[-1], self.START_END_CITY] += 1
         
         # Normalizar para obtener probabilidades
         prob_matrix = np.where(np.sum(freq_matrix, axis=1, keepdims=True) > 0, 
@@ -111,17 +116,16 @@ class TspEda:
     def generate_child(self, prob_matrix):
         """
         Genera una nueva ruta usando la matriz de probabilidades.
-        Implementa un algoritmo greedy probabilístico.
+        La ruta siempre comienza en la ciudad especificada.
         """
+        # La ruta siempre comienza en la ciudad especificada
+        route = [self.START_END_CITY]
         remaining_cities = set(range(self.NUM_CITIES))
-        route = []
+        remaining_cities.remove(self.START_END_CITY)
         
-        # Elegir ciudad inicial aleatoriamente
-        current_city = random.randint(0, self.NUM_CITIES - 1)
-        route.append(current_city)
-        remaining_cities.remove(current_city)
+        current_city = self.START_END_CITY
         
-        # Construir la ruta seleccionando ciudades según las probabilidades
+        # Construir la ruta seleccionando ciudades segun las probabilidades
         while remaining_cities:
             probs = prob_matrix[current_city].copy()
             # Poner a cero las probabilidades de ciudades ya visitadas
@@ -133,7 +137,7 @@ class TspEda:
             if np.sum(probs) > 0:
                 probs = probs / np.sum(probs)
             else:
-                # Si todas las probabilidades son cero, usar selección uniforme
+                # Si todas las probabilidades son cero, usar seleccion uniforme
                 probs = np.zeros(self.NUM_CITIES)
                 for city in remaining_cities:
                     probs[city] = 1.0 / len(remaining_cities)
@@ -143,7 +147,7 @@ class TspEda:
             route.append(next_city)
             remaining_cities.remove(next_city)
             current_city = next_city
-            
+        
         return np.array(route)
     
     def acceptance(self, child, parent):
@@ -163,14 +167,14 @@ class TspEda:
             # Estimar matriz de probabilidades
             prob_matrix = self.probability_matrix(population)
             
-            # Generar nuevos individuos y aplicar selección
+            # Generar nuevos individuos y aplicar seleccion
             new_population = []
             for parent in population:
                 child = self.generate_child(prob_matrix)
                 selected = self.acceptance(child, parent)
                 new_population.append(selected)
             
-            # Actualizar población
+            # Actualizar poblacion
             population = new_population
             
             # Evaluar mejor individuo (el de menor distancia)
@@ -180,7 +184,7 @@ class TspEda:
             # Guardar historial de fitness
             fitness_history.append(current_best_fitness)
             
-            print(f"Generación {generation + 1}:")
+            print(f"Generacion {generation + 1}:")
             print(f"Mejor Fitness (Distancia Total): {current_best_fitness:.2f}")
             print(f"Generaciones sin mejora: {stagnation_counter}")
             print("-" * 50)
@@ -200,9 +204,11 @@ class TspEda:
         print("\nResultados finales:")
         print(f"Mejor distancia encontrada: {best_fitness:.2f}")
         print(f"Mejor ruta: {best_route}")
-                
+        print(f"Nota: La ruta comienza y termina en la ciudad {self.START_END_CITY}")
+        
+        # Visualizar la ruta si matplotlib esta disponible
         return best_route, best_fitness
-
+    
 # Ejecutar el algoritmo
 if __name__ == "__main__":
     tsp_solver = TspEda()
