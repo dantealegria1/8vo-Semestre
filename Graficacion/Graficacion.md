@@ -229,3 +229,14 @@ $$P' = (x' , y') = (x \cdot \cos \theta - y \cdot \sin \theta, x \cdot \sin \the
 
 ✅ **Ejemplo:** Si $P(1,0)$ se rota 90° ($180=π \ 90 = \frac{\pi}{2}$):
 $$P' = (1 \cdot \cos \frac{\pi}{2} - 0 \cdot \sin \frac{\pi}{2}, 1 \cdot \sin \frac{\pi}{2} + 0 \cdot \cos \frac{\pi}{2}) \ P' = (0, 1)$$
+#### Rotaciones en 3D
+
+Sacar angulos de euler
+En 2D: La rotación en 2D se expresa mediante una multiplicación de matrices:
+$$\begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos{\theta} & -\sin{\theta} \\ \sin{\theta} & \cos{\theta} \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}$$
+La matriz de rotación en 2D puede escribirse en términos de vectores unitarios:
+$$\begin{bmatrix} \hat{i}' \cdot \hat{i} & \hat{i}' \cdot \hat{j} \\ \hat{j}' \cdot \hat{i} & \hat{j}' \cdot \hat{j} \end{bmatrix}$$
+donde:
+- $\hat{i}' y \ \hat{j}'$ son los vectores unitarios rotados.
+- Los productos escalares entre estos vectores forman los elementos de la matriz de rotación.
+

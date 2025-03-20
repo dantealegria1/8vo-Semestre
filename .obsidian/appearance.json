@@ -2,8 +2,8 @@
   "baseFontSizeAction": true,
   "textFontFamily": "FiraCode Nerd Font",
   "interfaceFontFamily": "FiraCode Nerd Font",
-  "theme": "system",
-  "cssTheme": "Typewriter",
+  "theme": "moonstone",
+  "cssTheme": "Cupertino",
   "baseFontSize": 20,
   "nativeMenus": false
 }
