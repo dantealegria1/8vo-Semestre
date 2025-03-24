@@ -51,7 +51,7 @@ COMMENT
 # Definición de constantes
 BIT_COUNT=50 
 POPULATION_SIZE=20  # Tamaño de la población
-MAX_GENERATIONS=201  # Número máximo de generaciones
+MAX_GENERATIONS=41  # Número máximo de generaciones
 NO_IMPROVEMENT_LIMIT=20 # Límite de generaciones sin mejora
 
 # Función para generar un individuo aleatorio (lista de bits)
