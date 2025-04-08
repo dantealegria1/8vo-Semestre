@@ -239,4 +239,195 @@ $$\begin{bmatrix} \hat{i}' \cdot \hat{i} & \hat{i}' \cdot \hat{j} \\ \hat{j}' \c
 donde:
 - $\hat{i}' y \ \hat{j}'$ son los vectores unitarios rotados.
 - Los productos escalares entre estos vectores forman los elementos de la matriz de rotación.
+## Chain Code y sus Variantes
 
+### 1. Chain Code
+
+El **Chain Code** es una técnica de codificación utilizada en el procesamiento de imágenes para representar la forma de un contorno mediante una secuencia de direcciones discretas. Se utiliza principalmente en el análisis de bordes y reconocimiento de patrones.
+
+La idea principal es recorrer un contorno siguiendo una dirección específica y almacenando los cambios direccionales en una cadena de códigos numéricos.
+
+---
+
+### 2. Three Orthogonal Direction Chain Code (3OT)
+
+Este método restringe los movimientos a **tres direcciones ortogonales**:
+
+- **0** → Derecha
+    
+- **1** → Arriba
+    
+- **2** → Izquierda
+    
+
+Se usa en aplicaciones donde la reducción de datos es prioritaria y el contorno puede representarse con menos direcciones.
+
+**Ejemplo:** Si un contorno se mueve de manera escalonada en una forma de "L", la secuencia podría ser:
+
+```
+0 → 0 → 1 → 1 → 2 → 2
+```
+
+---
+
+### 3. Freeman Chain Code de Ocho ηpq​=M00γ​Mpq​​2Direcciones (8-direcciones)
+
+El **Freeman Chain Code** es una variante más detallada que permite representar movimientos en **ocho direcciones**:
+
+```
+  3  2  1
+  4  P  0
+  5  6  7
+```
+
+Donde:
+
+- **0** → Derecha
+    
+- **1** → Diagonal arriba-derecha
+    
+- **2** → Arriba
+    
+- **3** → Diagonal arriba-izquierda
+    
+- **4** → Izquierda
+    
+- **5** → Diagonal abajo-izquierda
+    
+- **6** → Abajo
+    
+- **7** → Diagonal abajo-derecha
+    
+
+Este método es más preciso que el de tres direcciones y es ampliamente utilizado en análisis de imágenes y reconocimiento de patrones.
+
+**Ejemplo:** Si el contorno se mueve en diagonal y luego recto:
+
+```
+1 → 2 → 3 → 4 → 5 → 6
+```
+
+---
+
+## Conclusión
+
+Cada método de **Chain Code** tiene sus ventajas:
+
+- **3OT** es más compacto y fácil de procesar.
+    
+- **Freeman de 8 direcciones** ofrece mayor precisión en la representación de contornos.
+    
+
+Su elección depende del nivel de detalle y eficiencia que se requiera en la aplicación específica.
+
+## 1. Demostración Por Inducción: Relación entre Perímetro y Celdas
+
+### Teorema a Demostrar
+
+Para una figura compuesta por $m$ celdas cuadradas adyacentes, se cumple la relación:
+
+$2P_c + L = 4m$
+
+Donde:
+
+- $P_c$ = Perímetro común (bordes compartidos entre celdas)
+- $L$ = Perímetro libre (bordes que no son compartidos)
+- $m$ = Número de celdas
+
+### Caso Base
+
+Para una celda individual ($m = 1$):
+
+- $P_c = 0$ (no hay bordes compartidos)
+- $L = 4$ (todos los bordes son libres)
+- $m = 1$ (una sola celda)
+
+Verificación: $2(0) + 4 = 4(1)$ ✓
+
+### Hipótesis de Inducción
+
+Asumimos que para $m$ celdas se cumple: $2P_c + L = 4m$
+
+### Paso Inductivo
+
+Para $m+1$ celdas:
+
+- Al agregar una celda nueva, ocurre:
+    - $P_c' = P_c + 1$ (aumenta el perímetro común)
+    - $L' = L + 2$ (el perímetro libre aumenta en 2 unidades)
+    - $m' = m + 1$ (una celda adicional)
+
+Sustituyendo en la ecuación: $$2P_c' + L' = 2(P_c+1) + (L+2) = 2P_c + 2 + L + 2 = 2P_c + L + 4$$
+
+Por hipótesis de inducción, sabemos que $2P_c + L = 4m$, por tanto: $$2P_c + L + 4 = 4m + 4 = 4(m+1)$$
+Lo que demuestra que la relación se mantiene para $m+1$ celdas.
+### Parámetros Adicionales
+
+- $T = 3, 4, 6$ (posibles tipos de teselas o figuras)
+- $l = 1$ (longitud unitaria de cada lado)
+
+## 2. Codificación de Contornos
+
+### Códigos de Cadena
+
+Los códigos de cadena son representaciones numéricas del contorno de objetos en imágenes digitales.
+
+#### Tipos de Códigos de Cadena:
+
+1. **Código de Tres Direcciones Ortogonales (3OT)**
+    - Utiliza tres direcciones para representar contornos
+    - Más compacto que otros códigos pero con menor precisión
+    - ![[Pasted image 20250408110030.png]]
+    - ![[Pasted image 20250408110124.png]]
+    - Cada dos se pone el numerito
+2. F8
+	- Recorre la cadena por el centro de los pixeles
+	- Comienza con el pixel mas arriba a la izquierda
+	- ![[Pasted image 20250408110507.png]]
+	- ![[Pasted image 20250408110622.png]]
+3. **Código de Cadena de Freeman de Ocho Direcciones (DFCCE → AF8)**
+    - Utiliza 8 direcciones (0-7) para codificar el contorno
+    - Mayor precisión en la representación
+    - ![[Pasted image 20250408110708.png]]
+    - Usa dos vectores para codificar
+    - Recorre por el centro
+    - ![[Pasted image 20250408110742.png]]
+    - Ojo se comio el de la esquina inferior izquierda, el profe dice que esta mal, debio haber sido 0,0,4,2,2,0,0,4,2,2
+4. F4
+	- Comienza con el pixel que esta mas arriba a la izquierda
+	- Recorre la cadena por las orillas de los pixeles
+	- Usa un vector para codificar
+	- ![[Pasted image 20250408105520.png]]
+	- ![[Pasted image 20250408105627.png]]
+5. VCC
+	- Similar al F4 pero en lugar de usar un vector usa dos 
+	- Si vemos la diferencia es que son menos numeros en la codificacion final
+	- ![[Pasted image 20250408105752.png]]
+	- ![[Pasted image 20250408105940.png]]
+### Conjuntos Relevantes
+
+- $F_4 = {0, 1, 2, 3}$ (Código de Freeman de 4 direcciones)
+- $F_8 = {0, 1, 2, 3, 4, 5, 6, 7}$ (Código de Freeman de 8 direcciones)
+- $PBT = {0, 1}$ (Posiblemente código binario)
+- $VCC = {1, 2, 3}$ (Valores de conectividad)
+## 3. Momentos en Imágenes
+
+Los momentos son descriptores estadísticos utilizados para caracterizar la forma, tamaño y orientación de objetos en imágenes.
+
+### Definiciones Básicas
+
+- **Momento de orden $(p,q)$**: $M_{pq} = \iint x^p y^q \rho(x,y) \, dx \, dy$ Donde $\rho(x,y)$ es la función de densidad (intensidad de píxel)
+- **Momento de orden cero $M_{00}$**: Representa el área del objeto
+
+### Momentos Normalizados
+
+Los momentos normalizados $\eta_{pq}$ son invariantes a la escala:
+
+$$\eta_{pq} = \frac{M_{pq}}{M_{00}^{\gamma}}$$
+
+Donde $\gamma = \frac{p+q+2}{2}$ para $p+q \geq 2$
+
+### Valores Numéricos Observados
+
+- $\eta_{01} = -15.42$
+- $\eta_{01}' = -31.23$

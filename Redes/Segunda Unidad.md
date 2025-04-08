@@ -327,3 +327,465 @@ El almacenamiento puede clasificarse en función de su localización y redundanc
 ### 🔗 **Almacenamiento Distribuido**  
 - Repartición de datos en múltiples nodos para alta disponibilidad y tolerancia a fallos.  
 
+Aquí tienes un apunte más estructurado, con un diseño más claro y organizado para mejorar su comprensión.
+
+---
+# Hipervisores
+Los **hipervisores** son la base de la virtualización, ya que permiten ejecutar múltiples sistemas operativos sobre un mismo hardware físico. Existen tres tipos principales:
+
+---
+
+## 🏗️ **1. Hipervisores Tipo 1 (Bare-metal)**
+
+También llamados **hipervisores nativos** o **de tipo bare-metal**, se instalan **directamente sobre el hardware** sin necesidad de un sistema operativo intermedio.
+
+### ✅ **Ventajas:**
+
+✔️ Mayor rendimiento y eficiencia (sin capa intermedia)  
+✔️ Mejor seguridad y aislamiento de VMs  
+✔️ Adecuado para entornos empresariales y servidores
+
+### ❌ **Desventajas:**
+
+❌ Requiere hardware compatible  
+❌ Más complejo de administrar
+
+### 🔧 **Ejemplos:**
+
+- **VMware ESXi**
+    
+- **Microsoft Hyper-V**
+    
+- **Xen**
+    
+- **KVM** (Kernel-based Virtual Machine)
+    
+
+📌 **Usos comunes:** Centros de datos, servidores de alto rendimiento, cloud computing (AWS, Azure, Google Cloud).
+
+---
+
+## 🖥️ **2. Hipervisores Tipo 2 (Hosted)**
+
+Se instalan **sobre un sistema operativo** (Windows, Linux, macOS) y actúan como una aplicación que administra las máquinas virtuales.
+
+### ✅ **Ventajas:**
+
+✔️ Más fácil de instalar y usar  
+✔️ No requiere hardware especial  
+✔️ Adecuado para entornos de desarrollo y pruebas
+
+### ❌ **Desventajas:**
+
+❌ Menor rendimiento (depende del SO anfitrión)  
+❌ Menos seguro que los hipervisores Tipo 1
+
+### 🔧 **Ejemplos:**
+
+- **VMware Workstation / Fusion**
+    
+- **Oracle VirtualBox**
+    
+- **Parallels Desktop**
+    
+
+📌 **Usos comunes:** Desarrollo, pruebas de software, máquinas virtuales personales.
+
+---
+
+## 🌐 **3. Hipervisores Basados en Contenedores**
+
+No virtualizan hardware completo, sino que comparten el mismo kernel del sistema operativo y **usan espacios aislados** para ejecutar aplicaciones como si fueran máquinas virtuales ligeras.
+
+### ✅ **Ventajas:**
+
+✔️ Arranque rápido y menor uso de recursos  
+✔️ Escalabilidad ideal para microservicios  
+✔️ Mejor integración con entornos de CI/CD y DevOps
+
+### ❌ **Desventajas:**
+
+❌ Menos aislamiento que una VM tradicional  
+❌ Dependen del sistema operativo base
+
+### 🔧 **Ejemplos:**
+
+- **Docker**
+    
+- **LXC (Linux Containers)**
+    
+- **Podman**
+    
+- **Kubernetes** (orquestación de contenedores)
+    
+
+📌 **Usos comunes:** Cloud computing, microservicios, despliegues escalables en entornos DevOps.
+
+---
+
+## 📌 **¿Cuál elegir?**
+
+✅ **Tipo 1** → Servidores, entornos empresariales, cloud computing  
+✅ **Tipo 2** → Uso personal, pruebas de software, desarrollo  
+✅ **Contenedores** → Aplicaciones escalables, DevOps, microservicios
+
+## 🌐 **Virtualización con Hipervisores de Categoría 1**
+
+### 🖥️ **¿Por qué usar virtualización?**
+
+#### 🔹 **1. Consolidación**
+
+- Aprovechamiento eficiente del hardware
+    
+- Reducción del consumo energético
+    
+#### 🔹 **2. Tolerancia a fallos**
+
+- **Alta Disponibilidad (H.A.)**: Minimiza el tiempo de inactividad
+    
+- Migración en caliente para evitar interrupciones
+    
+#### 🔹 **3. Escalabilidad**
+
+- Ajuste dinámico de recursos según la demanda
+    
+#### 🔹 **4. Clusters**
+
+- Agrupación de servidores para mayor eficiencia
+    
+- **Emulación** de múltiples tipos de dispositivos
+
+#### 🔹 **5. Seguridad**
+
+- Aislamiento de máquinas virtuales
+    
+- Reducción del impacto de vulnerabilidades  
+
+---
+
+### 📂 **Almacenamiento y Repositorios**
+
+#### 🗄️ **Tipos de repositorios**
+
+✅ **Local**: Almacenamiento en un solo servidor  
+✅ **Remoto**: Servidores centralizados en la red  
+✅ **Distribuido**: Repartido en múltiples nodos
+
+#### 🔐 **Seguridad del almacenamiento**
+
+⚠️ **Líneas inseguras** → Riesgo de interceptación  
+☁️ **Cloud (inseguro)** → Riesgo de ataques y pérdida de control  
+🛡️ **Almacenamiento seguro (lento pero fiable)**
+
+---
+
+### 🌍 **Infraestructura y Redes**
+
+🔹 **Internet**  
+🔹 **Red de almacenamiento (SAN, NAS)**  
+🔹 **Discos locales**  
+🔹 **Red de datos**
+
+---
+
+✨ **Notas adicionales:**
+
+- La virtualización con hipervisores tipo 1 (bare-metal) ofrece mejor rendimiento y estabilidad.
+    
+- Es clave en entornos empresariales para optimizar costos y mejorar la resiliencia de la infraestructura TI.
+    
+
+
+# 📡 **Unidad 3: Capa de Servicios de Internet**
+
+## 🔹 **1. Conceptos Básicos**
+
+### 🏛 **Familia de protocolos de Internet (TCP/IP)**
+
+El modelo TCP/IP permite la comunicación en Internet mediante una estructura organizada en capas.
+
+📌 **Capas del Modelo TCP/IP:**
+
+|Capa|Número|Función|
+|---|---|---|
+|**Aplicación**|7,6|Interacción con el usuario y servicios de red.|
+|**Transporte**|4|Gestión de la comunicación entre dispositivos.|
+|**Red**|3|Enrutamiento de paquetes entre redes.|
+|**Enlace de Datos**|1,2|Manejo de frames y conexión física.|
+
+🔹 **Principios clave:**  
+✅ Una máquina **puede comunicarse siempre que se pueda enrutar** su tráfico.  
+✅ Cada mensaje en la red se encapsula en **paquetes**.  
+✅ La información viaja a través de un modelo llamado **datagrama**.
+
+---
+
+## 🔹 **2. Capa de Enlace de Datos**
+
+📌 **Funciones:**
+
+- Maneja los **frames o marcos de datos**.
+    
+- Controla la conexión entre dispositivos en la misma red.
+    
+
+📌 **Protocolos importantes:**
+
+- **LLC (Logical Link Control)** → Control de flujo y direccionamiento lógico.
+    
+- **MAC (Media Access Control)** → Direccionamiento físico (direcciones MAC).
+    
+
+---
+
+## 🔹 **3. Capa de Red**
+
+📌 **Objetivo:**
+
+- Crear "carreteras" para el tráfico de datos y definir la mejor ruta de los paquetes.
+    
+
+📌 **Protocolos clave:**
+
+- **IP (Internet Protocol)** → Identificación y entrega de paquetes.
+    
+- **ICMP (Internet Control Message Protocol)** → "El chismoso", notifica errores en la red.
+    
+- **Protocolos de enrutamiento** → Encuentran la mejor ruta para enviar paquetes.
+    
+- **AIP (Addressing and Internetworking Protocols)** → Manejo de direcciones y redes.
+    
+
+---
+
+## 🔹 **4. Capa de Transporte**
+
+📌 **Función principal:**
+
+- Facilitar la comunicación entre dispositivos gestionando la entrega de datos.
+    
+
+📌 **Protocolos más usados:**
+
+|Protocolo|Características|
+|---|---|
+|**UDP (User Datagram Protocol)**|Rápido pero inseguro, no garantiza la entrega.|
+|**TCP (Transmission Control Protocol)**|Más lento pero seguro, garantiza la entrega.|
+|**RTP (Real-time Transport Protocol)**|Se usaba para multimedia, pero ha perdido relevancia.|
+|**RSVP (Resource Reservation Protocol)**|Protocolo de reserva de recursos en la red.|
+
+🔹 **UDP y TCP usan sockets para comunicarse.**
+
+- **UDP** tiene **65,536 sockets**, cada aplicación usa los suyos.
+
+# Servicios en la Capa de Usuarios
+
+## Categorías de Servicios
+
+### 1. Servicios Básicos
+
+- **DNS (Domain Name Services)**
+    
+    - Sistema que traduce nombres de dominio a direcciones IP
+    - Componente fundamental para la navegación web
+    - Estructura jerárquica de resolución de nombres
+    - Ejemplo: `https://www.google.com` → el DNS traduce "www.google.com" a una dirección IP
+- **DHCP (Dynamic Host Configuration Protocol)**
+    
+    - Asigna automáticamente direcciones IP a dispositivos en una red
+    - Administra también máscaras de subred, puerta de enlace y servidores DNS
+    - Facilita la integración de nuevos dispositivos a la red
+- **Proxys**
+    
+    - Intermediarios entre cliente y servidor
+    - Tipos:
+        - Socks: actúa como intermediario para conexiones TCP/UDP
+        - NAT (Network Address Translation): permite compartir una dirección IP pública
+- **VPNs (Virtual Private Networks)**
+    
+    - Crean conexiones seguras a través de redes públicas
+    - Cifran el tráfico entre dispositivos
+    - Permiten acceso remoto seguro a redes privadas
+
+### 2. Servicios de Almacenamiento
+
+- **No Transparentes**
+    
+    - El usuario debe conocer la ubicación y método de acceso
+    - Mayor control pero requiere más conocimiento técnico
+- **Transparentes**
+    
+    - El usuario accede sin necesidad de conocer detalles técnicos
+    - Abstracción de la complejidad del sistema
+- **Bases de Datos**
+    
+    - Almacenamiento estructurado de información
+    - Sistemas de gestión para consulta y manipulación de datos
+
+### 3. Sesiones Remotas
+
+- **Texto [CLI - Command Line Interface]**
+    
+    - Interfaces de línea de comandos (SSH, Telnet)
+    - Control remoto basado en texto
+    - Eficientes para tareas administrativas
+- **Gráficos [Remote Desktops]**
+    
+    - Interfaces gráficas remotas (RDP, VNC, TeamViewer)
+    - Permiten visualizar y controlar escritorios remotos
+    - Mayor facilidad de uso para usuarios no técnicos
+
+### 4. Servicios de Información
+
+- **Asíncronos**
+    
+    - No requieren conexión simultánea (correo electrónico, foros)
+    - La comunicación ocurre en diferentes momentos temporales
+    - Permiten flexibilidad temporal
+- **Síncronos**
+    
+    - Requieren conexión simultánea (chat, videoconferencias)
+    - Comunicación en tiempo real
+    - Mayor inmediatez en la interacción
+
+## Gobernanza de Internet
+
+### NIC (Network Information Center)
+
+- Centro de Información de la Red
+- Funciones:
+    - Gestión de direcciones IP
+    - Administración de DNS
+    - Coordinación de recursos de red a nivel regional/nacional
+
+### IETF (Internet Engineering Task Force)
+
+- Organismo encargado de la tecnología de internet
+- Desarrolla y promueve estándares de internet
+- Establece protocolos mediante documentos RFC (Request for Comments)
+- Proceso de desarrollo:
+    1. Identificación de una necesidad
+    2. Propuesta de solución
+    3. Desarrollo de protocolos/estándares
+    4. Publicación como RFC
+    5. Implementación y mejora continua
+
+### Cronología Relevante
+
+- **1995**: Comercialización de Internet (ISPs)
+    - Surgimiento de proveedores de servicios de internet
+    - Expansión de protocolos estándares y privados
+    - Desarrollo de aplicaciones públicas y privadas
+
+## Estructura Funcional
+
+### Componentes del Ecosistema
+
+- **Personas** → **Organizaciones**
+    - Desarrollan y codifican aplicaciones
+    - Establecen estándares y protocolos
+    - Implementan servicios y servidores
+
+### Estructura de URLs
+
+- **Ejemplo**: `https://www.google.com`
+    - Protocolo: `https://`
+    - FQDN (Fully Qualified Domain Name): `www.google.com`
+    - El DNS traduce el FQDN a direcciones IP
+    - Las direcciones IP permiten la conectividad en internet
+
+### Relación FQDN-DNS-IP
+
+- FQDN ⟺ DNS ⟺ Direcciones IP
+- El sistema DNS actúa como intermediario para traducir nombres legibles para humanos a direcciones numéricas que las máquinas pueden procesar
+
+## Consideraciones Adicionales
+
+### Capas de Red
+
+- El modelo de capas facilita la comprensión de los servicios de red
+- La capa de usuario representa la interfaz más cercana al usuario final
+- Los servicios mencionados operan principalmente en las capas superiores del modelo OSI
+
+### Seguridad en Servicios
+
+- Cada servicio tiene consideraciones específicas de seguridad
+- La autenticación, autorización y cifrado son esenciales
+- Los protocolos modernos priorizan conexiones seguras (HTTPS, SFTP, SSH)
+
+### Tendencias Actuales
+
+- Virtualización de servicios
+- Computación en la nube
+- Microservicios y contenedores
+- Integración con inteligencia artificial y automatización
+Claro, aquí tienes el texto reorganizado, mejorado y con una estructura más clara y profesional, sin perder el tono explicativo:
+---
+## Servicios de DNS
+
+### 📌 Antecedentes
+
+Antes de que existiera el **Sistema de Nombres de Dominio (DNS)**, se utilizaba un archivo local llamado `/etc/hosts` para resolver nombres de dominio a direcciones IP. Este archivo aún existe y es útil en contextos muy pequeños o locales, pero no escala bien para Internet.
+
+A medida que creció la necesidad de resolver nombres en redes más grandes, surgió el protocolo **DNS (Domain Name System)**. A partir de ahí, se desarrollaron otros protocolos relacionados y se programaron servicios especializados para su operación.
+
+---
+### 🧠 Estructura del DNS
+
+El DNS se basa en **bases de datos distribuidas** y **jerárquicas** (en forma de árbol). Tener una sola base de datos centralizada sería impráctico, así que el sistema se diseñó para que:
+
+- Cada parte de la jerarquía tenga su **propia sección de la base de datos**.
+    
+- Existan **réplicas** de esas bases de datos, lo que garantiza redundancia y disponibilidad.
+    
+- La información se pueda delegar a distintas organizaciones o servidores.
+    
+---
+### 🗂 Organización del DNS
+
+#### Nivel raíz (Root)
+
+- Representado por un punto (`.`).
+    
+- Desde aquí se derivan todos los demás dominios.
+    
+#### Primer nivel (Top-Level Domains o TLDs)
+
+- Algunos ejemplos clásicos (creados inicialmente en EE. UU.):
+    
+    - `.mil` (militar)
+        
+    - `.gov` (gobierno)
+        
+    - `.edu` (educación)
+        
+    - `.org`, `.net`, `.com` (comercial)
+        
+- Registrar un dominio en esta base de datos tenía un costo (aprox. $50 USD), a menos que fuera para organizaciones sin fines de lucro.
+    
+- Cada país también tiene su **código de país** como TLD, por ejemplo: `.mx`, `.uk`, `.jp`.
+    
+#### Segundo nivel
+
+- Cada dominio de país o genérico puede tener sus propios subdominios.
+    
+- Por ejemplo, en México:
+    
+    - `.gob.mx`, `.net.mx`, `.org.mx`, `.edu.mx`, `.com.mx`
+        
+- Un caso anecdótico: alguien quiso registrar `uaa.mx` dentro de `.edu`, pero eso no era posible en ese momento. La Universidad Autónoma de Acapulco, por ejemplo, usa `uaa.edu.mx`.
+    
+#### Tercer nivel
+
+- Las instituciones o empresas pueden administrar sus propios subdominios.
+    
+- Por ejemplo, la UAA (Universidad Autónoma de Aguascalientes) administra subdominios como:
+    
+    - `aulavirtual.uaa.mx`
+        
+- La universidad mantiene **cuatro servidores DNS**:
+    
+    - Tres en el campus central
+        
+    - Uno en el campus sur
+        

@@ -1,3 +1,4 @@
+
 import numpy as np
 import pandas as pd
 from pymoo.core.problem import ElementwiseProblem
@@ -8,17 +9,13 @@ from pymoo.operators.crossover.sbx import SBX
 from pymoo.operators.mutation.pm import PM
 from pymoo.visualization.scatter import Scatter
 
+# Este script resuelve un problema de optimización multiobjetivo para seleccionar computadoras 
+# considerando cuatro criterios: precio, RAM, procesador y almacenamiento.
+# Utiliza el algoritmo NSGA-II para encontrar soluciones óptimas en un frente de Pareto.
+
 # Definir el problema de optimización multi-objetivo
 class SeleccionComputadora(ElementwiseProblem):
     def __init__(self, computadoras):
-        """
-        Inicializa el problema de selección de computadora.
-        
-        Parameters:
-        -----------
-        computadoras : pandas.DataFrame
-            DataFrame con las columnas: 'id', 'precio', 'ram', 'procesador', 'almacenamiento'
-        """
         self.computadoras = computadoras
         # Definimos 1 variable de decisión (el índice de la computadora)
         # y 4 objetivos (precio, RAM, procesador, almacenamiento)
@@ -38,8 +35,7 @@ class SeleccionComputadora(ElementwiseProblem):
         procesador = self.computadoras.iloc[idx]['procesador']
         almacenamiento = self.computadoras.iloc[idx]['almacenamiento']
         
-        # Definir los objetivos (queremos minimizar estos valores)
-        # Para RAM, procesador y almacenamiento, usamos el negativo ya que queremos maximizarlos
+        # Definir los objetivos (queremos minimizar precio y maximizar el resto)
         out["F"] = np.array([
             precio,          # Minimizar precio
             -ram,            # Maximizar RAM
@@ -47,27 +43,19 @@ class SeleccionComputadora(ElementwiseProblem):
             -almacenamiento  # Maximizar almacenamiento
         ])
 
-# Generar datos de ejemplo (computadoras con diferentes características)
+# Genera un conjunto de computadoras con características aleatorias
+# para simular un escenario de selección de computadoras óptimas.
 def generar_datos_ejemplo(n_computadoras=50):
-
     np.random.seed(42)  # Para reproducibilidad
     
     # Generar datos aleatorios para cada característica
     ids = np.arange(n_computadoras)
+    precios = np.random.uniform(500, 3000, n_computadoras)  # Precio entre 500 y 3000
+    ram = np.random.choice([4, 8, 16, 32, 64], n_computadoras)  # RAM entre 4 y 64 GB
+    procesador = np.random.uniform(1000, 3000, n_computadoras)  # Puntuación del procesador
+    almacenamiento = np.random.choice([256, 512, 1024, 2048], n_computadoras)  # Almacenamiento en GB
     
-    # Precios entre 500 y 3000
-    precios = np.random.uniform(500, 3000, n_computadoras)
-    
-    # RAM entre 4 y 64 GB
-    ram = np.random.choice([4, 8, 16, 32, 64], n_computadoras)
-    
-    # Procesador (puntuación entre 1000 y 3000, mayor es mejor)
-    procesador = np.random.uniform(1000, 3000, n_computadoras)
-    
-    # Almacenamiento entre 256 y 2048 GB
-    almacenamiento = np.random.choice([256, 512, 1024, 2048], n_computadoras)
-    
-    # Crear DataFrame
+    # Crear DataFrame con los datos
     df = pd.DataFrame({
         'id': ids,
         'precio': precios,
@@ -78,30 +66,30 @@ def generar_datos_ejemplo(n_computadoras=50):
     
     return df
 
-# Función principal
+# Función principal que ejecuta la optimización y muestra los resultados
 def main():
     # Generar datos de ejemplo
     computadoras = generar_datos_ejemplo(50)
     print("Datos de las computadoras generados:")
     print(computadoras.head())
     
-    # Crear el problema
+    # Crear el problema de selección de computadoras
     problema = SeleccionComputadora(computadoras)
     
-    # Configurar el algoritmo NSGA-II
+    # Configurar el algoritmo NSGA-II con sus parámetros
     algorithm = NSGA2(
-        pop_size=100,
+        pop_size=100,  # Tamaño de la población
         sampling=IntegerRandomSampling(),
-        crossover=SBX(prob=0.8, eta=15, vtype=int),
-        mutation=PM(eta=20, vtype=int),
-        eliminate_duplicates=True
+        crossover=SBX(prob=0.8, eta=15, vtype=int),  # Probabilidad de cruce 0.8
+        mutation=PM(eta=20, vtype=int),  # Tasa de mutación 20
+        eliminate_duplicates=True  # Eliminar soluciones duplicadas
     )
     
-    # Ejecutar la optimización
+    # Ejecutar la optimización con NSGA-II
     res = minimize(
         problema,
         algorithm,
-        ('n_gen', 100),
+        ('n_gen', 100),  # Número de generaciones
         seed=1,
         verbose=True
     )
@@ -120,48 +108,38 @@ def main():
     # Implementar un selector simple para el usuario
     print("\nRecomendación de computadoras según preferencias:")
     
-    # Ordenar por relación precio/prestaciones (suma ponderada normalizada)
-    # Normalizar los valores para que estén en la misma escala
+    # Normalización para comparación justa entre características
     computadoras_norm = computadoras_optimas.copy()
-    computadoras_norm['precio_norm'] = (computadoras_optimas['precio'] - computadoras_optimas['precio'].min()) / (computadoras_optimas['precio'].max() - computadoras_optimas['precio'].min())
-    computadoras_norm['ram_norm'] = (computadoras_optimas['ram'] - computadoras_optimas['ram'].min()) / (computadoras_optimas['ram'].max() - computadoras_optimas['ram'].min())
-    computadoras_norm['procesador_norm'] = (computadoras_optimas['procesador'] - computadoras_optimas['procesador'].min()) / (computadoras_optimas['procesador'].max() - computadoras_optimas['procesador'].min())
-    computadoras_norm['almacenamiento_norm'] = (computadoras_optimas['almacenamiento'] - computadoras_optimas['almacenamiento'].min()) / (computadoras_optimas['almacenamiento'].max() - computadoras_optimas['almacenamiento'].min())
+    for col in ['precio', 'ram', 'procesador', 'almacenamiento']:
+        computadoras_norm[col + '_norm'] = (computadoras_optimas[col] - computadoras_optimas[col].min()) / \
+                                           (computadoras_optimas[col].max() - computadoras_optimas[col].min())
     
-    # Calcular puntuación para diferentes perfiles de usuario
+    # Calcular puntuaciones para diferentes perfiles de usuario
     computadoras_norm['puntuacion_equilibrada'] = (
-        -computadoras_norm['precio_norm'] + 
-        computadoras_norm['ram_norm'] + 
-        computadoras_norm['procesador_norm'] + 
-        computadoras_norm['almacenamiento_norm']
+        -computadoras_norm['precio_norm'] + computadoras_norm['ram_norm'] + 
+        computadoras_norm['procesador_norm'] + computadoras_norm['almacenamiento_norm']
     )
     
     computadoras_norm['puntuacion_economica'] = (
-        -2*computadoras_norm['precio_norm'] + 
-        0.5*computadoras_norm['ram_norm'] + 
-        0.5*computadoras_norm['procesador_norm'] + 
-        0.5*computadoras_norm['almacenamiento_norm']
+        -2 * computadoras_norm['precio_norm'] + 0.5 * computadoras_norm['ram_norm'] + 
+        0.5 * computadoras_norm['procesador_norm'] + 0.5 * computadoras_norm['almacenamiento_norm']
     )
     
     computadoras_norm['puntuacion_alto_rendimiento'] = (
-        -0.5*computadoras_norm['precio_norm'] + 
-        1.5*computadoras_norm['ram_norm'] + 
-        2*computadoras_norm['procesador_norm'] + 
-        0.5*computadoras_norm['almacenamiento_norm']
+        -0.5 * computadoras_norm['precio_norm'] + 1.5 * computadoras_norm['ram_norm'] + 
+        2 * computadoras_norm['procesador_norm'] + 0.5 * computadoras_norm['almacenamiento_norm']
     )
     
-    # Recomendaciones para diferentes perfiles
+    # Mostrar las mejores computadoras según diferentes perfiles
     print("\nTop 3 computadoras con mejor equilibrio precio/rendimiento:")
-    top_equilibrado = computadoras_optimas.iloc[computadoras_norm['puntuacion_equilibrada'].argsort()[::-1][:3]]
-    print(top_equilibrado[['id', 'precio', 'ram', 'procesador', 'almacenamiento']])
+    print(computadoras_optimas.iloc[computadoras_norm['puntuacion_equilibrada'].argsort()[::-1][:3]])
     
     print("\nTop 3 computadoras más económicas con prestaciones aceptables:")
-    top_economico = computadoras_optimas.iloc[computadoras_norm['puntuacion_economica'].argsort()[::-1][:3]]
-    print(top_economico[['id', 'precio', 'ram', 'procesador', 'almacenamiento']])
+    print(computadoras_optimas.iloc[computadoras_norm['puntuacion_economica'].argsort()[::-1][:3]])
     
     print("\nTop 3 computadoras de alto rendimiento:")
-    top_rendimiento = computadoras_optimas.iloc[computadoras_norm['puntuacion_alto_rendimiento'].argsort()[::-1][:3]]
-    print(top_rendimiento[['id', 'precio', 'ram', 'procesador', 'almacenamiento']])
+    print(computadoras_optimas.iloc[computadoras_norm['puntuacion_alto_rendimiento'].argsort()[::-1][:3]])
 
+# Ejecutar la función principal si el script se ejecuta directamente
 if __name__ == "__main__":
     main()
