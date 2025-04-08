@@ -788,4 +788,20 @@ El DNS se basa en **bases de datos distribuidas** y **jerárquicas** (en forma d
     - Tres en el campus central
         
     - Uno en el campus sur
-        
+
+### 🌐 Resolución de nombres (de URL a IP)
+
+Cuando se quiere acceder a un sitio web como `www.x.com`, se realiza un proceso de resolución usando un **resolver DNS**, que sigue el siguiente camino (de derecha a izquierda):
+
+1. **`.` (raíz)**: El resolver empieza preguntando al servidor raíz si conoce el dominio `.com`.
+    
+2. **`.com`**: La raíz responde con la dirección de los servidores de `.com`.
+    
+3. **`x.com`**: Luego, se consulta a los servidores de `.com` si conocen el dominio `x`. Ellos devuelven la dirección IP de los servidores de nombres para `x.com`.
+    
+4. **`www.x.com`**: Finalmente, el resolver pregunta a los servidores de `x.com` si tienen un registro para `www`. Si existe, devuelve la dirección IP correspondiente.
+    
+
+🔁 Resultado: obtenemos la dirección IP asociada a `www.x.com`.
+
+> Es como una estructura anidada: `www` dentro de `x` dentro de `com` dentro de `root`.
