@@ -4,7 +4,7 @@ La optimización multiobjetivo (MOO) busca optimizar dos o más objetivos simult
 
 ## 2. Fundamentos
 
-### 🎯 Formulación
+###  Formulación
 
 $$\min f(x) = [f_1(x), f_2(x), ..., f_k(x)]$$
 
@@ -14,14 +14,14 @@ $$\min f(x) = [f_1(x), f_2(x), ..., f_k(x)]$$
 
 ## 3. Dominancia y Frente de Pareto
 
-### ✅ Dominancia de Pareto
+###  Dominancia de Pareto
 
 Una solución **A** domina a **B** si:
 
 - ( f_i(A) \leq f_i(B) ) para todo ( i )
 - ( f_j(A) < f_j(B) ) para al menos un ( j )
 
-### ⭐ Frente de Pareto
+###  Frente de Pareto
 
 El conjunto de soluciones **no dominadas**. Representa los mejores compromisos entre los objetivos.
 
@@ -60,7 +60,7 @@ Combinan diferentes estrategias (evolutivas, heurísticas, exactas, etc.) para m
 - **Multiobjetivo + Machine Learning**
 - **Híbridos Determinístico-Evolutivos**
 
-### ✅ Ventajas:
+###  Ventajas:
 
 - Mejor calidad de soluciones
 - Más diversidad
@@ -68,13 +68,13 @@ Combinan diferentes estrategias (evolutivas, heurísticas, exactas, etc.) para m
 
 ## 6. Algoritmos Multiobjetivo Populares
 
-|Algoritmo|Características|
-|---|---|
-|**NSGA-II**|Dominancia, crowding distance, elitismo|
-|**SPEA2**|Archivo externo, densidad|
-|**MOEA/D**|Divide el problema en subproblemas|
-|**MOPSO**|Enjambre de partículas multiobjetivo|
-|**NSGA-III**|Especializado en más de 3 objetivos|
+| Algoritmo    | Características                         |
+| ------------ | --------------------------------------- |
+| **NSGA-II**  | Dominancia, crowding distance, elitismo |
+| **SPEA2**    | Archivo externo, densidad               |
+| **MOEA/D**   | Divide el problema en subproblemas      |
+| **MOPSO**    | Enjambre de partículas multiobjetivo    |
+| **NSGA-III** | Especializado en más de 3 objetivos     |
 
 ## 7. Métricas de Evaluación
 
@@ -94,11 +94,11 @@ Combinan diferentes estrategias (evolutivas, heurísticas, exactas, etc.) para m
 
 ## 9. Ejemplo Simple
 
-|Solución|Tiempo (ms)|Energía (J)|
-|---|---|---|
-|A|10|80|
-|B|12|60|
-|C|11|70|
+| Solución | Tiempo (ms) | Energía (J) |
+| -------- | ----------- | ----------- |
+| A        | 10          | 80          |
+| B        | 12          | 60          |
+| C        | 11          | 70          |
 
 - A **domina** a C
 - A y B no se dominan ⇒ **Frente de Pareto** = {A, B}

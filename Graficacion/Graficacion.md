@@ -435,8 +435,8 @@ Donde $\gamma = \frac{p+q+2}{2}$ para $p+q \geq 2$
 
 ## 🧠 Entropía en Teoría de la Información
 
-La **entropía** es una medida de la **incertidumbre promedio** en una fuente de información. Fue introducida por Claude Shannon, y se interpreta como la **cantidad de información esperada por símbolo** emitido por una fuente.
 ---
+La **entropía** es una medida de la **incertidumbre promedio** en una fuente de información. Fue introducida por Claude Shannon, y se interpreta como la **cantidad de información esperada por símbolo** emitido por una fuente.
 ### 📏 Definición formal
 
 Sea una fuente de información \( X \) que emite un conjunto de símbolos \( \{x_1, x_2, \ldots, x_n\} \), con probabilidades respectivas \( \{p(x_1), p(x_2), \ldots, p(x_n)\} \). La **entropía de Shannon** se define como:
