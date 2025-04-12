@@ -431,3 +431,53 @@ Donde $\gamma = \frac{p+q+2}{2}$ para $p+q \geq 2$
 
 - $\eta_{01} = -15.42$
 - $\eta_{01}' = -31.23$
+
+
+## 🧠 Entropía en Teoría de la Información
+
+La **entropía** es una medida de la **incertidumbre promedio** en una fuente de información. Fue introducida por Claude Shannon, y se interpreta como la **cantidad de información esperada por símbolo** emitido por una fuente.
+---
+### 📏 Definición formal
+
+Sea una fuente de información \( X \) que emite un conjunto de símbolos \( \{x_1, x_2, \ldots, x_n\} \), con probabilidades respectivas \( \{p(x_1), p(x_2), \ldots, p(x_n)\} \). La **entropía de Shannon** se define como:
+
+$$
+H(X) = -\sum_{i=1}^n p(x_i) \log_2 p(x_i)
+$$
+
+Donde:
+- \( H(X) \): entropía de la fuente \( X \),
+- \( p(x_i) \): probabilidad de ocurrencia del símbolo \( x_i \),
+- La unidad es el **bit**, ya que se usa logaritmo en base 2.
+---
+### 📘 Interpretación
+
+- Si un símbolo es **más probable**, aporta **menos información**.
+- Si todos los símbolos son **igualmente probables**, la entropía es **máxima**.
+- A mayor entropía, **mayor incertidumbre** y **mayor cantidad de información** por símbolo.
+- Entre algo aparezca mas menos factor sorpresa existe
+$$ I = -log P$$
+- Un pizzaron tiene poca informacion por que es homogenia, no tiene cambios. 
+- Cuando empieza a haber cambios esos cambios me dan informacion, Entre mas probable sea algo tiene menos informacion, y visebersa
+---
+### 🧮 Ejemplos
+
+#### Caso uniforme:
+
+Supongamos una fuente que emite dos símbolos \( A \) y \( B \), con igual probabilidad \( p(A) = 0.5 \), \( p(B) = 0.5 \):
+
+$$
+H(X) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5 \cdot (-1) + 0.5 \cdot (-1)) = 1 \text{ bit}
+$$
+
+#### Caso no uniforme:
+
+Ahora, si \( p(A) = 0.9 \) y \( p(B) = 0.1 \):
+
+$$
+H(X) = - (0.9 \log_2 0.9 + 0.1 \log_2 0.1) \approx - (0.9 \cdot (-0.152) + 0.1 \cdot (-3.322)) \approx 0.469 \text{ bits}
+$$
+
+> 💡 A menor incertidumbre (mayor desequilibrio), menor entropía.
+
+---
